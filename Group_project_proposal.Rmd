@@ -1,0 +1,9 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Title:** Exploring the Dynamics of Developer Engagement and Job Satisfaction: An Analysis of the Stack Overflow Annual Developer Survey 2023
+
+**Names of the Students in the Group:** [Student Names]
+
+**The Survey Data Set:** The Stack Overflow Annual Developer Survey 2023 is a comprehensive survey that gathers valuable insights from a large and diverse population of software developers worldwide. The survey covers a wide array of topics, including developer roles, programming languages, tools, frameworks, job satisfaction, career aspirations, and demographic characteristics. With its extensive reach and depth of information, this survey provides a unique opportunity to investigate the factors that shape developer engagement and job satisfaction on a global scale.
