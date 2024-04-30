@@ -2,7 +2,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Exploring the Dynamics of Developer Engagement and Job Satisfaction: An Analysis of the Stack Overflow Annual Developer Survey 2023**
+**Exploring the Determinants of Developer Compensation: Insights from the Stack Overflow Annual Developer Survey 2023**
 
 **Names of the Students in the Group:** 
 - Rohan Junaid Khan [47843276]
@@ -12,13 +12,13 @@ knitr::opts_chunk$set(echo = TRUE)
 - Katherine Koslow [45649154]
 - Ayan Krishna Paul [47697296]
 
-
 **The Survey Data Set Selected:** 
-The Stack Overflow Annual Developer Survey 2023 is a comprehensive survey that gathers valuable insights from a large and diverse population of software developers worldwide. The survey covers a wide array of topics, including developer roles, programming languages, tools, frameworks, job satisfaction, career aspirations, and demographic characteristics. With its extensive reach and depth of information, this survey provides a unique opportunity to investigate the factors that shape developer engagement and job satisfaction on a global scale.
+The Stack Overflow Annual Developer Survey 2023 is a comprehensive survey that gathers valuable insights from a large and diverse population of software developers worldwide. The survey covers a wide array of topics, including developer roles, programming languages, tools, frameworks, job satisfaction, career aspirations, and demographic characteristics. With a focus on capturing the evolving developer experience and understanding the impact of emerging technologies like AI/ML on developers' workflows, the survey offers a unique opportunity to investigate the determinants of developer compensation on a global scale.
 
-The purpose of the survey is to collect the voice of the developer. Analysts, IT leaders, reporters, and other developers to stay up to date with the evolving developer experience, technologies that are rising or falling in favor, and to understand where tech might be going next. The focus for the 2023 Stack Overflow Developer Survey was on AI/ML, with the intention to capture how developers are thinking about it and using it in their workflows and to enhance the developer experience to get people to solutions faster. 
+By collecting the voice of developers, the Stack Overflow Annual Developer Survey 2023 enables analysts, IT leaders, reporters, and other developers to stay up to date with the latest trends and technologies that are shaping the industry. The extensive reach and depth of information provided by the survey not only helps in understanding where tech might be heading next but also offers valuable insights into the factors that influence developer compensation. Through a thorough analysis of this rich dataset, we can gain a deeper understanding of the complex interplay between various variables, such as developer roles, skills, experience, and geographic location, that contribute to determining compensation in the global tech industry.
 
-**objectives**
+**Objectives**
 
 
-**rationale for project (problem identified)**
+**Project Rationale**
+The tech industry is characterized by rapid advancements and constant change, making it imperative to understand the determinants of developer compensation. The factors that influence compensation have far-reaching implications, not only for individual developers' career trajectories but also for the overall productivity and innovation within organizations. It is therefore vital to study the interplay between the aforementioned factors in determining compensation.
