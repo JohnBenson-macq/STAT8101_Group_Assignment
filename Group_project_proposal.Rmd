@@ -2,8 +2,23 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Title:** Exploring the Dynamics of Developer Engagement and Job Satisfaction: An Analysis of the Stack Overflow Annual Developer Survey 2023
+**Exploring the Dynamics of Developer Engagement and Job Satisfaction: An Analysis of the Stack Overflow Annual Developer Survey 2023**
 
-**Names of the Students in the Group:** [Student Names]
+**Names of the Students in the Group:** 
+- Rohan Junaid Khan [47843276]
+- John Michael Benson [47906278]
+- David Kong [47458992]
+- Nergis Ilhan [47493895]
+- Katherine Koslow [45649154]
+- Ayan Krishna Paul [47697296]
 
-**The Survey Data Set:** The Stack Overflow Annual Developer Survey 2023 is a comprehensive survey that gathers valuable insights from a large and diverse population of software developers worldwide. The survey covers a wide array of topics, including developer roles, programming languages, tools, frameworks, job satisfaction, career aspirations, and demographic characteristics. With its extensive reach and depth of information, this survey provides a unique opportunity to investigate the factors that shape developer engagement and job satisfaction on a global scale.
+
+**The Survey Data Set Selected:** 
+The Stack Overflow Annual Developer Survey 2023 is a comprehensive survey that gathers valuable insights from a large and diverse population of software developers worldwide. The survey covers a wide array of topics, including developer roles, programming languages, tools, frameworks, job satisfaction, career aspirations, and demographic characteristics. With its extensive reach and depth of information, this survey provides a unique opportunity to investigate the factors that shape developer engagement and job satisfaction on a global scale.
+
+The purpose of the survey is to collect the voice of the developer. Analysts, IT leaders, reporters, and other developers to stay up to date with the evolving developer experience, technologies that are rising or falling in favor, and to understand where tech might be going next. The focus for the 2023 Stack Overflow Developer Survey was on AI/ML, with the intention to capture how developers are thinking about it and using it in their workflows and to enhance the developer experience to get people to solutions faster. 
+
+**objectives**
+
+
+**rationale for project (problem identified)**
