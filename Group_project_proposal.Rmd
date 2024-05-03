@@ -18,7 +18,9 @@ geometry: "left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Exploring the Determinants of Developer Compensation: Insights from the Stack Overflow Annual Developer Survey 2023**
+\begin{center}
+\Large\textbf{Exploring the Determinants of Developer Compensation: Insights from the Stack Overflow Annual Developer Survey 2023}
+\end{center}
 
 **Names of the Students in the Group:**
 
