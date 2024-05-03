@@ -1,0 +1,141 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\textbf{Exploring the Determinants of Developer Compensation: Insights
+from the Stack Overflow Annual Developer Survey 2023}
+
+\textbf{Names of the Students in the Group:}
+
+\begin{itemize}
+\item
+  Ayan Krishna Paul {[}47697296{]}
+\item
+  David Kong {[}47458992{]}
+\item
+  John Michael Benson {[}47906278{]}
+\item
+  Katherine Koslow {[}45649154{]}
+\item
+  Nergis Ilhan {[}47493895{]}
+\item
+  Rohan Junaid Khan {[}47843276{]}
+\end{itemize}
+
+\textbf{The Survey Data Set Selected:} The Stack Overflow Annual
+Developer Survey 2023 is a comprehensive survey that gathers valuable
+insights from a large and diverse population of software developers
+worldwide. The survey covers a wide array of topics, including developer
+roles, programming languages, tools, frameworks, job satisfaction,
+career aspirations, demographic characteristics and salaries. With a
+focus on capturing the evolving developer experience and understanding
+the impact of emerging technologies like AI/ML on developers' workflows,
+the survey offers a unique opportunity to investigate the determinants
+of developer compensation on a global scale.
+
+By collecting the voice of developers, the Stack Overflow Annual
+Developer Survey 2023 enables analysts, IT leaders, reporters and other
+developers to stay up to date with the latest trends and technologies
+that are shaping the industry. The extensive reach and depth of
+information provided by the survey not only helps and provides context
+in understanding where trends in technology are heading, but also offers
+key attributes that can potentially influence developer compensation.
+Through a thorough analysis of this rich dataset, we can gain a deeper
+understanding of the complex interplay between various variables, such
+as developer roles, skills, experience, and geographic location, that
+contribute to determining remuneration in the global tech industry.
+
+\textbf{Objectives} The primary objective of this project is to conduct
+a detailed exploratory data analysis (EDA) of the Stack Overflow Annual
+Developer Survey 2023, focusing on understanding the factors that affect
+developer compensation across the world. We aim to use compensations as
+the continuous response variable in our regression models to predict
+compensation based on various predictors such as geographic location,
+experience, technology used, and role in the industry. Additionally, we
+aim to investigate how AI/ML technologies are integrated into
+developers' work processes and consider their influence on job
+satisfaction and overall compensation. By analysing these, we plan to
+discover insights into the career paths of developers and the evolving
+technology landscape, providing valuable information for stakeholders in
+the tech industry. This analysis will highlight potential fields for the
+developer community and identify which variables are more influential.
+
+\textbf{Project Rationale} The tech industry is characterized by rapid
+advancements and constant change, making it imperative to understand the
+determinants of developer compensation. The factors that influence
+compensation have far-reaching implications, not only for individual
+developers' career trajectories but also for the overall productivity
+and innovation within organizations. It is therefore vital to study the
+interplay between the aforementioned factors in determining
+compensation.
+
+\end{document}

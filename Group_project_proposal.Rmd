@@ -1,17 +1,38 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_sections: true
+    toc_depth: 3
+    fig_caption: true
+    fig_crop: true
+    highlight: tango
+  html_document: default
+mainfont: Times New Roman
+fontsize: 12pt
+geometry: "left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm"
+---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 **Exploring the Determinants of Developer Compensation: Insights from the Stack Overflow Annual Developer Survey 2023**
 
-**Names of the Students in the Group:** 
-•	Ayan Krishna Paul [47697296]
-•	David Kong [47458992]
-•	John Michael Benson [47906278]
-•	Katherine Koslow [45649154]
-•	Nergis Ilhan [47493895]
-•	Rohan Junaid Khan [47843276]
+**Names of the Students in the Group:**
 
+- Ayan Krishna Paul [47697296]
+
+- David Kong [47458992]
+
+- John Michael Benson [47906278]
+
+- Katherine Koslow [45649154]
+
+- Nergis Ilhan [47493895]
+
+- Rohan Junaid Khan [47843276]
 
 **The Survey Data Set Selected:** 
 The Stack Overflow Annual Developer Survey 2023 is a comprehensive survey that gathers valuable insights from a large and diverse population of software developers worldwide. The survey covers a wide array of topics, including developer roles, programming languages, tools, frameworks, job satisfaction, career aspirations, demographic characteristics and salaries. With a focus on capturing the evolving developer experience and understanding the impact of emerging technologies like AI/ML on developers' workflows, the survey offers a unique opportunity to investigate the determinants of developer compensation on a global scale.
