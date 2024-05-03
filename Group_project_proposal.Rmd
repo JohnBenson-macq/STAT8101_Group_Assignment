@@ -37,12 +37,15 @@ knitr::opts_chunk$set(echo = TRUE)
 - Rohan Junaid Khan [47843276]
 
 **The Survey Data Set Selected:** 
+
 The Stack Overflow Annual Developer Survey 2023 is a comprehensive survey that gathers valuable insights from a large and diverse population of software developers worldwide. The survey covers a wide array of topics, including developer roles, programming languages, tools, frameworks, job satisfaction, career aspirations, demographic characteristics and salaries. With a focus on capturing the evolving developer experience and understanding the impact of emerging technologies like AI/ML on developers' workflows, the survey offers a unique opportunity to investigate the determinants of developer compensation on a global scale.
 
 By collecting the voice of developers, the Stack Overflow Annual Developer Survey 2023 enables analysts, IT leaders, reporters and other developers to stay up to date with the latest trends and technologies that are shaping the industry. The extensive reach and depth of information provided by the survey not only helps and provides context in understanding where trends in technology are heading, but also offers key attributes that can potentially influence developer compensation. Through a thorough analysis of this rich dataset, we can gain a deeper understanding of the complex interplay between various variables, such as developer roles, skills, experience, and geographic location, that contribute to determining remuneration in the global tech industry.
 
 **Objectives**
+
 The primary objective of this project is to conduct a detailed exploratory data analysis (EDA) of the Stack Overflow Annual Developer Survey 2023, focusing on understanding the factors that affect developer compensation across the world. We aim to use compensations as the continuous response variable in our regression models to predict compensation based on various predictors such as geographic location, experience, technology used, and role in the industry. Additionally, we aim to investigate how AI/ML technologies are integrated into developers' work processes and consider their influence on job satisfaction and overall compensation. By analysing these, we plan to discover insights into the career paths of developers and the evolving technology landscape, providing valuable information for stakeholders in the tech industry. This analysis will highlight potential fields for the developer community and identify which variables are more influential.
 
 **Project Rationale**
+
 The tech industry is characterized by rapid advancements and constant change, making it imperative to understand the determinants of developer compensation. The factors that influence compensation have far-reaching implications, not only for individual developers' career trajectories but also for the overall productivity and innovation within organizations. It is therefore vital to study the interplay between the aforementioned factors in determining compensation.
