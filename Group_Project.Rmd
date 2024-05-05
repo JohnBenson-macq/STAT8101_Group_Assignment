@@ -1,29 +1,48 @@
 ---
-title: "STAT8101_Sampling_Design_and_Analysis_Group_Project"
-output: pdf_document
-date: "2024-05-05"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    number_sections: true
+    toc_depth: 3
+    fig_caption: true
+    fig_crop: true
+    highlight: tango
+  html_document: default
+mainfont: Times New Roman
+fontsize: 12pt
+geometry: "left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Survey Methodology
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+#### Key Principles
 
-```{r cars}
-summary(cars)
-```
+- **Scope and Scale**: The survey reached 89,184 qualified software developers from 185 countries, indicating a broad global representation. The qualification for analysis was based on respondents' consent to share their data and completion of all required questions. About 2,000 responses were excluded due to incomplete data.
 
-## Including Plots
+- **Duration and Timing**: The survey was conducted from May 8, 2023, to May 19, 2023. The median response time was nearly 18 minutes, which increased from the previous year due to the inclusion of additional questions this year.
 
-You can also embed plots, for example:
+#### Evaluation
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+- **Recruitment Methods**: Respondents were primarily recruited through Stack Overflow's own channels, such as onsite messaging, blog posts, emails, banner ads, and social media posts. This recruitment strategy likely led to a sample biased towards highly engaged users of Stack Overflow.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+- **Geography**: Due to U.S. sanctions, the survey was not accessible in certain regions (Crimea, Cuba, Iran, North Korea, Syria), potentially skewing geographical representation. Some respondents circumvented this using VPNs, which introduces another layer of bias in data representation.
+
+- **Adaptive Questionnaire**: The survey employed conditional questioning, where certain topics (e.g., job-related questions) were only presented based on previous responses, which helps in reducing the respondent burden but could lead to biased results if not all relevant respondents see all questions.
+
+#### Adequate Explanation of Methods
+
+- **Handling of Compensation Data**: Compensation data, which was optional, was provided by 48,026 respondents. Compensation were reported in local currencies and converted to USD using the exchange rate from June 2, 2023. High outlier Compensation were trimmed (less than 1% of data), suggesting robust handling of Compensation data to prevent skewing results.
+
+- **Technological Inclusion**: Technologies to be included in the survey were selected based on previous years' data and community feedback. This participative approach helped ensure that the survey content remained relevant and reflective of current trends.
+
+- **Randomization of Questions**: The survey randomized the order of blocks of questions to minimize the order effect, which can influence how questions are answered based on their sequence in the survey.
+
+- **Data Analysis Adjustments**: Post-survey, several corrections were made to the online results, such as adjusting the Compensation filter to exclude small sample sizes and correcting display issues in sections about professional coders and AI tools. This demonstrates an ongoing commitment to accuracy and transparency in reporting survey results.
+
+
