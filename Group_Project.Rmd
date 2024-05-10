@@ -35,6 +35,8 @@ The tech industry is characterized by rapid advancements and constant change, ma
 
 The primary objective of this project is to conduct a detailed exploratory data analysis (EDA) of the Stack Overflow Annual Developer Survey 2023, focusing on understanding the factors that affect developer compensation across the world. We aim to use 'compensation' as the continuous response variable in our regression models to predict compensation based on various predictors such as geographic location, experience, technology used, and role in the industry. Additionally, we aim to investigate how AI/ML technologies are integrated into developers' work processes and consider their influence on job satisfaction and overall compensation. By analysing these, we plan to discover insights into the career paths of developers and the evolving technology landscape, providing valuable information for stakeholders in the tech industry. This analysis will highlight potential fields for the developer community and identify which variables are more influential.
 
+** update objective ot be focused on compenestation and what impacts that 
+
 ### Survey Methodology
 
 #### Key Principles
@@ -50,8 +52,6 @@ The primary objective of this project is to conduct a detailed exploratory data 
 - **Geography**: Due to U.S. sanctions, the survey was not accessible in certain regions (Crimea, Cuba, Iran, North Korea, Syria), potentially skewing geographical representation. Some respondents circumvented this using VPNs, which introduces another layer of bias in data representation.
 
 - **Adaptive Questionnaire**: The survey employed conditional questioning, where certain topics (e.g., job-related questions) were only presented based on previous responses, which helps in reducing the respondent burden but could lead to biased results if not all relevant respondents see all questions.
-
-#### Adequate Explanation of Methods
 
 - **Handling of Compensation Data**: Compensation data, which was optional, was provided by 48,026 respondents. Compensation were reported in local currencies and converted to USD using the exchange rate from June 2, 2023. High outlier Compensation were trimmed (less than 1% of data), suggesting robust handling of Compensation data to prevent skewing results.
 
