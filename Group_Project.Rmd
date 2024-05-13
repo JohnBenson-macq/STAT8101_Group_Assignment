@@ -37,6 +37,14 @@ The primary objective of this project is to conduct a detailed exploratory data 
 
 ** update objective ot be focused on compenestation and what impacts that 
 
+### Data Description 
+
+By collecting the voice of developers, the Stack Overflow Annual Developer Survey 2023 enables analysts, IT leaders, reporters and other developers to stay up to date with the latest trends and technologies that are shaping the industry. The extensive reach and depth of information provided by the survey not only helps and provides context in understanding where trends in technology are heading, but also offers key attributes that can potentially influence developer compensation. Through a thorough analysis of this rich dataset, we can gain a deeper understanding of the complex interplay between various variables, such as developer roles, skills, experience, and geographic location, that contribute to determining remuneration in the global tech industry.
+
+
+The rows within this dataset are representive of each respondent who filled out the survey and each column is representive of each question within the survey. As previously identified, there is a large number of missing values as respondants were unable to answer questions based on inability or branhcing of questions. These value have been dealt with xx as required by the objective xx. 
+
+
 ### Survey Methodology
 
 #### Key Principles
@@ -63,30 +71,40 @@ The primary objective of this project is to conduct a detailed exploratory data 
 
 - **Non-response**: 
 A variety of different forms of non-response occurs within this survey as a result of the questions composition, distribution methods and respondent locations. 
-- Non-repossession based on branching or skip-logic. Many questions are skipped based on the respondents answers to previous questions. This is done to streamline the survey, improve the relevance of questions and increase the specif information gathered on respondents. For example, job focused questions would only be visible to those who responded that they had a job, therefore resulting in non-response for all branching questions.
-- Non-response based on failure to respond when contacted.A number of participants that were emailed failed to respond to the survey request despite repeated outreaches.
+- Non-repossession based on branching or skip-logic: Many questions are skipped based on the respondents answers to previous questions. This is done to streamline the survey, improve the relevance of questions and increase the specif information gathered on respondents. For example, job focused questions would only be visible to those who responded that they had a job, therefore resulting in non-response for all branching questions.
+- Non-response based on failure to respond when contacted: A number of participants that were emailed, failed to respond to the survey request despite repeated outreaches.
 - The survey was conducted entirely in English resulting in the possibility of misinterpretation/misunderstanding of the questions asked. Given that the website operates wholly in English, however, the effect of language barrier non-response can be assumed to be minimal.
 - The survey was conducted solely in English, which could lead to potential misinterpretations or misunderstandings of the questions. However, since the website operates exclusively in English, the impact of non-response due to language barriers is expected to be minimal.
 \newline
-\newline
-How does the survey deﬁne non-response rate, and what are the non-response rates for the survey?
 \newline
 \newline
 The survey defined a non-response if either of the following criteria were met:
 - Respondent failed to complete an emailed survey
 - The respondent did not agree to the terms & conditions (Q120)
+\newline
+Non-resposne rates for The Stack Overflow Annual Developer Survey 2023:
+Of the 30,411 emailed surveys there were approximately 3,834 non-responses. Therefore, constituting 12.61% of the emailed surveys and 4.3% of the total sample. 
 
-Of the 30,411 emailed surveys there were approximately 3,834 non-responses constituting 12.61% of the emailed surveys and 4.3% of the total sample. 
-
-What methods are used to try to adjust for the non-response?
-
+Methods to adjust for the non-response:
 Non-respondents of the emailed survey received follow-up communications, including additional emails and messages, urging them to complete the survey. If they still failed to respond, a replacement participant was chosen from the same geographical area, specifically the same country.
 
 ### Data Analysis
 
-### Data Description 
-
-By collecting the voice of developers, the Stack Overflow Annual Developer Survey 2023 enables analysts, IT leaders, reporters and other developers to stay up to date with the latest trends and technologies that are shaping the industry. The extensive reach and depth of information provided by the survey not only helps and provides context in understanding where trends in technology are heading, but also offers key attributes that can potentially influence developer compensation. Through a thorough analysis of this rich dataset, we can gain a deeper understanding of the complex interplay between various variables, such as developer roles, skills, experience, and geographic location, that contribute to determining remuneration in the global tech industry.
 
 
-The rows within this dataset are representive of each respondent who filled out the survey and each column is representive of each question within the survey. As previously identified, there is a large number of missing values as respondants were unable to answer questions based on inability or branhcing of questions. These value have been dealt with xx as required by the objective xx. 
+### Discussion 
+
+
+
+
+
+### Conclsuion 
+
+
+
+
+
+
+### References 
+
+
