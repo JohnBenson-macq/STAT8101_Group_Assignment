@@ -88,6 +88,11 @@ Of the 30,411 emailed surveys there were approximately 3,834 non-responses. Ther
 Methods to adjust for the non-response:
 Non-respondents of the emailed survey received follow-up communications, including additional emails and messages, urging them to complete the survey. If they still failed to respond, a replacement participant was chosen from the same geographical area, specifically the same country.
 
+[FIND ARTICLES / ADDITIONAL INFO TO BACK UP THIS DECISION - VALIDATE ]
+[FIND SOME INFO ON HOW TO DEAL WITH NON-RESPOSNE, ESPECIALLY ON LIKE BRANCHING ]
+[RESEARCH ON STANDRDS FOR NON-RESPONSE]
+[TRY AND FIND OUT IF PEOPLE WERE TARGETTED BASED ON THEIR ACTIVITY LEVEL]
+
 ### Data Analysis
 
 
