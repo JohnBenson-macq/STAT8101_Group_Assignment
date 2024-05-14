@@ -95,6 +95,28 @@ Non-respondents of the emailed survey received follow-up communications, includi
 
 ### Data Analysis
 
+**data description**
+- of our data
+
+**Data Cleaning and manipulation**
+
+**EDA**
+
+**Feature Selection/ Data Curation**
+
+
+#### Our Implimentation
+**Histogram, wegiths and summary statistics of non categorical variable**
+- variable chosen: years coding
+
+
+
+**Two-way table and hypothesis test to explore association**
+- HIGHEST LEVEL OF EDUCATION AND COUNTRIES
+
+
+**regression to predict response**
+- WE PREDICT SALARY BASED ON ALL COVARIATES
 
 
 ### Discussion 
