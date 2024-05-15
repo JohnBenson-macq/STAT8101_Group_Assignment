@@ -99,7 +99,7 @@ Non-respondents of the emailed survey received follow-up communications, includi
 - of our data
 
 **Data Cleaning and manipulation**
-
+- talk about mice and what we have done
 **EDA**
 
 **Feature Selection/ Data Curation**
