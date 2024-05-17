@@ -1,0 +1,67 @@
+---
+title: "draft2"
+author: "Rohan Junaid Khan_47843276"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+df <- read.csv('complete_data.csv', header = TRUE)
+df
+```
+
+```{r}
+### Education lavels
+df[,2:9]
+```
+
+```{r}
+### Developer type
+df[,10:42]
+```
+
+```{r}
+dim(df)
+```
+
+
+
+```{r}
+# converting to factors
+bachelors <- as.factor(df$Bachelors_degree__B_A___B_S___B_Eng___etc__)
+data_scientist <- as.factor(df$Data_scientist_or_machine_learning_specialist)
+```
+
+```{r}
+t <- table(bachelors, data_scientist)
+t
+proportions(t,2)
+chisq.test(t)
+```
+```{r}
+masters <- as.factor(df$Masters_degree__M_A___M_S___M_Eng___MBA__etc__)
+```
+
+```{r}
+t2 <- table(masters, data_scientist)
+t2
+proportions(t2,2)
+chisq.test(t2)
+```
+
+
+
+```{r}
+numeric_data <- df[, sapply(df, is.numeric)]
+
+# Generate the correlation matrix
+cor_matrix <- cor(numeric_data)
+
+# Print the correlation matrix
+print(cor_matrix)
+```
+
