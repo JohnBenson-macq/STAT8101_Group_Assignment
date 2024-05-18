@@ -97,10 +97,17 @@ Non-respondents of the emailed survey received follow-up communications, includi
 
 **data description**
 - of our data
+- our methods used and why we have chosen the variables we have 
 
 **Data Cleaning and manipulation**
 - talk about mice and what we have done
+- put in the wiggly lines and show those to talk to what we have done
+
+
 **EDA**
+- show some graphs here
+- plot variables and show outliers
+-  
 
 **Feature Selection/ Data Curation**
 
@@ -113,14 +120,23 @@ Non-respondents of the emailed survey received follow-up communications, includi
 
 **Two-way table and hypothesis test to explore association**
 - HIGHEST LEVEL OF EDUCATION AND COUNTRIES
-
+- include graphs
+- CI tests, ect
 
 **regression to predict response**
 - WE PREDICT SALARY BASED ON ALL COVARIATES
+- run standard linear regression (then check log) -> see what comes out best
+- include grpahs here
 
 
 ### Discussion 
 
+#### summaries of results
+
+#### sucesses
+
+
+#### limitations
 
 
 
