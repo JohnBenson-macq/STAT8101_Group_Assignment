@@ -1,9 +1,20 @@
+# install.packages("MTE")
+# install.packages("Matrix")
+
 library(MASS)
 library(mice)
 library(ggplot2)
 library(dplyr)
 library(broom)  
 library(boot)
+library(parallel)
+library(glmnet)
+library(dplyr)
+library(MTE)
+library(nloptr)
+library(numDeriv)
+
+set.seed(123)  # For reproducibility
 
 imputed_data <- readRDS("../STAT8101/datasets/imputed_data.RDS")
 data <- read.csv("../STAT8101/datasets/so_survey_results_public.csv")
@@ -27,61 +38,70 @@ gc()
 dependent <- complete_data$ConvertedCompYearly
 predictors <- complete_data[, setdiff(names(complete_data), "ConvertedCompYearly")]
 
-# Perform PCA on the predictors
-pca_result <- prcomp(predictors, scale. = TRUE)  # Standardize variables
+X <- as.matrix(predictors)
+y <- as.vector(dependent)
+y_log <- log(y_sub)
 
-# Examine the summary of PCA to decide how many components to retain
-print(summary(pca_result))
+data <- data.frame(
+  Value = c(y, y_log),
+  Type = c(rep("Original", length(y)), rep("Log-transformed", length(y_log)))
+)
 
-# Scree plot to visualize variance explained by each principal component
-screeplot(pca_result, type = "lines", main = "Scree Plot")
+boxplot(Value ~ Type, data = data,
+        main = "Boxplot of Developer Compensation",
+        ylab = "Compensation (USD)",
+        col = c("lightblue", "lightgreen"),
+        border = "black",
+        outline = TRUE) 
 
-# We need to slice out some otherwise the regression fails
-cum_var_explained <- cumsum(pca_result$sdev^2 / sum(pca_result$sdev^2))
-num_components <- max(which(cum_var_explained < 0.9))
-pc_predictors <- pca_result$x[, 1:num_components]
+# Perform cross-validation for lambda selection
+cv_lasso <- cv.glmnet(X_sub, y_log, alpha = 1)  # alpha = 1 for Lasso
+plot(cv_lasso)
 
-# Create a data frame to include PC predictors and the dependent variable
-pc_data <- data.frame(pc_predictors, ConvertedCompYearly = dependent)
+# select best lambda 
+best_lambda <- cv_lasso$lambda.min
+final_model <- glmnet(X_sub, y_log, alpha = 1, lambda = best_lambda)
+coefficients_final <- coef(final_model, s = "lambda.min")
 
-rm(list = c("complete_data", "predictors"))
-gc()
+# Make predictions
+predictions <- predict(final_model, newx = X_sub, s = "lambda.min")
 
-# Run Huber regression on the PC data
-formula <- as.formula(paste("ConvertedCompYearly ~", paste(names(pc_data)[-which(names(pc_data) == "ConvertedCompYearly")], collapse = " + ")))
-huber_model <- rlm(formula, data = pc_data, psi = psi.huber)
+# Convert predictions back to the original scales
+predictions_original_scale <- exp(predictions)
 
-summary(huber_model)
+# Mean Squared Error
+mse <- mean((exp(y_log) - predictions_original_scale)^2)
+cat("Mean Squared Error: ", mse, "\n")
 
-# Coefficients from the Huber model
-huber_coeffs <- coef(huber_model)
+# Plot residuals and control for outliers
+residuals <- exp(y_log) - predictions_original_scale
+mean_residuals <- mean(residuals)
+sd_residuals <- sd(residuals)
+cutoff_residuals <- mean_residuals + 3 * sd_residuals  # Upper limit at 3 standard deviations
+residuals_capped <- ifelse(residuals > cutoff_residuals, cutoff_residuals, residuals)
 
-# Calculate the effective contributions
-# Each row in loadings corresponds to an original predictor,
-# and each column corresponds to a principal component.
-# huber_coeffs will be multiplied accordingly to map these contributions back to the original predictors.
-loadings <- pca_result$rotation[, 1:num_components]
-effective_contributions <- loadings %*% diag(huber_coeffs[-1])  # Assuming first coeff is the intercept
+# Residuals
+plot(residuals_capped, main = "Residuals", xlab = "Index", ylab = "Residuals")
+abline(h = 0, col = "red")
 
-# Sum contributions across components to get the total contribution of each predictor
-total_contributions <- apply(effective_contributions, 1, sum)
-predictor_contributions <- data.frame(Predictor = rownames(loadings), Contribution = total_contributions)
+# Predicted vs. residuals
+plot(predictions_original_scale, residuals_capped, main = "Predicted vs Residuals", xlab = "Predicted Values", ylab = "Residuals")
+abline(h = 0, col = "red")
 
-predictor_contributions <- predictor_contributions[order(abs(predictor_contributions$Contribution), decreasing = TRUE), ]
-print(predictor_contributions)
+# Calculate R-squared
+ss_total <- sum((exp(y_log) - mean(exp(y_log)))^2)
+ss_resid <- sum((exp(y_log) - predictions_original_scale)^2)
+r_squared <- 1 - ss_resid/ss_total
+cat("R-squared: ", r_squared, "\n")
 
-# Function to perform Huber regression and extract coefficients
-huber_coef <- function(data, indices) {
-  sample_data <- data[indices, ]  # resampling with replacement
-  model <- rlm(formula, data = sample_data, psi = psi.huber)
-  coef(model)
-}
+# Extract coefficients
+coef_matrix <- coef(final_model, s = "lambda.min")  
+coefficients_vector <- as.vector(coef_matrix)  
+coefficients_df <- data.frame(Coefficient = coefficients_vector[-1])  # Remove intercept
+rownames(coefficients_df) <- colnames(X_sub)
+coefficients_df$abs_coef <- abs(coefficients_df$Coefficient)
+coefficients_df_sorted <- coefficients_df[order(-coefficients_df$abs_coef), ]
 
-# Bootstrapping
-set.seed(123)  # for reproducibility
-bootstrap_results <- boot(data = pc_data, statistic = huber_coef, R = 1000)
-
-# Calculating confidence intervals
-boot_ci <- boot.ci(bootstrap_results, type = c("bca"))
-
-print(boot_ci)
+# Select top 10 predictors
+top_predictors <- head(coefficients_df_sorted, 10)
+print(top_predictors)

@@ -54,7 +54,7 @@ chi_test <- chisq.test(contingency_table)
 
 print(chi_test)
 
-# Check ci-squared assumptions 
+# Check chi-squared assumptions 
 expected_frequencies <- chi_test$expected
 
 # Find cells with expected frequencies less than 5

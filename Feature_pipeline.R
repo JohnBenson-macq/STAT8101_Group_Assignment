@@ -95,7 +95,7 @@ names(predictor_data) <- gsub("Specialist_", "Spec_", names(predictor_data))
 names(predictor_data) <- make.names(names(predictor_data))
 
 # Setting methods for MICE
-# 'logreg' for binary variables, predictive mean matching for numeric
+# 'logreg' for binary variables, predictive mean matching, 'pmm', for numeric
 meth <- rep("logreg", ncol(predictor_data))
 meth[names(predictor_data) == "YearsCode"] <- "pmm"
 
