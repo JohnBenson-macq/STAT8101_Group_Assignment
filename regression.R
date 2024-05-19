@@ -40,7 +40,7 @@ predictors <- complete_data[, setdiff(names(complete_data), "ConvertedCompYearly
 
 X <- as.matrix(predictors)
 y <- as.vector(dependent)
-y_log <- log(y_sub)
+y_log <- log(y)
 
 data <- data.frame(
   Value = c(y, y_log),
@@ -55,16 +55,16 @@ boxplot(Value ~ Type, data = data,
         outline = TRUE) 
 
 # Perform cross-validation for lambda selection
-cv_lasso <- cv.glmnet(X_sub, y_log, alpha = 1)  # alpha = 1 for Lasso
+cv_lasso <- cv.glmnet(X, y_log, alpha = 1)  # alpha = 1 for Lasso
 plot(cv_lasso)
 
 # select best lambda 
 best_lambda <- cv_lasso$lambda.min
-final_model <- glmnet(X_sub, y_log, alpha = 1, lambda = best_lambda)
+final_model <- glmnet(X, y_log, alpha = 1, lambda = best_lambda)
 coefficients_final <- coef(final_model, s = "lambda.min")
 
 # Make predictions
-predictions <- predict(final_model, newx = X_sub, s = "lambda.min")
+predictions <- predict(final_model, newx = X, s = "lambda.min")
 
 # Convert predictions back to the original scales
 predictions_original_scale <- exp(predictions)
@@ -98,7 +98,7 @@ cat("R-squared: ", r_squared, "\n")
 coef_matrix <- coef(final_model, s = "lambda.min")  
 coefficients_vector <- as.vector(coef_matrix)  
 coefficients_df <- data.frame(Coefficient = coefficients_vector[-1])  # Remove intercept
-rownames(coefficients_df) <- colnames(X_sub)
+rownames(coefficients_df) <- colnames(X)
 coefficients_df$abs_coef <- abs(coefficients_df$Coefficient)
 coefficients_df_sorted <- coefficients_df[order(-coefficients_df$abs_coef), ]
 
