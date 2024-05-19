@@ -42,7 +42,7 @@ The primary objective of this project is to conduct a detailed exploratory data 
 By collecting the voice of developers, the Stack Overflow Annual Developer Survey 2023 enables analysts, IT leaders, reporters and other developers to stay up to date with the latest trends and technologies that are shaping the industry. The extensive reach and depth of information provided by the survey not only helps and provides context in understanding where trends in technology are heading, but also offers key attributes that can potentially influence developer compensation. Through a thorough analysis of this rich dataset, we can gain a deeper understanding of the complex interplay between various variables, such as developer roles, skills, experience, and geographic location, that contribute to determining remuneration in the global tech industry.
 
 
-The rows within this dataset are representive of each respondent who filled out the survey and each column is representive of each question within the survey. As previously identified, there is a large number of missing values as respondants were unable to answer questions based on inability or branhcing of questions. These value have been dealt with xx as required by the objective xx. 
+The rows within this data set are representative of each respondent who filled out the survey and each column is representative of each question within the survey. As previously identified, there is a large number of missing values as respondents were unable to answer questions based on inability or branching of questions. These value have been dealt with xx as required by the objective xx. 
 
 
 ### Survey Methodology
@@ -82,13 +82,36 @@ The survey defined a non-response if either of the following criteria were met:
 - Respondent failed to complete an emailed survey
 - The respondent did not agree to the terms & conditions (Q120)
 \newline
-Non-resposne rates for The Stack Overflow Annual Developer Survey 2023:
-Of the 30,411 emailed surveys there were approximately 3,834 non-responses. Therefore, constituting 12.61% of the emailed surveys and 4.3% of the total sample. 
+Non-response rates for The Stack Overflow Annual Developer Survey 2023:
+40,000 surveys were emailed out to Stack Overflow uses weighted by country and targeted on the most active users that had not already answered. Of these 27,414 were completed with 12,586 non-respondents, resulting in a non-response rate of 31.47%. The unanswered surveys were reissued, using oversampling methodologies to a new sample (n=18,240) that followed the same weighted criteria. Of the 18,240 survey that were reissued there were 3,834 respondents and 14,406 non-respondents resulting in a non-response rate of 78.98%. In total, the emailed survey received 31,248 responses against an initial sample size of 40,000 constituting a non-response rate of 21.88%. Combining the total number of emailed surveys i.e. initial sample + secondary sample = $40,000 + 18,240= 58,240$, however, a total non-response rate was calculated at 46.35% 
 
 Methods to adjust for the non-response:
-Non-respondents of the emailed survey received follow-up communications, including additional emails and messages, urging them to complete the survey. If they still failed to respond, a replacement participant was chosen from the same geographical area, specifically the same country.
+Targeted follow up strategies by way of follow-up communications were employed to encourage non-respondents to complete the survey.(Kelly et al., 2013) This included emailing and messaging the non-respondents. After a set time had elapsed, the number of non-respondents was redetermined along with aggregated statistic, specifically geographical location (country)(Corry et al., 2017). An additional round of emailed surveys targeting individuals with the same country characteristics as the non-respondents was conducted along with an oversampling strategy that had a sample size inversely proportional to the initial non-response rate. (Pickery & Carton, 2008)
 
 [FIND ARTICLES / ADDITIONAL INFO TO BACK UP THIS DECISION - VALIDATE ]
+\newline
+[REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
+\newline
+Corry N, Williams C, Battaglia M, McMaster H, Stander V (2017)
+\newline
+*Assessing and adjusting for non-response in the Millennium Cohort Family Study*
+\newline
+https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-017-0294-8
+\newline
+\newline
+Kelly K, CLARK B, Brown V,Sitzia J (2003) 
+\newline
+*Good practice in the conduct and reporting of survey research*
+\newline
+https://academic.oup.com/intqhc/article/15/3/261/1856193#
+\newline
+\newline
+Pickery J, Carton A (2008)
+\newline
+*Oversampling in Relation to Differential Regional Response Rates*
+\newline
+https://ojs.ub.uni-konstanz.de/srm/article/view/656
+
 [FIND SOME INFO ON HOW TO DEAL WITH NON-RESPOSNE, ESPECIALLY ON LIKE BRANCHING ]
 [RESEARCH ON STANDRDS FOR NON-RESPONSE]
 [TRY AND FIND OUT IF PEOPLE WERE TARGETTED BASED ON THEIR ACTIVITY LEVEL]
