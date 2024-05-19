@@ -5,7 +5,7 @@ complete_data <- complete(imputed_data, 1)
 
 raw_data <- read.csv("../STAT8101/datasets/so_survey_results_public.csv") 
 
-clean_and_filter_data <- function(raw_data, complete_data, column_name) {
+clean_and_filter_data <- function(data, complete_data, column_name) {
   # Extract unique values and clean them
   unique_values <- unique(data[[column_name]])
   unique_values <- as.list(na.omit(unique_values))
