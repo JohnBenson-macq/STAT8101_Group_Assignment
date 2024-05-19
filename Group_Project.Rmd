@@ -134,7 +134,7 @@ outlined details of the respondents including age, employment status, residing c
 **EDA**
 - show some graphs here
 - plot variables and show outliers
--  
+-  show hist of comp vairbales and log and talk to why we need log trasnformation
 
 **Feature Selection/ Data Curation**
 
@@ -167,7 +167,9 @@ outlined details of the respondents including age, employment status, residing c
 
 
 #### limitations
-
+- this is not a fully randomised survey, the population itself is thsoe who use stack overflow
+- on the topic of disclosing salary, people may not be comoftoable to share given the nature of who is requesting the survey. stack overflow has soem details relating to you like name, email
+- only two rouds of sending out the survey 
 
 
 
