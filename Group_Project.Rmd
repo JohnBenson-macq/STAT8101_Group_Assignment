@@ -120,6 +120,9 @@ https://ojs.ub.uni-konstanz.de/srm/article/view/656
 
 **data description**
 - of our data
+The initial survey data consisted of 84 fields and 89,185 observations. The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI and Stack Overflow metrics. The respondent characteristics
+outlined details of the respondents including age, employment status, residing country, years coding and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages they know and use, any databases they use, frameworks and platforms they may use and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents use of AI and it's effect on their programming. Finally, data was collected around the respondents use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore several questions were asked using a Likert scale to gauge respondents views on the design and usefulness of the site for their needs.
+
 - our methods used and why we have chosen the variables we have 
 - explain our N is large enough that we do not need to use the survey package
 
