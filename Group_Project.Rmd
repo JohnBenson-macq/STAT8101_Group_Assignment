@@ -33,9 +33,8 @@ The tech industry is characterized by rapid advancements and constant change, ma
 
 #### Aim
 
-The primary objective of this project is to conduct a detailed exploratory data analysis (EDA) of the Stack Overflow Annual Developer Survey 2023, focusing on understanding the factors that affect developer compensation across the world. We aim to use 'compensation' as the continuous response variable in our regression models to predict compensation based on various predictors such as geographic location, experience, technology used, and role in the industry. Additionally, we aim to investigate how AI/ML technologies are integrated into developers' work processes and consider their influence on job satisfaction and overall compensation. By analysing these, we plan to discover insights into the career paths of developers and the evolving technology landscape, providing valuable information for stakeholders in the tech industry. This analysis will highlight potential fields for the developer community and identify which variables are more influential.
+The primary objective of this project is to conduct a detailed exploratory data analysis (EDA) of the Stack Overflow Annual Developer Survey 2023, focusing on understanding the factors that affect developer compensation across the world. We aim to use 'compensation' as the continuous response variable in our regression models to predict compensation based on various predictors such as organisation size, education level, work experience, and role in the industry (developer type). By analysing these, we plan to discover insights into the career paths of developers and the evolving technology landscape, providing valuable information for stakeholders in the tech industry. This analysis will highlight potential fields for the developer community and identify which variables are more influential.
 
-** update objective ot be focused on compenestation and what impacts that 
 
 ### Data Description 
 
@@ -52,6 +51,11 @@ The rows within this data set are representative of each respondent who filled o
 - **Scope and Scale**: The survey reached 89,184 qualified software developers from 185 countries, indicating a broad global representation. The qualification for analysis was based on respondents' consent to share their data and completion of all required questions. About 2,000 responses were excluded due to incomplete data.
 
 - **Duration and Timing**: The survey was conducted from May 8, 2023, to May 19, 2023. The median response time was nearly 18 minutes, which increased from the previous year due to the inclusion of additional questions this year.
+
+- **Survey Design**: 
+
+
+- **Stratification and Clustering**: 
 
 #### Evaluation
 
@@ -71,6 +75,7 @@ The rows within this data set are representative of each respondent who filled o
 
 - **Non-response**: 
 A variety of different forms of non-response occurs within this survey as a result of the questions composition, distribution methods and respondent locations. 
+
 - Non-repossession based on branching or skip-logic: Many questions are skipped based on the respondents answers to previous questions. This is done to streamline the survey, improve the relevance of questions and increase the specif information gathered on respondents. For example, job focused questions would only be visible to those who responded that they had a job, therefore resulting in non-response for all branching questions.
 - Non-response based on failure to respond when contacted: A number of participants that were emailed, failed to respond to the survey request despite repeated outreaches.
 - The survey was conducted entirely in English resulting in the possibility of misinterpretation/misunderstanding of the questions asked. Given that the website operates wholly in English, however, the effect of language barrier non-response can be assumed to be minimal.
@@ -119,8 +124,10 @@ https://ojs.ub.uni-konstanz.de/srm/article/view/656
 ### Data Analysis
 
 **Data description**
-The initial survey data consisted of 84 fields and 89,185 observations. The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI and Stack Overflow metrics. The respondent characteristics
+The initial survey data consisted of 84 fields and 89,185 observations. Given the size of this survey 
+The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI and Stack Overflow metrics. The respondent characteristics
 outlined details of the respondents including age, employment status, residing country, years coding and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages they know and use, any databases they use, frameworks and platforms they may use and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents use of AI and it's effect on their programming. Finally, data was collected around the respondents use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore several questions were asked using a Likert scale to gauge respondents views on the design and usefulness of the site for their needs.
+
 
 - our methods used and why we have chosen the variables we have 
 - explain our N is large enough that we do not need to use the survey package
@@ -139,21 +146,13 @@ Numeric Variables
 - convertedcomp_log: Given the compensation outliers presenet within the dataset, a log transofrmation has been applied to the variable of interest 'ConvertedCompYearly' resultign in an approxiamtly normal distribution. 
 ![Alt text](Numerical_variables_hist.png){width=50% height=50%}
 
-
-
-
+Further visualations of missing values for key variables of interest:
+- There are a random missing values across 'YearsCode' and 'YearsCodePro'.
+- Missing values are present across all combinations of 'Employment' types.
+- A singular 'Employment' category has a large number of missing values, this is the Non-employed category as those without emplyment have no compensation. 
+- It is evident that there is a high amount of non-response questions focuses on compensation, with a number of 'Employment' categories having only missing responses variables. This is on account of the high number of unqiue 'Employment' combinations given the multi-select string nature of the questions and the sensitivity of providing compensation information. 
 ![Alt text](years_code_vs_pro_MV.png){width=50% height=50%}
-
-![Alt text](comp_log_v_employment_MV.png){width=50% height=50%}
-
-
 ![Alt text](ConvertedComp_v_employment_MV.png){width=50% height=50%}
-
-
-
-![Alt text](WorkExp_v_employment_MV.png){width=50% height=50%}
-
-
 
 
 UpSet plots have been used to visualise the intersections of missing data within our dataset, given several characteristics and attribute values can be encoded simultaneously (Lex et al, 2014). This plots indecates that there is a high frequency of interception across all variables relating to 'AI', and miminal frequency for interceptions of various combintionas of 'AI' attributes.
