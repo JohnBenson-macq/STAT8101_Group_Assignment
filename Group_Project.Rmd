@@ -136,7 +136,8 @@ To handle missing values, we employed Multiple Imputation by Chained Equations (
 
 The MICE algorithm operates by iteratively imputing missing values in each variable based on the observed values of other variables. By generating multiple imputed datasets, MICE accounts for the uncertainty associated with missing data, providing a more robust and reliable basis for subsequent statistical analyses.
 
-- put in the wiggly lines and show those to talk to what we have done
+![Alt text](wiggle_plots.png){width=50% height=50%}
+The plot shows the mean (left) and standard deviation (right) of the imputed values only. We can see the streams intermingling indicating convergence of the imputed values. 
 
 [REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
 

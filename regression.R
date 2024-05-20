@@ -48,7 +48,7 @@ data <- data.frame(
 )
 
 boxplot(Value ~ Type, data = data,
-        main = "Boxplot of Developer Compensation",
+        main = "Developer Compensation comparison of skewness",
         ylab = "Compensation (USD)",
         col = c("lightblue", "lightgreen"),
         border = "black",
@@ -56,7 +56,26 @@ boxplot(Value ~ Type, data = data,
 
 # Perform cross-validation for lambda selection
 cv_lasso <- cv.glmnet(X, y_log, alpha = 1)  # alpha = 1 for Lasso
-plot(cv_lasso)
+
+# Extract the lambda values, MSE, and the standard errors
+lambda <- cv_lasso$lambda
+log_lambda <- log(lambda)
+mse <- cv_lasso$cvm
+std_error <- cv_lasso$cvsd
+
+# Create a data frame for plotting
+data <- data.frame(log_lambda, mse, std_error)
+
+# Plot using ggplot2
+plot <- ggplot(data, aes(x = log_lambda, y = mse)) +
+  geom_line() +  # Plot the line connecting MSE points
+  geom_point() +  # Add points for each lambda
+  geom_errorbar(aes(ymin = mse - std_error, ymax = mse + std_error), width = .1) +
+  labs(x = "Log(Lambda)", y = "Mean Squared Error", title = "Cross-Validation Results for LASSO Regression") +
+  theme_minimal()  # Use a minimal theme for cleaner presentation
+
+# Print the plot
+print(plot)
 
 # select best lambda 
 best_lambda <- cv_lasso$lambda.min
