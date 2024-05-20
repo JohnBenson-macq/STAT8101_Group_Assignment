@@ -148,6 +148,9 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 - plot variables and show outliers
 -  show hist of comp vairbales and log and talk to why we need log trasnformation
 
+
+![Alt text](years code vs pro MV.png){width=50% height=50%}
+
 **Feature Selection/ Data Curation**
 
 
