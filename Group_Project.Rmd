@@ -118,13 +118,50 @@ https://ojs.ub.uni-konstanz.de/srm/article/view/656
 
 ### Data Analysis
 
-**data description**
-- of our data
+**Data description**
 The initial survey data consisted of 84 fields and 89,185 observations. The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI and Stack Overflow metrics. The respondent characteristics
 outlined details of the respondents including age, employment status, residing country, years coding and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages they know and use, any databases they use, frameworks and platforms they may use and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents use of AI and it's effect on their programming. Finally, data was collected around the respondents use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore several questions were asked using a Likert scale to gauge respondents views on the design and usefulness of the site for their needs.
 
 - our methods used and why we have chosen the variables we have 
 - explain our N is large enough that we do not need to use the survey package
+
+
+**EDA**
+
+A summary of our data indicates that only 4 out of the 84 fields are numeric variables, while the remaining 80 variables are catorgosied as chacters as they are comprised of string responses. It is evident that a number of missing values exist within this dataset as indecates by the number of 'NA's' for the numerical observations.
+![Alt text](Missing_data.png){width=50% height=50%}
+
+Numeric Variables
+- CompTotal: Extremely right-skewed given outliers with extermly high compensation values.
+- ConvertedCompYearly: Extremely right-skewed given outliers with extermly high compensation values.
+- ResponseId: This variable identifies each observation and is not a response from participants.
+- WorkExp: Right-skewed, indicating the decreasing frequency of work experience within the respondants. 
+- convertedcomp_log: Given the compensation outliers presenet within the dataset, a log transofrmation has been applied to the variable of interest 'ConvertedCompYearly' resultign in an approxiamtly normal distribution. 
+![Alt text](Numerical_variables_hist.png){width=50% height=50%}
+
+
+
+
+![Alt text](years_code_vs_pro_MV.png){width=50% height=50%}
+
+![Alt text](comp_log_v_employment_MV.png){width=50% height=50%}
+
+
+![Alt text](ConvertedComp_v_employment_MV.png){width=50% height=50%}
+
+
+
+![Alt text](WorkExp_v_employment_MV.png){width=50% height=50%}
+
+
+
+
+UpSet plots have been used to visualise the intersections of missing data within our dataset, given several characteristics and attribute values can be encoded simultaneously (Lex et al, 2014). This plots indecates that there is a high frequency of interception across all variables relating to 'AI', and miminal frequency for interceptions of various combintionas of 'AI' attributes.
+![Alt text](Missing_data_2.png){width=50% height=50%}
+
+
+Lex, A., Gehlenborg, N., Strobelt, H., Vuillemot, R., & Pfister, H. (2014). UpSet: Visualization of Intersecting Sets. IEEE transactions on visualization and computer graphics, 20(12), 1983–1992. https://doi.org/10.1109/TVCG.2014.2346248
+
 
 **Data Cleaning and manipulation**
 
@@ -142,26 +179,6 @@ The plot shows the mean (left) and standard deviation (right) of the imputed val
 [REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
 
 van Buuren S. (2007). Multiple imputation of discrete and continuous data by fully conditional specification. Statistical methods in medical research, 16(3), 219–242. https://doi.org/10.1177/0962280206074463
-
-**EDA**
-- show some graphs here
-- plot variables and show outliers
--  show hist of comp vairbales and log and talk to why we need log trasnformation
-
-
-![Alt text](years_code_vs_pro_MV.png){width=50% height=50%}
-
-![Alt text](comp_log_v_employment_MV.png){width=50% height=50%}
-
-
-![Alt text](ConvertedComp_v_employment_MV.png){width=50% height=50%}
-
-
-
-![Alt text](WorkExp_v_employment_MV.png){width=50% height=50%}
-
-![Alt text](Numerical_variables_hist.png){width=50% height=50%}
-![Alt text](Missing_data.png){width=50% height=50%}
 
 
 
