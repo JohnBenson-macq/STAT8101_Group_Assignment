@@ -18,9 +18,33 @@ geometry: "left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Declaration 
+
+We declare that the following project is evidence our own work that has not been submitted previously for academic credit. All group members, who have all actively contributed, submit this assignment as an original piece of work. 
+
+- Conceptualisation, X.X. and Y.Y.; 
+- Methodology, X.X.; 
+- Software, X.X.; 
+- Validation, X.X., Y.Y. and Z.Z.; 
+- Formal Analysis, X.X.; 
+- Investigation, X.X.; 
+- Resources, X.X.; 
+- Data Curation, X.X.; 
+- Writing – Original Draft Preparation, X.X.; 
+- Writing – Review & Editing, X.X.; 
+- Visualisation, X.X.
+
+
+
 ### Abstract 
 
+
+
+
 ### Contents
+
+
+
 
 ### Introduction 
 
@@ -221,9 +245,10 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 
 ### Conclsuion 
 
+The Stack Overflow Developer Survey for 2023 has provided valuable insights into the experiences of developers across the world. 
 
 
-
+Insights from this survey may influence the future of developers as they grow, learn and adjsut to new trends and technolgoies as the industry continues to rapidly evolve. 
 
 
 ### References 
