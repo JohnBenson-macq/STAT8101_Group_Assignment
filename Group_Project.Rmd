@@ -149,7 +149,7 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 -  show hist of comp vairbales and log and talk to why we need log trasnformation
 
 
-![Alt text](years code vs pro MV.png){width=50% height=50%}
+![Alt text](years_code_vs_pro_MV.png){width=50% height=50%}
 
 **Feature Selection/ Data Curation**
 
