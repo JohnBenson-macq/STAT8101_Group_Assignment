@@ -127,9 +127,20 @@ outlined details of the respondents including age, employment status, residing c
 - explain our N is large enough that we do not need to use the survey package
 
 **Data Cleaning and manipulation**
-- talk about mice and what we have done
+
+To clean our data, we first began by subsampling the dataset to include only valid responses to *ConvertedCompYearly*. This decision was made as it maintains a large dataset (48,019 responses) while ensuring data integrity. Additionally due to the highly skewed nature of the data, and *ConvertedCompYearly* being the variable of interest any self-imputation would have been unreliable.
+
+In order to prepare the data for imputation and subsequent regression analyses, several variables required augmentation. The *LanguageHaveWorkedWith* and *DatabaseHaveWorkedWith* variables contained multiple responses per respondent, indicating every language or database they had worked with. These variables were separated and encoded, along with *EdLevel*, *DevType*, and *OrgSize*, to create binary columns representing each unique response.
+
+To handle missing values, we employed Multiple Imputation by Chained Equations (MICE). Five iterations were selected as it gave a balance between computational efficiency and convergence of the algorithm. For the encoded binary variables, the logistic regression method ('logreg') was utilized, for the numeric variable *YearsCode* was imputed using predictive mean matching ('pmm'), this method preserves the distributional properties of the original data (van Buuren, 2007).
+
+The MICE algorithm operates by iteratively imputing missing values in each variable based on the observed values of other variables. By generating multiple imputed datasets, MICE accounts for the uncertainty associated with missing data, providing a more robust and reliable basis for subsequent statistical analyses.
+
 - put in the wiggly lines and show those to talk to what we have done
 
+[REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
+
+van Buuren S. (2007). Multiple imputation of discrete and continuous data by fully conditional specification. Statistical methods in medical research, 16(3), 219–242. https://doi.org/10.1177/0962280206074463
 
 **EDA**
 - show some graphs here
