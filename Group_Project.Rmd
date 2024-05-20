@@ -151,6 +151,21 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 
 ![Alt text](years_code_vs_pro_MV.png){width=50% height=50%}
 
+![Alt text](comp_log_v_employment_MV.png){width=50% height=50%}
+
+
+![Alt text](ConvertedComp_v_employment_MV.png){width=50% height=50%}
+
+
+
+![Alt text](WorkExp_v_employment_MV.png){width=50% height=50%}
+
+![Alt text](Numerical_variables_hist.png){width=50% height=50%}
+![Alt text](Missing_data.png){width=50% height=50%}
+
+
+
+
 **Feature Selection/ Data Curation**
 
 
