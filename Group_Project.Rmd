@@ -38,7 +38,11 @@ We declare that the following project is evidence our own work that has not been
 
 ### Abstract 
 
+This project conducts a comprehensive exploratory data analysis (EDA) of the "Stack Overflow Annual Developer Survey 2023," collecting responses from more than 90,000 developers worldwide. The main aim is to investigate the factors affecting the compensation of developers using various selected determinants.
 
+Our analysis demonstrates important information about developer compensations by exploring the impact of experience, education level, and technological expertise. In conducting my analysis, we used regression models, leveraging the survey's detailed classification and clustering information to calculate the standard errors of the survey estimates accurately. We used graphs to evaluate the relationships between various categorical variables. We detailed our findings and conducted hypothesis testing to evaluate the relationships. Additionally, we addressed nonresponse issues by using multiple imputation techniques to address missing data and ensure robustness in our findings.
+
+This analysis provides insight into compensation dynamics within developers worldwide by addressing critical factors affecting yearly compensation.
 
 
 ### Contents
