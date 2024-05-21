@@ -44,9 +44,6 @@ Our analysis demonstrates important information about developer compensations by
 
 This analysis provides insight into compensation dynamics within developers worldwide by addressing critical factors affecting yearly compensation.
 
-
-### Contents
-
 ### Contents
 
 1. **Declaration**
@@ -85,7 +82,6 @@ This analysis provides insight into compensation dynamics within developers worl
 8. **Conclusion**
 9. **References**
 10. **Appendices**
-
 
 
 ### Introduction 
