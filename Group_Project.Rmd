@@ -277,9 +277,13 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 
 
 #### limitations
-- this is not a fully randomised survey, the population itself is thsoe who use stack overflow
-- on the topic of disclosing salary, people may not be comoftoable to share given the nature of who is requesting the survey. stack overflow has soem details relating to you like name, email
-- only two rouds of sending out the survey 
+Although the research is comprehensive and informative, it also comes with some limitations that should be considered when interpreting the results. Firstly, the survey is not fully randomized; it mostly targets users who are active on Stack Overflow. This method of surveying through Stack Overflow's own channels, such as onsite messaging, blog posts, and emails, can be limiting. Additionally, only two rounds of survey sending may include a limited variety of respondents.
+
+Another important consideration is that the salary question was optional, and 48,026 respondents provided salary data. This means that nearly half of the participants chose not to give this information. Different factors can lead this, such as the sensitivity of salary data in some countries and cultures, or individuals not feeling comfortable sharing their earnings, especially if they are dissatisfied with them.
+
+Data privacy and security are also critical concerns. Due to worries about declaring sensitive information, participants may hesitate to share detailed personal data. The sensitivity of the information, the people who have or can access the information, and the security solutions can be concepts that stop people. In today's digital world, concerns about personal information breaches can significantly affect participation rates.
+
+To ensure data consistency, salary data provided by the participant was converted to US dollars using the exchange rate on June 2, 2023. However, this conversion may lead to biases. Economic conditions can differ between countries, so an individual earning a good salary by their country's standards might fall into a different income category after conversion to USD. This could lead to incorrect findings when making country-based inferences.
 
 
 
