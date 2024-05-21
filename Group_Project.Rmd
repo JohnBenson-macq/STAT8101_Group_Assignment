@@ -115,9 +115,6 @@ The rows within this data set are representative of each respondent who filled o
 - **Duration and Timing**: The survey was conducted from May 8, 2023, to May 19, 2023. The median response time was nearly 18 minutes, which increased from the previous year due to the inclusion of additional questions this year.
 
 #### Survey Design
-- **Survey Design**: 
-
-
 - **Stratification and Clustering**: 
 - was not an SRS, there was stratifcation but not clsutering (from survey desing)
 - 
@@ -279,6 +276,8 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 
 
 #### Sucesses
+- No convergence
+- Successful implementation of mice algorithm 
 
 
 #### limitations
