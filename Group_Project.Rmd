@@ -185,7 +185,7 @@ https://ojs.ub.uni-konstanz.de/srm/article/view/656
 
 ### Data Analysis
 
-**Data description**
+**Data Description**
 The initial survey data consisted of 84 fields and 89,185 observations. 
 The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI and Stack Overflow metrics. The respondent characteristics
 outlined details of the respondents including age, employment status, residing country, years coding and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages they know and use, any databases they use, frameworks and platforms they may use and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents use of AI and it's effect on their programming. Finally, data was collected around the respondents use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore several questions were asked using a Likert scale to gauge respondents views on the design and usefulness of the site for their needs.
@@ -197,7 +197,7 @@ In constructing out regression model we selected predictor variables that were l
 [Sources]
 Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied Survey Data Analysis (2nd ed.)
 
-**EDA**
+**Exploratory Data Analysis (EDA)**
 
 A summary of our data indicates that only 4 out of the 84 fields are numeric variables, while the remaining 80 variables are catorgosied as chacters as they are comprised of string responses. It is evident that a number of missing values exist within this dataset as indecates by the number of 'NA's' for the numerical observations.
 ![Alt text](Missing_data.png){width=50% height=50%}
@@ -260,7 +260,7 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 - include graphs
 
 
-**regression to predict response**
+**Regression to predict response**
 - WE PREDICT SALARY BASED ON ALL COVARIATES
 - run standard linear regression (then check log) -> see what comes out best
 - include grpahs here
@@ -271,16 +271,17 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 
 ### Discussion 
 
-#### Summaries of results
+#### Summaries of Results
 
 
 
-#### Sucesses
-- No convergence
-- Successful implementation of mice algorithm 
+#### Successes
+The data for the analysis we conducted was challenging to process due to a significant amount of missing values. Our most significant success was using the Multiple Imputation with Chained Equations (MICE) algorithm to handle missing values, which we did satisfactorily. By using five iterations, we ensured that our data were balanced. Successful implementation of the MICE algorithm ensured that the imputed data sets were reliable and robust, providing a solid foundation for subsequent analysis. So, we encountered convergence issues in our data and ensured that model parameters were stable and gave accurate and reliable results.
+
+In addition, we effectively handled the data cleaning and manipulation process. Due to the highly skewed structure of the *ConvertedCompYearly* variable, which we chose as the response variable, performing an analysis in its raw form would not allow us to obtain accurate results. Maintaining a large dataset of 48,019 responses while ensuring data integrity, we began *ConvertedCompYearly* by subsampling the dataset to include only valid responses. Through this careful data preparation and the application of statistical methods detailed above, we successfully prepared the data for accurate and meaningful analysis.
 
 
-#### limitations
+#### Limitations
 Although the research is comprehensive and informative, it also comes with some limitations that should be considered when interpreting the results. Firstly, the survey is not fully randomized; it mostly targets users who are active on Stack Overflow. This method of surveying through Stack Overflow's own channels, such as onsite messaging, blog posts, and emails, can be limiting. Additionally, only two rounds of survey sending may include a limited variety of respondents.
 
 Another important consideration is that the salary question was optional, and 48,026 respondents provided salary data. This means that nearly half of the participants chose not to give this information. Different factors can lead this, such as the sensitivity of salary data in some countries and cultures, or individuals not feeling comfortable sharing their earnings, especially if they are dissatisfied with them.
@@ -291,7 +292,7 @@ To ensure data consistency, salary data provided by the participant was converte
 
 
 
-### Conclsuion 
+### Conclusion 
 
 The Stack Overflow Developer Survey for 2023 has provided valuable insights into the experiences of developers across the world. 
 
