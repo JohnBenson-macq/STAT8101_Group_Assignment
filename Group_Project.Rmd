@@ -114,12 +114,15 @@ The rows within this data set are representative of each respondent who filled o
 
 - **Duration and Timing**: The survey was conducted from May 8, 2023, to May 19, 2023. The median response time was nearly 18 minutes, which increased from the previous year due to the inclusion of additional questions this year.
 
+#### Survey Design
 - **Survey Design**: 
 
 
 - **Stratification and Clustering**: 
+- was not an SRS, there was stratifcation but not clsutering (from survey desing)
+- 
 
-#### Evaluation
+#### Evaluation of Methodologies
 
 - **Recruitment Methods**: Respondents were primarily recruited through Stack Overflow's own channels, such as onsite messaging, blog posts, emails, banner ads, and social media posts. This recruitment strategy likely led to a sample biased towards highly engaged users of Stack Overflow.
 
@@ -271,9 +274,11 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 
 ### Discussion 
 
-#### summaries of results
+#### Summaries of results
 
-#### sucesses
+
+
+#### Sucesses
 
 
 #### limitations
