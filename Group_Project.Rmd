@@ -152,10 +152,12 @@ The initial survey data consisted of 84 fields and 89,185 observations.
 The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI and Stack Overflow metrics. The respondent characteristics
 outlined details of the respondents including age, employment status, residing country, years coding and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages they know and use, any databases they use, frameworks and platforms they may use and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents use of AI and it's effect on their programming. Finally, data was collected around the respondents use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore several questions were asked using a Likert scale to gauge respondents views on the design and usefulness of the site for their needs.
 
+Given that the data set was pre-weighted along the key factor i.e. country and that given the large number of observations in our data-set (89,000+) it was deemed unnecessary for the need to use utilise survey packages as the design effects were likely to be minimal (Heeringa et al., 2017).
 
-- our methods used and why we have chosen the variables we have 
-- explain our N is large enough that we do not need to use the survey package
+In constructing out regression model we selected predictor variables that were likely to have a strong association with the response variable, that is yearly compensation. As such it was determined that variables including the years an individual spent coding, their highest level of education attainment, their role in their organisation, the size of the organisation, the programming languages they know, the database systems they use and other tools they used were the most appropriate. All predictor variables, with the exception of years coding, were categorical and were handled by translating each level into individual binary 1:0 variables corresponding to TRUE/FALSE respectively. 
 
+[Sources]
+Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied Survey Data Analysis (2nd ed.)
 
 **EDA**
 
@@ -253,5 +255,26 @@ Insights from this survey may influence the future of developers as they grow, l
 
 ### References 
 
+Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied Survey Data Analysis (2nd ed.)
+\newline
+Corry N, Williams C, Battaglia M, McMaster H, Stander V (2017)
+\newline
+*Assessing and adjusting for non-response in the Millennium Cohort Family Study*
+\newline
+https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-017-0294-8
+\newline
+\newline
+Kelly K, CLARK B, Brown V,Sitzia J (2003) 
+\newline
+*Good practice in the conduct and reporting of survey research*
+\newline
+https://academic.oup.com/intqhc/article/15/3/261/1856193#
+\newline
+\newline
+Pickery J, Carton A (2008)
+\newline
+*Oversampling in Relation to Differential Regional Response Rates*
+\newline
+https://ojs.ub.uni-konstanz.de/srm/article/view/656
 
 NOTE - UPLOAD JPEJ FILE FOR ANY PLOTS WE WANT TO USE IN HERE
