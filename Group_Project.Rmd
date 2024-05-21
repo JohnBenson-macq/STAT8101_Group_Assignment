@@ -47,6 +47,44 @@ This analysis provides insight into compensation dynamics within developers worl
 
 ### Contents
 
+### Contents
+
+1. **Declaration**
+2. **Abstract**
+3. **Introduction**
+    - Project Rationale
+    - Aim
+4. **Data Description**
+5. **Survey Methodology**
+    - Key Principles
+        - Scope and Scale
+        - Duration and Timing
+        - Survey Design
+        - Stratification and Clustering
+    - Evaluation
+        - Recruitment Methods
+        - Geography
+        - Adaptive Questionnaire
+        - Handling of Compensation Data
+        - Technological Inclusion
+        - Randomization of Questions
+        - Data Analysis Adjustments
+        - Non-response
+6. **Data Analysis**
+    - Data Description
+    - Exploratory Data Analysis (EDA)
+        - Descriptive Statistics
+        - Histograms and Graphs
+    - Data Cleaning and Manipulation
+    - Feature Selection/Data Curation
+    - Regression Analysis
+7. **Discussion**
+    - Summary of Results
+    - Successes
+    - Limitations
+8. **Conclusion**
+9. **References**
+10. **Appendices**
 
 
 
