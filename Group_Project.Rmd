@@ -310,59 +310,18 @@ The Stack Overflow Developer Survey for 2023 has provided valuable insights into
 
 ### References 
 
+Corry, N.H., Williams, C.S., Battaglia, M., McMaster, H.S., Stander, V.A., (2017), Assessing and adjusting for non-response in the Millennium Cohort Family Study. *BMC Med Res Methodol*, 17(16). https://doi.org/10.1186/s12874-017-0294-8
+\newline
 Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied Survey Data Analysis (2nd ed.)
 \newline
-Corry N, Williams C, Battaglia M, McMaster H, Stander V (2017)
+Kelly K, CLARK B, Brown V,Sitzia J. (2003). Good practice in the conduct and reporting of survey research, *International Journal for Quality in Health Care*, 15(3), 261–266, https://doi.org/10.1093/intqhc/mzg031
 \newline
-*Assessing and adjusting for non-response in the Millennium Cohort Family Study*
+Lex, A., Gehlenborg, N., Strobelt, H., Vuillemot, R., & Pfister, H. (1983–1992). UpSet: Visualization of Intersecting Sets. *IEEE transactions on visualization and computer graphics*, 20(12), https://doi.org/10.1109/TVCG.2014.2346248
 \newline
-https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-017-0294-8
+Pickery, J., & Carton, A. (2008). Oversampling in Relation to Differential Regional Response Rates. *Survey Research Methods*, 2(2), 83–92. https://doi.org/10.18148/srm/2008.v2i2.656
 \newline
-\newline
-Kelly K, CLARK B, Brown V,Sitzia J (2003) 
-\newline
-*Good practice in the conduct and reporting of survey research*
-\newline
-https://academic.oup.com/intqhc/article/15/3/261/1856193#
-\newline
-\newline
-Pickery J, Carton A (2008)
-\newline
-*Oversampling in Relation to Differential Regional Response Rates*
-\newline
-https://ojs.ub.uni-konstanz.de/srm/article/view/656
-\newline
-Lex, A., Gehlenborg, N., Strobelt, H., Vuillemot, R., & Pfister, H. (2014). UpSet: Visualization of Intersecting Sets. IEEE transactions on visualization and computer graphics, 20(12), 1983–1992. https://doi.org/10.1109/TVCG.2014.2346248
+van Buuren S. (2007). Multiple imputation of discrete and continuous data by fully conditional specification. *Statistical methods in medical research*, 16(3), 219–242. https://doi.org/10.1177/0962280206074463
 
-[REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
-
-van Buuren S. (2007). Multiple imputation of discrete and continuous data by fully conditional specification. Statistical methods in medical research, 16(3), 219–242. https://doi.org/10.1177/0962280206074463
-
-[FIND ARTICLES / ADDITIONAL INFO TO BACK UP THIS DECISION - VALIDATE ]
-\newline
-[REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
-\newline
-Corry N, Williams C, Battaglia M, McMaster H, Stander V (2017)
-\newline
-*Assessing and adjusting for non-response in the Millennium Cohort Family Study*
-\newline
-https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-017-0294-8
-\newline
-\newline
-Kelly K, CLARK B, Brown V,Sitzia J (2003) 
-\newline
-*Good practice in the conduct and reporting of survey research*
-\newline
-https://academic.oup.com/intqhc/article/15/3/261/1856193#
-\newline
-\newline
-Pickery J, Carton A (2008)
-\newline
-*Oversampling in Relation to Differential Regional Response Rates*
-\newline
-https://ojs.ub.uni-konstanz.de/srm/article/view/656
-
-NOTE - UPLOAD JPEJ FILE FOR ANY PLOTS WE WANT TO USE IN HERE
 
 
 ### Appendix
