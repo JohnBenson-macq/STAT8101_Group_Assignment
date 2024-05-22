@@ -222,15 +222,14 @@ Further visualations of missing values for key variables of interest:
 - Missing values are present across all combinations of 'Employment' types.
 - A singular 'Employment' category has a large number of missing values, this is the Non-employed category as those without emplyment have no compensation. 
 - It is evident that there is a high amount of non-response questions focuses on compensation, with a number of 'Employment' categories having only missing responses variables. This is on account of the high number of unqiue 'Employment' combinations given the multi-select string nature of the questions and the sensitivity of providing compensation information. 
-![Alt text](years_code_vs_pro_MV.png){width=50% height=50%}
-![Alt text](ConvertedComp_v_employment_MV.png){width=50% height=50%}
+- No clear trends of missing variables.
+![Alt text](MV_YearsCode_vs_Pro.png){width=50% height=50%}
+![Alt text](MV_Employment_vs_converted_comp.png){width=50% height=50%}
 
 
-UpSet plots have been used to visualise the intersections of missing data within our dataset, given several characteristics and attribute values can be encoded simultaneously (Lex et al, 2014). This plots indecates that there is a high frequency of interception across all variables relating to 'AI', and miminal frequency for interceptions of various combintionas of 'AI' attributes.
-![Alt text](Missing_data_2.png){width=50% height=50%}
+UpSet plots have been used to visualise the intersections of missing data within our dataset, given several characteristics and attribute values can be encoded simultaneously (Lex et al, 2014). This plots indecates that there are higher frequencies for interceptions across all a greater number of variables relating to 'AI' and reduced frequency for interceptions of various reduced combintionas of 'AI' attributes. A large number of misssing values are visibly present within this dataset, therfore requiring appropriate cleaning methodologies.
+![Alt text](Missing_values_upset.png){width=50% height=50%}
 
-
-Lex, A., Gehlenborg, N., Strobelt, H., Vuillemot, R., & Pfister, H. (2014). UpSet: Visualization of Intersecting Sets. IEEE transactions on visualization and computer graphics, 20(12), 1983–1992. https://doi.org/10.1109/TVCG.2014.2346248
 
 
 **Data Cleaning and manipulation**
@@ -350,5 +349,8 @@ Pickery J, Carton A (2008)
 *Oversampling in Relation to Differential Regional Response Rates*
 \newline
 https://ojs.ub.uni-konstanz.de/srm/article/view/656
+\newline
+Lex, A., Gehlenborg, N., Strobelt, H., Vuillemot, R., & Pfister, H. (2014). UpSet: Visualization of Intersecting Sets. IEEE transactions on visualization and computer graphics, 20(12), 1983–1992. https://doi.org/10.1109/TVCG.2014.2346248
+
 
 NOTE - UPLOAD JPEJ FILE FOR ANY PLOTS WE WANT TO USE IN HERE
