@@ -115,9 +115,16 @@ The rows within this data set are representative of each respondent who filled o
 - **Duration and Timing**: The survey was conducted from May 8, 2023, to May 19, 2023. The median response time was nearly 18 minutes, which increased from the previous year due to the inclusion of additional questions this year.
 
 #### Survey Design
-- **Stratification and Clustering**: 
-- was not an SRS, there was stratifcation but not clsutering (from survey desing)
-- 
+The objective of the survey was to obtain data on a wide range of topics to help infer and provided insights into the trends and technology shaping the industry. As such, the survey contained questions relating to the objective details of the respondents e.g. the years they've spent coding, their salary and their profession etc and questions designed to elicit more subjective responses in relation to the technology landscape e.g. their thoughts on the usefulness of AI to their work and whether Stack Overflow has been helpful etc.
+
+The questionnaire contained a mix of questions in the form of single-response multiple choice, multiple-response multiple choice and short answers that resulted in responses of a categorical or numerical nature. The multiple choice questions themselves contained response options that either related specifically to the questions asked, for example, numerical ranges for employer size, or utilised a Likert scale that ranged from "Strongly Disagree" to "Strongly Agree" to gauge the agreeableness of a respondent to a proposition e.g. that AI will be useful in assisting their work. All questions were framed in as neutral a tone as possible to assist in minimising potential social desirability bias from respondents. 
+
+Survey outcomes from previous years were used as learnings to help update the survey question methodology including the re-evaluation of question wording and framing to reduce ambiguity and non-responses to individual questions
+
+The survey mode was conducted in a two stage process with each stage pertaining to a different form of participation. The initial primary mode of engagement centered around an opt-in model where the survey was available to everyone on the Stack Overflow website with message banners and advertisements on the site encouraging users to participate in the survey. The purpose of this model was two fold: to attract as many responses as possible and that those who opted-in were less likely to provide non-response answers to any individual question.
+
+Once the opt-in time period had elapsed the responses were aggregated by country and a second stage was then implemented whereby the survey was specifically emailed to a target population of users who had not already completed the survey. The design of this approach involved stratified sampling techniques whereby the target population of users/respondents was weighted according to the country they resided in such that the overall response rate (opt-in and emailed participants) by country was roughly proportional to number of programmers in that country as a proportion of the global user base. For example, high response rates for countries such as India & China were desired given the disproportionate number of programmers compared to the global mean. As such, should the number of responses be lower than expected at the opt-in stage for these countries, they were over sampled i.e. over represented, in the population of emailed surveys.
+
 
 #### Evaluation of Methodologies
 
