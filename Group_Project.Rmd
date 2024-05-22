@@ -266,6 +266,9 @@ The cross-validation process for Lasso regression involved tuning the lambda par
 
 ![Alt text](cross_validation_results.png){width=50% height=50%}
 
+**Numeric Variable Histogram**
+
+
 
 **Two-way table and hypothesis test to explore association**
 - HIGHEST LEVEL OF EDUCATION AND COUNTRIES
