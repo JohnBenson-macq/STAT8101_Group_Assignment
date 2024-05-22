@@ -251,15 +251,21 @@ The plot shows the mean (left) and standard deviation (right) of the imputed val
 van Buuren S. (2007). Multiple imputation of discrete and continuous data by fully conditional specification. Statistical methods in medical research, 16(3), 219–242. https://doi.org/10.1177/0962280206074463
 
 
-
-
 **Feature Selection/ Data Curation**
 
+In analyzing compensation data problems such as skewness and outliers are common. These issues can have detrimental effects on the model. To address this, we performed a log-transformation on the compensation data. The transformation helped to stabilize variance and normalize the data, making it suitable for linear modeling.
 
-#### Our Implimentation
-**Histogram, wegiths and summary statistics of non categorical variable**
-- variable chosen: years coding
+The transformation's effectiveness is evident in the boxplot comparison below, which shows a marked reduction in skewness.
 
+![Alt text](comparison_of_skewness.png){width=50% height=50%}
+
+To identifying the key determinants of *ConvertedCompYearly*, we utilized Lasso regression, a regularization method designed to improve the statistical model's predictive performance and clarity.  Lasso performs both variable selection and regularization, which helps in handling the multicollinearity and overfitting by shrinking less important feature's coefficients to zero. Consequently, Lasso enables us to identify the most pertinent variables while maintaining a parsimonious model.
+
+Our dataset included 135 features, some of which exhibited high multicollinearity. Using Lasso regression, we aimed to mitigate these issues by selecting a subset of features that provides the best predictive performance.
+
+The cross-validation process for Lasso regression involved tuning the lambda parameter, which controls the strength of the penalty applied to features. A plot of the cross-validation results shows how the mean squared error varies with different log(lambda) values. The optimal lambda value in this context was approximately -6.502476 in log space.
+
+![Alt text](cross_validation_results.png){width=50% height=50%}
 
 
 **Two-way table and hypothesis test to explore association**
@@ -267,13 +273,27 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 - include graphs
 
 
-**Regression to predict response**
-- WE PREDICT SALARY BASED ON ALL COVARIATES
-- run standard linear regression (then check log) -> see what comes out best
-- include grpahs here
-- CI tests, ect
-- AIC / BIC
+**Regression Results**
 
+The Predicted vs Residuals displays residuals on the vertical axis and the predicted compensation values on the horizontal axis. A horizontal line at zero represents no error between the predicted and actual values. The ideal scenario in such a plot is for the residuals to be randomly dispersed around the horizontal line, indicating that the model predicts equally well across all values of the independent variable.
+
+![Alt text](predicted_vs_residuals.png){width=50% height=50%}
+As can be observed the spread of residuals increases with the predicted compensation values. The heteroscedasticity observed suggests that the model's predictive accuracy varies across the scale of compensation, being less precise at higher compensation levels. This violates one of the fundamental assumptions of linear regression, so further results should be treated with caution.
+
+**Model Performance**
+
+The Mean Squared Error of the model was found to be approximately 464,518,156,488. This high value suggests that the model, while predictive, may have limitations in capturing all the variability in the compensation data. The R-squared value, was -0.0004225354, indicating that the model explains none of the variability around the mean. This unexpectedly low value could be a result of non-linear relationships not captured by the model.
+
+The top predictors determined by the Lasso of developer compensation include:
+
+- Student: Negatively associated with compensation.
+- APL: Also negatively impacts compensation, suggesting less mainstream technologies may correlate with lower pay.
+- Academic Researcher: Another negative predictor, indicating lower compensation in academic roles.
+- Primary/Elementary School: Suggests lower compensation for lower educational attainment.
+- Senior Executive (C-Suite, VP, etc.): Positively correlated with higher compensation.
+- Raku: Similar to APL, using less common technologies correlates with lower compensation.
+- Small Company Sizes: Both very small (2 to 9 employees) and large company sizes (10,000 or more employees) showed significant correlations, with smaller sizes negatively affecting compensation.
+- Blockchain and Snowflake: These technologies are associated with higher compensation, likely reflecting their current demand and specialization required.
 
 
 ### Discussion 
