@@ -321,10 +321,11 @@ To ensure data consistency, salary data provided by the participant was converte
 
 ### Conclusion 
 
-The Stack Overflow Developer Survey for 2023 has provided valuable insights into the experiences of developers across the world. 
+The Stack Overflow Annual Developer Survey 2023 is a noteworthy dataset that offers valuable insights into developer compensation trends and their factors. 
 
+Our results indicate that not only does education and company size impact compensation but specific technologies that are both widly used and in-demand drive increased compensation values. This is in alignment with the economic theory of supply and demand, in which compensation increases when there is a greater amount of demand to supply. To obtain more accurate results, further analysis is required with a higher degree of granularity for elements related to compensation and the possible application of non-linear models. Considering that many survey items were optional, this will lead to a deeper comprehension of the effects on compensation. 
 
-Insights from this survey may influence the future of developers as they grow, learn and adjsut to new trends and technolgoies as the industry continues to rapidly evolve. 
+The Stack Overflow Developer Survey for 2023 has provided valuable insights into understanding compensation of developers across the world. This report has adressed a number of data challanges including the non-response to identify the relationships of key variables that impact developer compensation. Further research may deepen our understanding of factors that may influence the future of developers as they grow, learn and adjsut to new trends and technolgoies in the rapidly evolving industry. This analysis does not only benifit developers but may be used by employers and policymakers to improve their understanding of the the compensation landascape for developers and adress disparities across the industry. 
 
 
 ### References 
