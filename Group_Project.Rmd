@@ -224,7 +224,7 @@ The MICE algorithm operates by iteratively imputing missing values in each varia
 The plot shows the mean and standard deviation of the imputed values only. We can see the streams intermingling indicating convergence of the imputed values. 
 
 
-**Feature Selection and Data Curation**
+#### Feature Selection and Data Curation
 
 In analyzing compensation data problems such as skewness and outliers are common. These issues can have detrimental effects on the model. To address this, we performed a log-transformation on the compensation data. The transformation helped to stabilize variance and normalize the data, making it suitable for linear modeling.
 
@@ -240,17 +240,25 @@ The cross-validation process for Lasso regression involved tuning the lambda par
 
 ![Alt text](cross_validation_results.png){width=50% height=50%}
 
-**Numeric Responsen Results**
+
+### Implimentation 
+
+All code and algorithms can be viewed via the GitHub repository (see appendix). 
+
+
+### Results
+
+#### Numeric Responsen Results
 - input hist here
 
 
-**Categorical Response Results**
+#### Categorical Response Results
 - HIGHEST LEVEL OF EDUCATION AND COUNTRIES
 - include graphs
 - input two way table here
 
 
-**Regression Results**
+#### Regression Results
 
 The Predicted vs Residuals displays residuals on the vertical axis and the predicted compensation values on the horizontal axis. A horizontal line at zero represents no error between the predicted and actual values. The ideal scenario in such a plot is for the residuals to be randomly dispersed around the horizontal line, indicating that the model predicts equally well across all values of the independent variable.
 
@@ -275,10 +283,6 @@ The top predictors determined by the Lasso of developer compensation include:
 The Lasso model has provided valuable insights into the factors affecting developer compensation, highlighting the role of job roles, technology use, and company size. However, the low R-squared suggests that additional variables, possibly capturing more specific skills or regional economic factors, might be needed to improve the model's explanatory power. Further analysis could also explore non-linear modeling techniques or more sophisticated transformations to better capture the complex dynamics of the compensation landscape in tech.
 
 ### Discussion 
-
-#### Summaries of Results
-
-
 
 #### Successes
 The data for the analysis we conducted was challenging to process due to a significant amount of missing values. Our most significant success was using the Multiple Imputation with Chained Equations (MICE) algorithm to handle missing values, which we did satisfactorily. By using five iterations, we ensured that our data were balanced. Successful implementation of the MICE algorithm ensured that the imputed data sets were reliable and robust, providing a solid foundation for subsequent analysis. So, we encountered convergence issues in our data and ensured that model parameters were stable and gave accurate and reliable results.
@@ -361,3 +365,10 @@ Pickery J, Carton A (2008)
 https://ojs.ub.uni-konstanz.de/srm/article/view/656
 
 NOTE - UPLOAD JPEJ FILE FOR ANY PLOTS WE WANT TO USE IN HERE
+
+
+### Appendix
+
+[Insert link to repository]
+
+
