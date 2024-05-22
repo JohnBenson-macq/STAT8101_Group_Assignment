@@ -73,7 +73,9 @@ This analysis provides insight into compensation dynamics within developers worl
         - Descriptive Statistics
         - Histograms and Graphs
     - Data Cleaning and Manipulation
-    - Feature Selection/Data Curation
+    - Feature Selection and Data Curation
+    - Numerical Response
+    - Categorical Response
     - Regression Analysis
 7. **Discussion**
     - Summary of Results
@@ -162,29 +164,6 @@ Non-response rates for The Stack Overflow Annual Developer Survey 2023:
 Methods to adjust for the non-response:
 Targeted follow up strategies by way of follow-up communications were employed to encourage non-respondents to complete the survey.(Kelly et al., 2013) This included emailing and messaging the non-respondents. After a set time had elapsed, the number of non-respondents was redetermined along with aggregated statistic, specifically geographical location (country)(Corry et al., 2017). An additional round of emailed surveys targeting individuals with the same country characteristics as the non-respondents was conducted along with an oversampling strategy that had a sample size inversely proportional to the initial non-response rate. (Pickery & Carton, 2008)
 
-[FIND ARTICLES / ADDITIONAL INFO TO BACK UP THIS DECISION - VALIDATE ]
-\newline
-[REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
-\newline
-Corry N, Williams C, Battaglia M, McMaster H, Stander V (2017)
-\newline
-*Assessing and adjusting for non-response in the Millennium Cohort Family Study*
-\newline
-https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-017-0294-8
-\newline
-\newline
-Kelly K, CLARK B, Brown V,Sitzia J (2003) 
-\newline
-*Good practice in the conduct and reporting of survey research*
-\newline
-https://academic.oup.com/intqhc/article/15/3/261/1856193#
-\newline
-\newline
-Pickery J, Carton A (2008)
-\newline
-*Oversampling in Relation to Differential Regional Response Rates*
-\newline
-https://ojs.ub.uni-konstanz.de/srm/article/view/656
 
 [FIND SOME INFO ON HOW TO DEAL WITH NON-RESPOSNE, ESPECIALLY ON LIKE BRANCHING ]
 [RESEARCH ON STANDRDS FOR NON-RESPONSE]
@@ -192,7 +171,7 @@ https://ojs.ub.uni-konstanz.de/srm/article/view/656
 
 ### Data Analysis
 
-**Data Description**
+#### Data Description
 The initial survey data consisted of 84 fields and 89,185 observations. 
 The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI and Stack Overflow metrics. The respondent characteristics
 outlined details of the respondents including age, employment status, residing country, years coding and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages they know and use, any databases they use, frameworks and platforms they may use and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents use of AI and it's effect on their programming. Finally, data was collected around the respondents use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore several questions were asked using a Likert scale to gauge respondents views on the design and usefulness of the site for their needs.
@@ -204,12 +183,12 @@ In constructing out regression model we selected predictor variables that were l
 [Sources]
 Heeringa, S. G., West, B. T., & Berglund, P. A. (2017). Applied Survey Data Analysis (2nd ed.)
 
-**Exploratory Data Analysis (EDA)**
+#### Exploratory Data Analysis (EDA)
 
 A summary of our data indicates that only 4 out of the 84 fields are numeric variables, while the remaining 80 variables are catorgosied as chacters as they are comprised of string responses. It is evident that a number of missing values exist within this dataset as indecates by the number of 'NA's' for the numerical observations.
 ![Alt text](Missing_data.png){width=50% height=50%}
 
-Numeric Variables
+**Numeric Variables**
 - CompTotal: Extremely right-skewed given outliers with extermly high compensation values.
 - ConvertedCompYearly: Extremely right-skewed given outliers with extermly high compensation values.
 - ResponseId: This variable identifies each observation and is not a response from participants.
@@ -231,8 +210,7 @@ UpSet plots have been used to visualise the intersections of missing data within
 ![Alt text](Missing_values_upset.png){width=50% height=50%}
 
 
-
-**Data Cleaning and manipulation**
+#### Data Cleaning and Manipulation
 
 To clean our data, we first began by subsampling the dataset to include only valid responses to *ConvertedCompYearly*. This decision was made as it maintains a large dataset (48,019 responses) while ensuring data integrity. Additionally due to the highly skewed nature of the data, and *ConvertedCompYearly* being the variable of interest any self-imputation would have been unreliable.
 
@@ -245,12 +223,8 @@ The MICE algorithm operates by iteratively imputing missing values in each varia
 ![Alt text](wiggle_plots.png){width=50% height=50%}
 The plot shows the mean and standard deviation of the imputed values only. We can see the streams intermingling indicating convergence of the imputed values. 
 
-[REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
 
-van Buuren S. (2007). Multiple imputation of discrete and continuous data by fully conditional specification. Statistical methods in medical research, 16(3), 219–242. https://doi.org/10.1177/0962280206074463
-
-
-**Feature Selection/ Data Curation**
+**Feature Selection and Data Curation**
 
 In analyzing compensation data problems such as skewness and outliers are common. These issues can have detrimental effects on the model. To address this, we performed a log-transformation on the compensation data. The transformation helped to stabilize variance and normalize the data, making it suitable for linear modeling.
 
@@ -266,13 +240,14 @@ The cross-validation process for Lasso regression involved tuning the lambda par
 
 ![Alt text](cross_validation_results.png){width=50% height=50%}
 
-**Numeric Variable Histogram**
+**Numeric Responsen Results**
+- input hist here
 
 
-
-**Two-way table and hypothesis test to explore association**
+**Categorical Response Results**
 - HIGHEST LEVEL OF EDUCATION AND COUNTRIES
 - include graphs
+- input two way table here
 
 
 **Regression Results**
@@ -357,5 +332,32 @@ https://ojs.ub.uni-konstanz.de/srm/article/view/656
 \newline
 Lex, A., Gehlenborg, N., Strobelt, H., Vuillemot, R., & Pfister, H. (2014). UpSet: Visualization of Intersecting Sets. IEEE transactions on visualization and computer graphics, 20(12), 1983–1992. https://doi.org/10.1109/TVCG.2014.2346248
 
+[REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
+
+van Buuren S. (2007). Multiple imputation of discrete and continuous data by fully conditional specification. Statistical methods in medical research, 16(3), 219–242. https://doi.org/10.1177/0962280206074463
+
+[FIND ARTICLES / ADDITIONAL INFO TO BACK UP THIS DECISION - VALIDATE ]
+\newline
+[REFERENCES TEMPORARILY PLACED HERE - TO BE MOVED BEFORE REPORT PUBLICATION]
+\newline
+Corry N, Williams C, Battaglia M, McMaster H, Stander V (2017)
+\newline
+*Assessing and adjusting for non-response in the Millennium Cohort Family Study*
+\newline
+https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-017-0294-8
+\newline
+\newline
+Kelly K, CLARK B, Brown V,Sitzia J (2003) 
+\newline
+*Good practice in the conduct and reporting of survey research*
+\newline
+https://academic.oup.com/intqhc/article/15/3/261/1856193#
+\newline
+\newline
+Pickery J, Carton A (2008)
+\newline
+*Oversampling in Relation to Differential Regional Response Rates*
+\newline
+https://ojs.ub.uni-konstanz.de/srm/article/view/656
 
 NOTE - UPLOAD JPEJ FILE FOR ANY PLOTS WE WANT TO USE IN HERE
