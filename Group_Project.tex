@@ -74,10 +74,10 @@
 \hypertarget{declaration}{%
 \subsubsection{Declaration}\label{declaration}}
 
-We declare that the following project is evidence our own work that has
-not been submitted previously for academic credit. All group members,
-who have all actively contributed, submit this assignment as an original
-piece of work.
+We declare that the following project is evidence of our own work that
+has not been submitted previously for academic credit. All group
+members, who have all actively contributed, submit this assignment as an
+original piece of work.
 
 \begin{itemize}
 \tightlist
@@ -115,18 +115,17 @@ investigate the factors affecting the compensation of developers using
 various selected determinants.
 
 Our analysis demonstrates important information about developer
-compensations by exploring the impact of experience, education level,
-and technological expertise. In conducting my analysis, we used
-regression models, leveraging the survey's detailed classification and
-clustering information to calculate the standard errors of the survey
-estimates accurately. We used graphs to evaluate the relationships
-between various categorical variables. We detailed our findings and
-conducted hypothesis testing to evaluate the relationships.
-Additionally, we addressed nonresponse issues by using multiple
-imputation techniques to address missing data and ensure robustness in
-our findings.
+compensation by exploring the impact of experience, education level, and
+technological expertise. In conducting our analysis, we used regression
+models, leveraging the survey's detailed classification and clustering
+information to calculate the standard errors of the survey estimates
+accurately. We used graphs to evaluate the relationships between various
+categorical variables. We detailed our findings and conducted hypothesis
+testing to evaluate the relationships. Additionally, we addressed
+nonresponse issues by using multiple imputation techniques to address
+missing data and ensure robustness in our findings.
 
-This analysis provides insight into compensation dynamics within
+This analysis provides insight into compensation dynamics among
 developers worldwide by addressing critical factors affecting yearly
 compensation.
 
@@ -163,7 +162,7 @@ compensation.
     \begin{itemize}
     \tightlist
     \item
-      Evaluation of Methodologies
+      Scope and Scale
     \item
       Duration and Timing
     \end{itemize}
@@ -185,12 +184,14 @@ compensation.
     \item
       Technological Inclusion
     \item
-      Randomization of Questions
+      Randomisation of Questions
     \item
       Data Analysis Adjustments
     \item
-      Non-response
+      Survey Language
     \end{itemize}
+  \item
+    Non-Response
   \end{itemize}
 \item
   \textbf{Data Analysis}
@@ -255,12 +256,12 @@ compensation on a global scale.
 \hypertarget{project-rationale}{%
 \paragraph{Project Rationale}\label{project-rationale}}
 
-The tech industry is characterized by rapid advancements and constant
+The tech industry is characterised by rapid advancements and constant
 change, making it imperative to understand the determinants of developer
 compensation. The factors that influence compensation have far-reaching
 implications, not only for individual developers' career trajectories
 but also for the overall productivity and innovation within
-organizations. It is therefore vital to study the interplay between the
+organisations. It is therefore vital to study the interplay between the
 aforementioned factors in determining compensation.
 
 \hypertarget{aim}{%
@@ -286,8 +287,8 @@ By collecting the voice of developers, the Stack Overflow Annual
 Developer Survey 2023 enables analysts, IT leaders, reporters and other
 developers to stay up to date with the latest trends and technologies
 that are shaping the industry. The extensive reach and depth of
-information provided by the survey not only helps and provides context
-in understanding where trends in technology are heading, but also offers
+information provided by the survey not only helps provides context in
+understanding where trends in technology are heading, but also offers
 key attributes that can potentially influence developer compensation.
 Through a thorough analysis of this rich dataset, we can gain a deeper
 understanding of the complex interplay between various variables, such
@@ -298,189 +299,206 @@ The rows within this data set are representative of each respondent who
 filled out the survey and each column is representative of each question
 within the survey. As previously identified, there is a large number of
 missing values as respondents were unable to answer questions based on
-inability or branching of questions. These value have been dealt with xx
-as required by the objective xx.
+inability or branching of questions.
 
 \hypertarget{survey-methodology}{%
 \subsubsection{Survey Methodology}\label{survey-methodology}}
 
+\newline
+\newline
+
 \hypertarget{key-principles}{%
 \paragraph{Key Principles}\label{key-principles}}
 
+\newline
+\newline
+
 \textbf{Scope and Scale}: The survey reached 89,184 qualified software
 developers from 185 countries, indicating a broad global representation.
-The qualification for analysis was based on respondents' consent to
-share their data and completion of all required questions. About 2,000
-responses were excluded due to incomplete data.
+The qualification for analysis was based on respondents' consenting to
+share their data and the completion of all required questions.
+Approximately 2,000 responses were excluded due to incomplete data.
+\newline \newline
 
-\textbf{Duration and Timing}: The survey was conducted from May 8, 2023,
+\textbf{Duration and Timing}: The survey was conducted from May 82023,
 to May 19, 2023. The median response time was nearly 18 minutes, which
 increased from the previous year due to the inclusion of additional
-questions this year.
+questions. \newline \newline \newline
 
 \hypertarget{survey-design}{%
 \paragraph{Survey Design}\label{survey-design}}
 
-The objective of the survey was to obtain data on a wide range of topics
-to help infer and provided insights into the trends and technology
-shaping the industry. As such, the survey contained questions relating
-to the objective details of the respondents e.g.~the years they've spent
-coding, their salary and their profession etc and questions designed to
-elicit more subjective responses in relation to the technology landscape
-e.g.~their thoughts on the usefulness of AI to their work and whether
-Stack Overflow has been helpful etc.
+The objective of this survey was to obtain data on a wide range of
+topics to help infer and provide insights into trends and technology
+that are shaping the developers industry. The survey contained questions
+relating to the objective details on the respondents, such as, the years
+they've spent coding, their salary and their profession. This was
+combined with questions designed to elicit more subjective responses in
+relation to the technology landscape, such as, their thoughts on the
+usefulness of AI to their work and whether Stack Overflow has been
+helpful. \newline
 
 The questionnaire contained a mix of questions in the form of
 single-response multiple choice, multiple-response multiple choice and
-short answers that resulted in responses of a categorical or numerical
-nature. The multiple choice questions themselves contained response
-options that either related specifically to the questions asked, for
-example, numerical ranges for employer size, or utilised a Likert scale
-that ranged from ``Strongly Disagree'' to ``Strongly Agree'' to gauge
-the agreeableness of a respondent to a proposition e.g.~that AI will be
-useful in assisting their work. All questions were framed in as neutral
-a tone as possible to assist in minimising potential social desirability
-bias from respondents.
+short answers that resulted in responses of categorical or numerical
+natures. Some multiple choice questions themselves contained response
+options that related specifically to the questions asked, such as the
+numerical ranges for employer size. Additionally multiple choice
+questions utilised Likert scales with the range ``Strongly Disagree'' to
+``Strongly Agree'', to gauge the agreeableness of a respondent to a
+proposition, for example, `that AI will be useful in assisting their
+work'. All questions were framed in as neutral a tone as possible to
+assist in minimising potential social desirability bias from
+respondents. \newline
 
 Survey outcomes from previous years were used as learnings to help
 update the survey question methodology including the re-evaluation of
 question wording and framing to reduce ambiguity and non-responses to
-individual questions
+individual questions. \newline
 
-The survey mode was conducted in a two stage process with each stage
+The survey mode was conducted in a two-stage process with each stage
 pertaining to a different form of participation. The initial primary
-mode of engagement centered around an opt-in model where the survey was
-available to everyone on the Stack Overflow website with message banners
-and advertisements on the site encouraging users to participate in the
-survey. The purpose of this model was two fold: to attract as many
-responses as possible and that those who opted-in were less likely to
-provide non-response answers to any individual question.
+mode of engagement centred around an opt-in model where the survey was
+available to everyone on the Stack Overflow website. With message
+banners and advertisements used on the site to encourage users to
+participate in the survey. The purpose of this model was twofold: to
+attract as many responses as possible and to reduce the likelihood that
+individuals who opted-in would provide non-response answers to any
+individual questions. \newline
 
 Once the opt-in time period had elapsed the responses were aggregated by
-country and a second stage was then implemented whereby the survey was
+country and a second stage was then implemented, whereby the survey was
 specifically emailed to a target population of users who had not already
 completed the survey. The design of this approach involved stratified
 sampling techniques whereby the target population of users/respondents
-was weighted according to the country they resided in such that the
-overall response rate (opt-in and emailed participants) by country was
-roughly proportional to number of programmers in that country as a
+was weighted according to the country they resided in. To ensure that
+the overall response rate (opt-in and emailed participants) by country
+was roughly proportional to number of programmers in that country as a
 proportion of the global user base. For example, high response rates for
 countries such as India \& China were desired given the disproportionate
 number of programmers compared to the global mean. As such, should the
 number of responses be lower than expected at the opt-in stage for these
 countries, they were over sampled i.e.~over represented, in the
-population of emailed surveys.
+population of emailed surveys. \newline \newline \newline
 
 \hypertarget{evaluation-of-methodologies}{%
 \paragraph{Evaluation of
 Methodologies}\label{evaluation-of-methodologies}}
 
+\newline
+\newline
+
 \textbf{Recruitment Methods}: Respondents were primarily recruited
 through Stack Overflow's own channels, such as onsite messaging, blog
 posts, emails, banner ads, and social media posts. This recruitment
 strategy likely led to a sample biased towards highly engaged users of
-Stack Overflow.
+Stack Overflow. \newline \newline
 
 \textbf{Geography}: Due to U.S. sanctions, the survey was not accessible
 in certain regions (Crimea, Cuba, Iran, North Korea, Syria), potentially
 skewing geographical representation. Some respondents circumvented this
 using VPNs, which introduces another layer of bias in data
-representation.
+representation. \newline \newline
 
 \textbf{Adaptive Questionnaire}: The survey employed conditional
 questioning, where certain topics (e.g., job-related questions) were
 only presented based on previous responses, which helps in reducing the
 respondent burden but could lead to biased results if not all relevant
-respondents see all questions.
+respondents see all questions. \newline \newline
 
 \textbf{Handling of Compensation Data}: Compensation data, which was
-optional, was provided by 48,026 respondents. Compensation were reported
+optional, was provided by 48,026 respondents. Compensation was reported
 in local currencies and converted to USD using the exchange rate from
-June 2, 2023. High outlier Compensation were trimmed (less than 1\% of
+June 2, 2023. High outlier Compensations were trimmed (less than 1\% of
 data), suggesting robust handling of Compensation data to prevent
-skewing results.
+skewing results. \newline \newline
 
 \textbf{Technological Inclusion}: Technologies to be included in the
 survey were selected based on previous years' data and community
 feedback. This participative approach helped ensure that the survey
-content remained relevant and reflective of current trends.
+content remained relevant and reflective of current trends. \newline
+\newline
 
-\textbf{Randomization of Questions}: The survey randomized the order of
-blocks of questions to minimize the order effect, which can influence
-how questions are answered based on their sequence in the survey.
+\textbf{Randomisation of Questions}: The survey randomised the order of
+blocks-of-questions to minimize the order effect. Since the order of
+questions can influence how they are answered based on their sequence
+within the survey. \newline \newline
 
 \textbf{Data Analysis Adjustments}: Post-survey, several corrections
-were made to the online results, such as adjusting the Compensation
-filter to exclude small sample sizes and correcting display issues in
-sections about professional coders and AI tools. This demonstrates an
-ongoing commitment to accuracy and transparency in reporting survey
-results.
-
-\textbf{Non-response}: A variety of different forms of non-response
-occurs within this survey as a result of the questions composition,
-distribution methods and respondent locations.
+were made to the online results. This included adjusting the
+Compensation filter to exclude small sample sizes and correcting display
+issues in sections about professional coders and AI tools. This
+demonstrates an ongoing commitment to accuracy and transparency in
+reporting survey results. \newline \newline
 
 \begin{itemize}
 \tightlist
 \item
-  Non-repossession based on branching or skip-logic: Many questions are
-  skipped based on the respondents answers to previous questions. This
-  is done to streamline the survey, improve the relevance of questions
-  and increase the specif information gathered on respondents. For
-  example, job focused questions would only be visible to those who
-  responded that they had a job, therefore resulting in non-response for
-  all branching questions.
-\item
-  Non-response based on failure to respond when contacted: A number of
-  participants that were emailed, failed to respond to the survey
-  request despite repeated outreaches.
-\item
-  The survey was conducted entirely in English resulting in the
-  possibility of misinterpretation/misunderstanding of the questions
-  asked. Given that the website operates wholly in English, however, the
-  effect of language barrier non-response can be assumed to be minimal.
-\item
-  The survey was conducted solely in English, which could lead to
-  potential misinterpretations or misunderstandings of the questions.
-  However, since the website operates exclusively in English, the impact
-  of non-response due to language barriers is expected to be minimal.
-  \newline \newline \newline The survey defined a non-response if either
-  of the following criteria were met:
-\item
-  Respondent failed to complete an emailed survey
-\item
-  The respondent did not agree to the terms \& conditions (Q120)
-  \newline Non-response rates for The Stack Overflow Annual Developer
-  Survey 2023: 40,000 surveys were emailed out to Stack Overflow uses
-  weighted by country and targeted on the most active users that had not
-  already answered. Of these 27,414 were completed with 12,586
-  non-respondents, resulting in a non-response rate of 31.47\%. The
-  unanswered surveys were reissued, using oversampling methodologies to
-  a new sample (n=18,240) that followed the same weighted criteria. Of
-  the 18,240 survey that were reissued there were 3,834 respondents and
-  14,406 non-respondents resulting in a non-response rate of 78.98\%. In
-  total, the emailed survey received 31,248 responses against an initial
-  sample size of 40,000 constituting a non-response rate of 21.88\%.
-  Combining the total number of emailed surveys i.e.~initial sample +
-  secondary sample = \(40,000 + 18,240= 58,240\), however, a total
-  non-response rate was calculated at 46.35\%
+  \emph{Survey Language:} The survey was conducted entirely in English
+  resulting in the possibility of misinterpretation/misunderstanding of
+  the questions asked. Given that the website operates wholly in
+  English, however, the effect of language barrier non-response can be
+  assumed to be minimal. \newline \newline \newline
 \end{itemize}
 
-Methods to adjust for the non-response: Targeted follow up strategies by
-way of follow-up communications were employed to encourage
-non-respondents to complete the survey.(Kelly et al., 2013) This
-included emailing and messaging the non-respondents. After a set time
-had elapsed, the number of non-respondents was redetermined along with
-aggregated statistic, specifically geographical location (country)(Corry
-et al., 2017). An additional round of emailed surveys targeting
-individuals with the same country characteristics as the non-respondents
-was conducted along with an oversampling strategy that had a sample size
-inversely proportional to the initial non-response rate. (Pickery \&
-Carton, 2008)
+\hypertarget{non-response}{%
+\paragraph{Non-Response}\label{non-response}}
 
-{[}FIND SOME INFO ON HOW TO DEAL WITH NON-RESPOSNE, ESPECIALLY ON LIKE
-BRANCHING {]} {[}RESEARCH ON STANDRDS FOR NON-RESPONSE{]} {[}TRY AND
-FIND OUT IF PEOPLE WERE TARGETTED BASED ON THEIR ACTIVITY LEVEL{]}
+\newline
+
+The survey defined a non-response if either of the following criteria
+were met: \newline - Respondent failed to complete an emailed survey
+\newline - The respondent did not agree to the terms \& conditions
+(Q120) \newline \newline
+
+A number of different forms of non-response occurs within this survey as
+a result of the question composition, distribution methods and
+respondent locations. \newline
+
+\begin{itemize}
+\item
+  \emph{Non-repossession based on branching or skip-logic:} Many
+  questions may be skipped based on the respondent's answers to previous
+  questions. This is done to streamline the survey, improve the
+  relevance of questions and increase the specific information gathered
+  on respondents. For example, job focused questions would only be
+  visible to those who responded that they had a job, therefore
+  resulting in non-response for all branching questions. \newline
+\item
+  \emph{Non-response based on failure to respond when contacted:} A
+  number of participants that were emailed, failed to respond to the
+  survey request despite repeated outreaches. \newline \newline
+\end{itemize}
+
+\textbf{Non-response rates for The Stack Overflow Annual Developer
+Survey 2023:} \newline
+
+40,000 surveys were emailed out to Stack Overflow users, weighted by
+country and targeted on the most active users that had not already
+answered. Of these 27,414 were completed with 12,586 non-respondents,
+resulting in a non-response rate of 31.47\%. The unanswered surveys were
+reissued, using oversampling methodologies to a new sample (n=18,240)
+that followed the same weighted criteria. Of the 18,240 surveys that
+were reissued, there were 3,834 respondents and 14,406 non-respondents
+resulting in a non-response rate of 78.98\%. In total, the emailed
+survey received 31,248 responses against an initial sample size of
+40,000 constituting a non-response rate of 21.88\%. Combining the total
+number of emailed surveys, the initial sample + secondary sample =
+\(40,000 + 18,240= 58,240\), therefore the total non-response rate was
+46.35\%. \newline \newline
+
+\textbf{Methods to adjust for the non-response:} \newline
+
+Targeted follow up strategies by way of follow-up communications were
+employed to encourage non-respondents to complete the survey (Kelly et
+al., 2013). This included emailing and messaging the non-respondents.
+After a set time had elapsed, the number of non-respondents was
+redetermined along with aggregated statistic, specifically geographical
+location (country)(Corry et al., 2017). An additional round of emailed
+surveys targeting individuals with the same country characteristics as
+the non-respondents was conducted along with an oversampling strategy
+that had a sample size inversely proportional to the initial
+non-response rate (Pickery \& Carton, 2008).
 
 \hypertarget{data-analysis}{%
 \subsubsection{Data Analysis}\label{data-analysis}}
@@ -490,26 +508,26 @@ FIND OUT IF PEOPLE WERE TARGETTED BASED ON THEIR ACTIVITY LEVEL{]}
 
 The initial survey data consisted of 84 fields and 89,185 observations.
 The data collected broadly cover four main areas of interest: respondent
-characteristics, technology, AI and Stack Overflow metrics. The
+characteristics, technology, AI, and Stack Overflow metrics. The
 respondent characteristics outlined details of the respondents including
-age, employment status, residing country, years coding and salary. The
+age, employment status, residing country, years coding, and salary. The
 technology element encompassed data about the tools the respondents used
 as it pertains to programming including the programming languages they
 know and use, any databases they use, frameworks and platforms they may
-use and other tangentially related tools such as Confluence. The key
+use, and other tangentially related tools such as Confluence. The key
 topic for this year's developer survey centered around AI and, as such,
-several questions were asked as to the respondents use of AI and it's
-effect on their programming. Finally, data was collected around the
-respondents use of the Stack Overflow website including time spent on
-the site and what they used it for. Furthermore several questions were
-asked using a Likert scale to gauge respondents views on the design and
+several questions were asked as to the respondents' use of AI and it's
+effect on their programming. Finally, data was collected about the
+respondents' use of the Stack Overflow website including time spent on
+the site and what they used it for. Furthermore, several questions were
+asked using a Likert scale to gauge respondents' views on the design and
 usefulness of the site for their needs.
 
 Given that the data set was pre-weighted along the key factor
 i.e.~country and that given the large number of observations in our
-data-set (89,000+) it was deemed unnecessary for the need to use utilise
-survey packages as the design effects were likely to be minimal
-(Heeringa et al., 2017).
+data-set (89,000+) it was deemed unnecessary for the need to use survey
+packages as the design effects were likely to be minimal (Heeringa et
+al., 2017).
 
 In constructing out regression model we selected predictor variables
 that were likely to have a strong association with the response
@@ -518,13 +536,9 @@ variables including the years an individual spent coding, their highest
 level of education attainment, their role in their organisation, the
 size of the organisation, the programming languages they know, the
 database systems they use and other tools they used were the most
-appropriate. All predictor variables, with the exception of years
-coding, were categorical and were handled by translating each level into
-individual binary 1:0 variables corresponding to TRUE/FALSE
-respectively.
-
-{[}Sources{]} Heeringa, S. G., West, B. T., \& Berglund, P. A. (2017).
-Applied Survey Data Analysis (2nd ed.)
+appropriate. All predictor variables, except for years coding, were
+categorical and were handled by translating each level into individual
+binary 1:0 variables corresponding to TRUE/FALSE respectively.
 
 \hypertarget{exploratory-data-analysis-eda}{%
 \paragraph{Exploratory Data Analysis
@@ -538,40 +552,46 @@ number of `NA's' for the numerical observations.
 \includegraphics[width=0.5\textwidth,height=0.5\textheight]{Missing_data.png}
 
 \textbf{Numeric Variables} - CompTotal: Extremely right-skewed given
-outliers with extermly high compensation values. - ConvertedCompYearly:
-Extremely right-skewed given outliers with extermly high compensation
+outliers with extremely high compensation values. - ConvertedCompYearly:
+Extremely right-skewed given outliers with extremely high compensation
 values. - ResponseId: This variable identifies each observation and is
 not a response from participants. - WorkExp: Right-skewed, indicating
 the decreasing frequency of work experience within the respondants. -
-convertedcomp\_log: Given the compensation outliers presenet within the
-dataset, a log transofrmation has been applied to the variable of
-interest `ConvertedCompYearly' resultign in an approxiamtly normal
+convertedcomp\_log: Given the compensation outliers present within the
+dataset, a log transformation has been applied to the variable of
+interest `ConvertedCompYearly' resulting in an approximately normal
 distribution.
-\includegraphics[width=0.5\textwidth,height=0.5\textheight]{Numerical_variables_hist.png}
 
-Further visualations of missing values for key variables of interest: -
-There are a random missing values across `YearsCode' and `YearsCodePro'.
-- Missing values are present across all combinations of `Employment'
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=0.5\textheight]{Numerical_variables_hist.png}
+\caption{Alt text}
+\end{figure}
+
+Further visualisation of missing values for key variables of interest: -
+There are random missing values across `YearsCode' and `YearsCodePro'. -
+Missing values are present across all combinations of `Employment'
 types. - A singular `Employment' category has a large number of missing
-values, this is the Non-employed category as those without emplyment
+values, this is the Non-employed category as those without employment
 have no compensation. - It is evident that there is a high amount of
-non-response questions focuses on compensation, with a number of
-`Employment' categories having only missing responses variables. This is
-on account of the high number of unqiue `Employment' combinations given
+non-response questions focused on compensation, with several
+`Employment' categories having only missing response variables. This is
+on account of the high number of unique `Employment' combinations given
 the multi-select string nature of the questions and the sensitivity of
 providing compensation information. - No clear trends of missing
 variables.
+
 \includegraphics[width=0.5\textwidth,height=0.5\textheight]{MV_YearsCode_vs_Pro.png}
 \includegraphics[width=0.5\textwidth,height=0.5\textheight]{MV_Employment_vs_converted_comp.png}
 
 UpSet plots have been used to visualise the intersections of missing
 data within our dataset, given several characteristics and attribute
-values can be encoded simultaneously (Lex et al, 2014). This plots
-indecates that there are higher frequencies for interceptions across all
-a greater number of variables relating to `AI' and reduced frequency for
-interceptions of various reduced combintionas of `AI' attributes. A
-large number of misssing values are visibly present within this dataset,
-therfore requiring appropriate cleaning methodologies.
+values can be encoded simultaneously (Lex et al, 2014). This plot
+indicates that there are higher frequencies for interceptions across a
+greater number of variables relating to `AI' and reduced frequencies for
+interceptions of various reduced combinations of `AI' attributes. Many
+missing values are visibly present within this dataset, therefore
+requiring appropriate cleaning methodologies.
 \includegraphics[width=0.5\textwidth,height=0.5\textheight]{Missing_values_upset.png}
 
 \hypertarget{data-cleaning-and-manipulation}{%
@@ -712,26 +732,27 @@ Results}\label{categorical-responses-results}}
 \begin{itemize}
 \tightlist
 \item
-  Two categorical variable: ``Education Level'' and ``Organization
+  Two categorical variable: ``Education Level'' and ``Organisation
   size'' has been chosen to observe if there is any association among
-  them. For this hypotheses test assumption, a fisher exact test been
-  deployed. The p-value is derived from a simulation method rather than
-  an exact calculation based on 10,000 replicates. The simulation method
-  is done due to the small expected frequencies in the contingency
-  table, making exact calculation impractical. This test's alternative
-  hypothesis is two-sided, which means it was looking for any
-  correlation (rather than assuming one variable is greater or lower
-  than another).
+  them. For this hypothesis test, a Fisher Exact Test has been deployed.
+  The p-value is derived from a simulation method rather than an exact
+  calculation based on 10,000 replicates. This simulation method is
+  conducted due to the small expected frequencies in the contingency
+  table, making exact calculations impractical. The alternative
+  hypothesis of this test is two-sided, indicating that it was examining
+  any potential correlation between the variables, without assuming that
+  one variable is greater or lesser than the other.
   \includegraphics[width=1\textwidth,height=1\textheight]{fisher-test-result.png}
   Using Fisher's Exact Test with 10,000 simulated repetitions, we
   established a very significant connection between the two categorical
   variables under study (p \textless0.0001). This implies that the
   observed link is highly unlikely to have occurred by coincidence,
-  giving compelling evidence against the null hypothesis of no
+  providing compelling evidence against the null hypothesis of no
   association. This conclusion might have significant consequences for
-  our understanding of education level and organisation size. This
-  result's robustness is reinforced by the use of a simulation technique
-  to account for the contingency table's particular conditions.
+  our understanding of education level and organisation size. The
+  robustness of this result is reinforced by the use of a simulation
+  technique to account for the contingency table's particular
+  conditions.
 \end{itemize}
 
 \begin{figure}
@@ -740,50 +761,51 @@ Results}\label{categorical-responses-results}}
 \caption{Alt text}
 \end{figure}
 
-The relationship between organization sizes and education levels is
-comprehensively visualized by the mosaic plot. Different education
-levels are represented by the X-axis, and organizational sizes are
-represented by the Y-axis. The size of the tiles in the mosaic plot
+The relationship between organisation sizes and education levels is
+comprehensively visualised using the mosaic plot. Different education
+levels are represented on the X-axis, and organisational sizes are
+represented on the Y-axis. The size of the tiles in the mosaic plot
 represents the frequency or proportion of combinations of education
-level and organization size. Each tile represents a combination of these
-attributes. The standardized residuals, which show the degree of
-association between these categories, are indicated by the color coding
-of the tiles, which goes from blue to red. Red tiles show
-lower-than-expected frequencies, and blue tiles show
-higher-than-expected frequencies. The color's intensity corresponds to
+level and organisation size. Each tile represents a combination of these
+attributes. The standardised residuals, which show the degree of
+association between these categories, are indicated by the colour coding
+of the tiles, which ranges from blue to red. Red tiles indicate
+lower-than-expected frequencies, and blue tiles indicate
+higher-than-expected frequencies. The colour's intensity corresponds to
 the size of these residuals.
 
 Several important insights are revealed by a thorough plot analysis. For
-developers who possess a bachelor's degree as shown by the larger blue
-tiles, there is a noticeably higher proportion in smaller organizations.
-On the other hand, as indicated by the red tiles, employees with
-bachelor's degrees tend to be less common than anticipated in larger
-organizations. Workers who hold master's degrees are more common in
-medium-sized to large-sized businesses; these positive residuals are
-highlighted by blue tiles. The red tiles indicate that employees with
-Master's degrees are less common in smaller organizations.
+developers who possess a bachelor's degree (as shown by the larger blue
+tiles), there is a noticeably higher proportion in smaller
+organisations. On the other hand, as indicated by the red tiles,
+employees with bachelor's degrees tend to be less common than
+anticipated in larger organisations. Workers who hold master's degrees
+are more common in medium-sized to large-sized businesses; these
+positive residuals are highlighted by blue tiles. The red tiles indicate
+that employees with master's degrees are less common in smaller
+organisations.
 
 In a similar vein, employees with professional degrees are more common
-in larger organizations, although the frequency of such employees is
-lower in smaller organizations. The trend for developers holding
-associate's degrees is less obvious, medium-sized organizations
+in larger organisations, although the frequency of such employees is
+lower in smaller organisations. The trend for developers holding
+associate's degrees is less obvious; medium-sized organisations
 nevertheless exhibit a somewhat higher frequency than anticipated.
 
 With only slight differences, the proportion of employees who have only
 completed their primary or elementary and secondary schooling is
-generally low across all organization sizes. The blue tiles indicate the
-higher frequency of employees in smaller organizations who have some
+generally low across all organisation sizes. The blue tiles indicate the
+higher frequency of employees in smaller organisations who have some
 college education but have not earned a degree, while the red tiles
-indicate the lower frequency of such employees in larger organizations.
+indicate the lower frequency of such employees in larger organisations.
 
-In conclusion, the mosaic plot shows that while smaller organizations
+In conclusion, the mosaic plot shows that while smaller organisations
 have a more diverse range of education levels, including bachelor's
-degrees and some college education without degrees, larger organizations
+degrees and some college education without degrees, larger organisations
 prefer employees with higher education levels, such as master's and
-professional degrees. The standardized residuals provide important
-information about the hiring practices of various organization sizes by
+professional degrees. The standardised residuals provide important
+information about the hiring practices of various organisation sizes by
 highlighting the significant relationships between education levels and
-organization sizes.
+organisation sizes
 
 \hypertarget{regression-results}{%
 \paragraph{Regression Results}\label{regression-results}}
@@ -794,54 +816,62 @@ organization sizes.
 \caption{Alt text}
 \end{figure}
 
-The Predicted vs Residuals displays residuals on the vertical axis and
-the predicted compensation values on the horizontal axis. A horizontal
-line at zero represents no error between the predicted and actual
-values. The ideal scenario in such a plot is for the residuals to be
-randomly dispersed around the horizontal line, indicating that the model
-predicts equally well across all values of the independent variable. As
-can be observed the spread of residuals increases with the predicted
-compensation values. The heteroscedasticity observed suggests that the
-model's predictive accuracy varies across the scale of compensation,
-being less precise at higher compensation levels. This violates one of
-the fundamental assumptions of linear regression, so further results
-should be treated with caution.
+The Predicted vs Residuals plot displays residuals on the vertical axis
+and the predicted compensation values on the horizontal axis. A
+horizontal line at zero represents no error between the predicted and
+actual values. The ideal scenario in such a plot is for the residuals to
+be randomly dispersed around the horizontal line, indicating that the
+model predicts equally well across all values of the independent
+variable. As can be observed, the spread of residuals increases with the
+predicted compensation values. The heteroscedasticity observed suggests
+that the model's predictive accuracy varies across the scale of
+compensation, being less precise at higher compensation levels. This
+violates one of the fundamental assumptions of linear regression, so
+further results should be treated with caution.
 
 \textbf{Model Performance}
 
 The Mean Squared Error of the model was found to be approximately
 464,518,156,488. This high value suggests that the model may have
 limitations in capturing all the variability in the compensation data.
-The R-squared value, was -0.0004, indicating that the model explains
-none of the variability around the mean. This unexpectedly low value
-could be a result of non-linear relationships not captured by the model.
+The R-squared value was -0.0004, indicating that the model explains none
+of the variability around the mean. This unexpectedly low value could be
+a result of non-linear relationships not captured by the model.
 
 The top predictors determined by the Lasso of developer compensation
 include:
 
+\textless\textless\textless\textless\textless\textless\textless{} HEAD -
+Student: Coefficient: -1.15, 95\% CI: {[}-1.30, -1.00{]}. Suggests that
+attaining education can have a negative impact on compensation. - APL:
+Coefficient: -0.53, 95\% CI: {[}-0.65, -0.41{]}. Suggests that less
+mainstream technologies may correlate with lower pay. - Academic
+Researcher: Coefficient: -0.31, 95\% CI: {[}-0.42, -0.196{]}. Indicates
+lower compensation in academic roles. - Primary/Elementary School:
+Coefficient: -0.17, 95\% CI: {[}-0.336, 0.0{]}. Suggests lower
+compensation for lower educational attainment. - Senior Executive
+(C-Suite, VP, etc.): Coefficient: 0.28, 95\% CI: {[}0.194, 0.368{]}.
+Senior positions result in higher compensation. ======= - Student:
+Coefficient: -1.15, 95\% CI: {[}-1.30, -1.00{]}. This indicates that
+being a student is associated with lower compensation, possibly due to
+part-time or intern-level employment. - APL: Coefficient: -0.53, 95\%
+CI: {[}-0.65, -0.41{]}. Suggests less mainstream technologies may
+correlate with lower pay. - Academic Researcher: Coefficient: -0.31,
+95\% CI: {[}-0.42, -0.196{]}. Indicating lower compensation in academic
+roles. - Primary/Elementary School: Coefficient: -0.17, 95\% CI:
+{[}-0.336, 0.0{]}. Suggests lower compensation for lower educational
+attainment. - Senior Executive (C-Suite, VP, etc.): Coefficient 0.28,
+95\% CI: {[}0.194, 0.368{]}. Senior positions result in higher
+compensation.
+
 \begin{itemize}
 \tightlist
-\item
-  Student: Coefficient: -1.15, 95\% CI: {[}-1.30, -1.00{]}. Suggests
-  while attaining education can have a negative impact on compensation.
-\item
-  APL: Coefficient: -0.53, 95\% CI: {[}-0.65, -0.41{]}. Suggests less
-  mainstream technologies may correlate with lower pay.
-\item
-  Academic Researcher: Coefficient: -0.31, 95\% CI: {[}-0.42, -0.196{]}.
-  Indicating lower compensation in academic roles.
-\item
-  Primary/Elementary School: Coefficient: -0.17, 95\% CI: {[}-0.336,
-  0.0{]}. Suggests lower compensation for lower educational attainment.
-\item
-  Senior Executive (C-Suite, VP, etc.): 0.28, 95\% CI: {[}0.194,
-  0.368{]}. Senior positions result in higher compensation.
 \item
   Raku: Coefficient: -0.37, 95\% CI: {[}-0.49, -0.25{]}. Similar to APL,
   using less common technologies correlates with lower compensation.
 \item
-  Company size showed that large companies are better compensating then
-  small companies, with large companies having a positive coefficient
+  Company size showed that large companies compensate better than small
+  companies, with large companies having a positive coefficient
   (Coefficient: 0.34, 95\% CI: {[}0.294, 0.381{]}) and small companies a
   negative coefficient (Coefficient: -0.32, 95\% CI: {[}-0.367,
   -0.263{]}).
@@ -849,17 +879,18 @@ include:
   Blockchain (Coefficient: 0.05, 95\% CI: {[}0.0, 0.1{]}) and Snowflake
   (Coefficient: 0.31, 95\% CI: {[}0.263, 0.357{]}): These technologies
   are associated with higher compensation, likely reflecting their
-  current demand and specialization required.
+  current demand and the specialization required.
 \end{itemize}
 
 The Lasso model has provided valuable insights into the factors
 affecting developer compensation, highlighting the role of job roles,
-technology use, and company size. However, the low R-squared suggests
-that additional variables, possibly capturing more specific skills or
-regional economic factors, might be needed to improve the model's
-explanatory power. Further analysis could also explore non-linear
-modeling techniques or more sophisticated transformations to better
-capture the complex dynamics of the compensation landscape in tech.
+technology use, and company size. However, the low R-squared value
+suggests that additional variables, possibly capturing more specific
+skills or regional economic factors, might be needed to improve the
+model's explanatory power. Further analysis could also explore
+non-linear modeling techniques or more sophisticated transformations to
+better capture the complex dynamics of the compensation landscape in
+tech.
 
 \hypertarget{discussion}{%
 \subsubsection{Discussion}\label{discussion}}
@@ -867,15 +898,15 @@ capture the complex dynamics of the compensation landscape in tech.
 \hypertarget{successes}{%
 \paragraph{Successes}\label{successes}}
 
-The data for~the analysis we conducted~was challenging to process~due to
+The data for the analysis we conducted was challenging to process due to
 a significant amount of missing values. Our most significant success was
 using the Multiple Imputation with Chained Equations (MICE) algorithm to
 handle missing values, which we did satisfactorily. By using five
-iterations, we ensured that~our data were balanced.~Successful
+iterations, we ensured that our data was balanced. Successful
 implementation of the MICE algorithm ensured that the imputed data sets
 were reliable and robust, providing a solid foundation for subsequent
-analysis.~So, we encountered convergence issues in our~data~and ensured
-that model parameters~were~stable and gave accurate and reliable
+analysis. So, we encountered convergence issues in our data and ensured
+that model parameters were stable and gave accurate and reliable
 results.
 
 In addition, we effectively handled the data cleaning and manipulation
@@ -884,7 +915,7 @@ process. Due to the highly skewed structure of the
 variable, performing an analysis in its raw form would not allow us to
 obtain accurate results. Maintaining a large dataset of 48,019 responses
 while ensuring data integrity, we began \emph{ConvertedCompYearly} by
-subsampling~the dataset to include only valid responses. Through this
+subsampling the dataset to include only valid responses. Through this
 careful data preparation and the application of statistical methods
 detailed above, we successfully prepared the data for accurate and
 meaningful analysis.
@@ -903,9 +934,10 @@ may include a limited variety of respondents.
 Another important consideration is that the salary question was
 optional, and 48,026 respondents provided salary data. This means that
 nearly half of the participants chose not to give this information.
-Different factors can lead this, such as the sensitivity of salary data
-in some countries and cultures, or individuals not feeling comfortable
-sharing their earnings, especially if they are dissatisfied with them.
+Different factors can lead to this, such as the sensitivity of salary
+data in some countries and cultures, or individuals not feeling
+comfortable sharing their earnings, especially if they are dissatisfied
+with them.
 
 Data privacy and security are also critical concerns. Due to worries
 about declaring sensitive information, participants may hesitate to
@@ -931,7 +963,7 @@ that offers valuable insights into developer compensation trends and
 their factors.
 
 Our results indicate that not only does education and company size
-impact compensation but specific technologies that are both widly used
+impact compensation but specific technologies that are both widely used,
 and in-demand drive increased compensation values. This is in alignment
 with the economic theory of supply and demand, in which compensation
 increases when there is a greater amount of demand to supply. To obtain
@@ -943,14 +975,14 @@ on compensation.
 
 The Stack Overflow Developer Survey for 2023 has provided valuable
 insights into understanding compensation of developers across the world.
-This report has adressed a number of data challanges including the
+This report has addressed a number of data challenges including the
 non-response to identify the relationships of key variables that impact
 developer compensation. Further research may deepen our understanding of
 factors that may influence the future of developers as they grow, learn
-and adjsut to new trends and technolgoies in the rapidly evolving
-industry. This analysis does not only benifit developers but may be used
-by employers and policymakers to improve their understanding of the the
-compensation landascape for developers and adress disparities across the
+and adjust to new trends and technologies in the rapidly evolving
+industry. This analysis does not only benefit developers but may be used
+by employers and policymakers to improve their understanding of the
+compensation landscape for developers and address disparities across the
 industry.
 
 \hypertarget{references}{%
@@ -980,6 +1012,7 @@ research}, 16(3), 219--242.
 \hypertarget{appendix}{%
 \subsubsection{Appendix}\label{appendix}}
 
-{[}Insert link to repository{]}
+Link to repository:
+(\url{https://github.com/JohnBenson-macq/STAT8101_Group_Assignment})
 
 \end{document}
