@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Declaration 
 
-We declare that the following project is evidence our own work that has not been submitted previously for academic credit. All group members, who have all actively contributed, submit this assignment as an original piece of work. 
+We declare that the following project is evidence of our own work that has not been submitted previously for academic credit. All group members, who have all actively contributed, submit this assignment as an original piece of work. 
 
 - Conceptualisation, X.X. and Y.Y.; 
 - Methodology, X.X.; 
@@ -40,9 +40,9 @@ We declare that the following project is evidence our own work that has not been
 
 This project conducts a comprehensive exploratory data analysis (EDA) of the "Stack Overflow Annual Developer Survey 2023," collecting responses from more than 90,000 developers worldwide. The main aim is to investigate the factors affecting the compensation of developers using various selected determinants.
 
-Our analysis demonstrates important information about developer compensations by exploring the impact of experience, education level, and technological expertise. In conducting my analysis, we used regression models, leveraging the survey's detailed classification and clustering information to calculate the standard errors of the survey estimates accurately. We used graphs to evaluate the relationships between various categorical variables. We detailed our findings and conducted hypothesis testing to evaluate the relationships. Additionally, we addressed nonresponse issues by using multiple imputation techniques to address missing data and ensure robustness in our findings.
+Our analysis demonstrates important information about developer compensation by exploring the impact of experience, education level, and technological expertise. In conducting our analysis, we used regression models, leveraging the survey's detailed classification and clustering information to calculate the standard errors of the survey estimates accurately. We used graphs to evaluate the relationships between various categorical variables. We detailed our findings and conducted hypothesis testing to evaluate the relationships. Additionally, we addressed nonresponse issues by using multiple imputation techniques to address missing data and ensure robustness in our findings.
 
-This analysis provides insight into compensation dynamics within developers worldwide by addressing critical factors affecting yearly compensation.
+This analysis provides insight into compensation dynamics among developers worldwide by addressing critical factors affecting yearly compensation.
 
 ### Contents
 
@@ -100,10 +100,10 @@ The primary objective of this project is to conduct a detailed exploratory data 
 
 ### Data Description 
 
-By collecting the voice of developers, the Stack Overflow Annual Developer Survey 2023 enables analysts, IT leaders, reporters and other developers to stay up to date with the latest trends and technologies that are shaping the industry. The extensive reach and depth of information provided by the survey not only helps and provides context in understanding where trends in technology are heading, but also offers key attributes that can potentially influence developer compensation. Through a thorough analysis of this rich dataset, we can gain a deeper understanding of the complex interplay between various variables, such as developer roles, skills, experience, and geographic location, that contribute to determining remuneration in the global tech industry.
+By collecting the voice of developers, the Stack Overflow Annual Developer Survey 2023 enables analysts, IT leaders, reporters and other developers to stay up to date with the latest trends and technologies that are shaping the industry. The extensive reach and depth of information provided by the survey not only helps provides context in understanding where trends in technology are heading, but also offers key attributes that can potentially influence developer compensation. Through a thorough analysis of this rich dataset, we can gain a deeper understanding of the complex interplay between various variables, such as developer roles, skills, experience, and geographic location, that contribute to determining remuneration in the global tech industry.
 
 
-The rows within this data set are representative of each respondent who filled out the survey and each column is representative of each question within the survey. As previously identified, there is a large number of missing values as respondents were unable to answer questions based on inability or branching of questions. These value have been dealt with xx as required by the objective xx. 
+The rows within this data set are representative of each respondent who filled out the survey and each column is representative of each question within the survey. As previously identified, there is a large number of missing values as respondents were unable to answer questions based on inability or branching of questions.
 
 
 ### Survey Methodology
@@ -258,21 +258,21 @@ The dataset includes around 15.67 average years of coding experience. The mean i
 
 
 #### Categorical Response's Results
-- Two categorical variable: "Education Level" and "Organization size" has been chosen to observe if there is any association among them. For this hypotheses test assumption, a fisher exact test been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. The simulation method is done due to the small expected frequencies in the contingency table, making exact calculation impractical. This test's alternative hypothesis is two-sided, which means it was looking for any correlation (rather than assuming one variable is greater or lower than another).
+- Two categorical variable: "Education Level" and "Organisation size" has been chosen to observe if there is any association among them. For this hypothesis test, a Fisher Exact Test has been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. This simulation method is conducted due to the small expected frequencies in the contingency table, making exact calculations impractical. The alternative hypothesis of this test is two-sided, indicating that it was examining any potential correlation between the variables, without assuming that one variable is greater or lesser than the other.
 ![Alt text](fisher-test-result.png){width=100% height=100%}
-Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, giving compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. This result's robustness is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
+Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, providing compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. The robustness of this result is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
 
 ![Alt text](mosaic-fisher-plot.png){width=100% height=100%}
 
-The relationship between organization sizes and education levels is comprehensively visualized by the mosaic plot. Different education levels are represented by the X-axis, and organizational sizes are represented by the Y-axis. The size of the tiles in the mosaic plot represents the frequency or proportion of combinations of education level and organization size. Each tile represents a combination of these attributes. The standardized residuals, which show the degree of association between these categories, are indicated by the color coding of the tiles, which goes from blue to red. Red tiles show lower-than-expected frequencies, and blue tiles show higher-than-expected frequencies. The color's intensity corresponds to the size of these residuals.
+The relationship between organisation sizes and education levels is comprehensively visualised using the mosaic plot. Different education levels are represented on the X-axis, and organisational sizes are represented on the Y-axis. The size of the tiles in the mosaic plot represents the frequency or proportion of combinations of education level and organisation size. Each tile represents a combination of these attributes. The standardised residuals, which show the degree of association between these categories, are indicated by the colour coding of the tiles, which ranges from blue to red. Red tiles indicate lower-than-expected frequencies, and blue tiles indicate higher-than-expected frequencies. The colour's intensity corresponds to the size of these residuals.
 
-Several important insights are revealed by a thorough plot analysis. For developers who possess a bachelor's degree as shown by the larger blue tiles, there is a noticeably higher proportion in smaller organizations. On the other hand, as indicated by the red tiles, employees with bachelor's degrees tend to be less common than anticipated in larger organizations. Workers who hold master's degrees are more common in medium-sized to large-sized businesses; these positive residuals are highlighted by blue tiles. The red tiles indicate that employees with Master's degrees are less common in smaller organizations.
+Several important insights are revealed by a thorough plot analysis. For developers who possess a bachelor's degree (as shown by the larger blue tiles), there is a noticeably higher proportion in smaller organisations. On the other hand, as indicated by the red tiles, employees with bachelor's degrees tend to be less common than anticipated in larger organisations. Workers who hold master's degrees are more common in medium-sized to large-sized businesses; these positive residuals are highlighted by blue tiles. The red tiles indicate that employees with master's degrees are less common in smaller organisations.
 
-In a similar vein, employees with professional degrees are more common in larger organizations, although the frequency of such employees is lower in smaller organizations. The trend for developers holding associate's degrees is less obvious, medium-sized organizations nevertheless exhibit a somewhat higher frequency than anticipated.
+In a similar vein, employees with professional degrees are more common in larger organisations, although the frequency of such employees is lower in smaller organisations. The trend for developers holding associate's degrees is less obvious; medium-sized organisations nevertheless exhibit a somewhat higher frequency than anticipated.
 
-With only slight differences, the proportion of employees who have only completed their primary or elementary and secondary schooling is generally low across all organization sizes. The blue tiles indicate the higher frequency of employees in smaller organizations who have some college education but have not earned a degree, while the red tiles indicate the lower frequency of such employees in larger organizations.
+With only slight differences, the proportion of employees who have only completed their primary or elementary and secondary schooling is generally low across all organisation sizes. The blue tiles indicate the higher frequency of employees in smaller organisations who have some college education but have not earned a degree, while the red tiles indicate the lower frequency of such employees in larger organisations.
 
-In conclusion, the mosaic plot shows that while smaller organizations have a more diverse range of education levels, including bachelor's degrees and some college education without degrees, larger organizations prefer employees with higher education levels, such as master's and professional degrees. The standardized residuals provide important information about the hiring practices of various organization sizes by highlighting the significant relationships between education levels and organization sizes.
+In conclusion, the mosaic plot shows that while smaller organisations have a more diverse range of education levels, including bachelor's degrees and some college education without degrees, larger organisations prefer employees with higher education levels, such as master's and professional degrees. The standardised residuals provide important information about the hiring practices of various organisation sizes by highlighting the significant relationships between education levels and organisation sizes
 
 
 
@@ -280,26 +280,26 @@ In conclusion, the mosaic plot shows that while smaller organizations have a mor
 
 ![Alt text](predicted_vs_residuals.png){width=50% height=50%}
 
-The Predicted vs Residuals displays residuals on the vertical axis and the predicted compensation values on the horizontal axis. A horizontal line at zero represents no error between the predicted and actual values. The ideal scenario in such a plot is for the residuals to be randomly dispersed around the horizontal line, indicating that the model predicts equally well across all values of the independent variable. As can be observed the spread of residuals increases with the predicted compensation values. The heteroscedasticity observed suggests that the model's predictive accuracy varies across the scale of compensation, being less precise at higher compensation levels. This violates one of the fundamental assumptions of linear regression, so further results should be treated with caution.
+The Predicted vs Residuals plot displays residuals on the vertical axis and the predicted compensation values on the horizontal axis. A horizontal line at zero represents no error between the predicted and actual values. The ideal scenario in such a plot is for the residuals to be randomly dispersed around the horizontal line, indicating that the model predicts equally well across all values of the independent variable. As can be observed, the spread of residuals increases with the predicted compensation values. The heteroscedasticity observed suggests that the model's predictive accuracy varies across the scale of compensation, being less precise at higher compensation levels. This violates one of the fundamental assumptions of linear regression, so further results should be treated with caution.
 
 
 
 **Model Performance**
 
-The Mean Squared Error of the model was found to be approximately 464,518,156,488. This high value suggests that the model may have limitations in capturing all the variability in the compensation data. The R-squared value, was -0.0004, indicating that the model explains none of the variability around the mean. This unexpectedly low value could be a result of non-linear relationships not captured by the model.
+The Mean Squared Error of the model was found to be approximately 464,518,156,488. This high value suggests that the model may have limitations in capturing all the variability in the compensation data. The R-squared value was -0.0004, indicating that the model explains none of the variability around the mean. This unexpectedly low value could be a result of non-linear relationships not captured by the model.
 
 The top predictors determined by the Lasso of developer compensation include:
 
-- Student: Coefficient: -1.15, 95% CI: [-1.30, -1.00]. Suggests while attaining education can have a negative impact on compensation. 
-- APL: Coefficient: -0.53, 95% CI: [-0.65, -0.41]. Suggests less mainstream technologies may correlate with lower pay. 
-- Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicating lower compensation in academic roles. 
+- Student: Coefficient: -1.15, 95% CI: [-1.30, -1.00]. Suggests that attaining education can have a negative impact on compensation.
+- APL: Coefficient: -0.53, 95% CI: [-0.65, -0.41]. Suggests that less mainstream technologies may correlate with lower pay.
+- Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicates lower compensation in academic roles.
 - Primary/Elementary School: Coefficient: -0.17, 95% CI: [-0.336, 0.0]. Suggests lower compensation for lower educational attainment.
-- Senior Executive (C-Suite, VP, etc.): 0.28, 95% CI: [0.194, 0.368]. Senior positions result in higher compensation.
+- Senior Executive (C-Suite, VP, etc.): Coefficient: 0.28, 95% CI: [0.194, 0.368]. Senior positions result in higher compensation.
 - Raku: Coefficient: -0.37, 95% CI: [-0.49, -0.25]. Similar to APL, using less common technologies correlates with lower compensation.
-- Company size showed that large companies are better compensating then small companies, with large companies having a positive coefficient (Coefficient: 0.34, 95% CI: [0.294, 0.381]) and small companies a negative coefficient (Coefficient: -0.32, 95% CI: [-0.367, -0.263]).
-- Blockchain (Coefficient: 0.05, 95% CI: [0.0, 0.1]) and Snowflake (Coefficient: 0.31, 95% CI: [0.263, 0.357]): These technologies are associated with higher compensation, likely reflecting their current demand and specialization required.
+- Company size showed that large companies compensate better than small companies, with large companies having a positive coefficient (Coefficient: 0.34, 95% CI: [0.294, 0.381]) and small companies a negative coefficient (Coefficient: -0.32, 95% CI: [-0.367, -0.263]).
+- Blockchain (Coefficient: 0.05, 95% CI: [0.0, 0.1]) and Snowflake (Coefficient: 0.31, 95% CI: [0.263, 0.357]): These technologies are associated with higher compensation, likely reflecting their current demand and the specialization required.
 
-The Lasso model has provided valuable insights into the factors affecting developer compensation, highlighting the role of job roles, technology use, and company size. However, the low R-squared suggests that additional variables, possibly capturing more specific skills or regional economic factors, might be needed to improve the model's explanatory power. Further analysis could also explore non-linear modeling techniques or more sophisticated transformations to better capture the complex dynamics of the compensation landscape in tech.
+The Lasso model has provided valuable insights into the factors affecting developer compensation, highlighting the role of job roles, technology use, and company size. However, the low R-squared value suggests that additional variables, possibly capturing more specific skills or regional economic factors, might be needed to improve the model's explanatory power. Further analysis could also explore non-linear modeling techniques or more sophisticated transformations to better capture the complex dynamics of the compensation landscape in tech.
 
 ### Discussion 
 
@@ -347,6 +347,6 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 
 ### Appendix
 
-[Insert link to repository]
+[Insert link to repository](https://github.com/JohnBenson-macq/STAT8101_Group_Assignment)
 
 
