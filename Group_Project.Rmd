@@ -246,22 +246,43 @@ All code and algorithms can be viewed via the GitHub repository (see appendix).
 
 ### Results
 
-#### Numeric Responsen Results
-- input hist here
+#### Numerical Response's Results
+- The variable chosen for this part was 'YearsCode'. Here is the histograms:
+![Alt text](yearsCode_numeric_histogram.png){width=80% height=80%}
+There is a noticeable peak in the distribution at 5 to 10 years of coding experience, indicating that a high percentage of persons in our sample have coding expertise in this area. This might mean that many people are in the early to mid stages of their careers. The frequency drops as the number of years increases, as is common in many job domains where fewer people achieve very high levels of expertise. The existence of numerous peaks (10, 15, 20, 30 years) may reflect varied common career duration or moments at which people change occupations, rise to new roles, or even take pauses from coding. The histogram includes a big tail to the right, indicating that there are still a considerable number of people with extensive coding expertise, but far less than those with 5-10 years.
+**Summary Statistics:**
+**Mean of Years of Coding: 15.67**
+**Standard Deviation of Years of Coding: 9.87**
+**Median of Years of Coding: 13**
+The dataset includes around 15.67 average years of coding experience. The mean is sensitive to outliers and skewed distributions, which means that a few extremely high or low numbers can have a large impact on the mean. A standard deviation of around 9.87 years implies that individual coding experience varies greatly from the average (mean), with many developers having years of expertise that are significantly lower or higher than the norm. The median is a reliable measure of central tendency that is less impacted by outliers and skewed data than the mean. This number is less than the mean, indicating that the distribution of years of coding is somewhat skewed to the right (positively skewed), with a tail extending towards greater years of coding.
 
 
-#### Categorical Response Results
-- HIGHEST LEVEL OF EDUCATION AND COUNTRIES
-- include graphs
-- input two way table here
+#### Categorical Response's Results
+- Two categorical variable: "Education Level" and "Organization size" has been chosen to observe if there is any association among them. For this hypotheses test assumption, a fisher exact test been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. The simulation method is done due to the small expected frequencies in the contingency table, making exact calculation impractical. This test's alternative hypothesis is two-sided, which means it was looking for any correlation (rather than assuming one variable is greater or lower than another).
+![Alt text](fisher-test-result.png){width=100% height=100%}
+Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, giving compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. This result's robustness is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
+
+![Alt text](mosaic-fisher-plot.png){width=100% height=100%}
+
+The relationship between organization sizes and education levels is comprehensively visualized by the mosaic plot. Different education levels are represented by the X-axis, and organizational sizes are represented by the Y-axis. The size of the tiles in the mosaic plot represents the frequency or proportion of combinations of education level and organization size. Each tile represents a combination of these attributes. The standardized residuals, which show the degree of association between these categories, are indicated by the color coding of the tiles, which goes from blue to red. Red tiles show lower-than-expected frequencies, and blue tiles show higher-than-expected frequencies. The color's intensity corresponds to the size of these residuals.
+
+Several important insights are revealed by a thorough plot analysis. For developers who possess a bachelor's degree as shown by the larger blue tiles, there is a noticeably higher proportion in smaller organizations. On the other hand, as indicated by the red tiles, employees with bachelor's degrees tend to be less common than anticipated in larger organizations. Workers who hold master's degrees are more common in medium-sized to large-sized businesses; these positive residuals are highlighted by blue tiles. The red tiles indicate that employees with Master's degrees are less common in smaller organizations.
+
+In a similar vein, employees with professional degrees are more common in larger organizations, although the frequency of such employees is lower in smaller organizations. The trend for developers holding associate's degrees is less obvious, medium-sized organizations nevertheless exhibit a somewhat higher frequency than anticipated.
+
+With only slight differences, the proportion of employees who have only completed their primary or elementary and secondary schooling is generally low across all organization sizes. The blue tiles indicate the higher frequency of employees in smaller organizations who have some college education but have not earned a degree, while the red tiles indicate the lower frequency of such employees in larger organizations.
+
+In conclusion, the mosaic plot shows that while smaller organizations have a more diverse range of education levels, including bachelor's degrees and some college education without degrees, larger organizations prefer employees with higher education levels, such as master's and professional degrees. The standardized residuals provide important information about the hiring practices of various organization sizes by highlighting the significant relationships between education levels and organization sizes.
+
 
 
 #### Regression Results
 
-The Predicted vs Residuals displays residuals on the vertical axis and the predicted compensation values on the horizontal axis. A horizontal line at zero represents no error between the predicted and actual values. The ideal scenario in such a plot is for the residuals to be randomly dispersed around the horizontal line, indicating that the model predicts equally well across all values of the independent variable.
-
 ![Alt text](predicted_vs_residuals.png){width=50% height=50%}
-As can be observed the spread of residuals increases with the predicted compensation values. The heteroscedasticity observed suggests that the model's predictive accuracy varies across the scale of compensation, being less precise at higher compensation levels. This violates one of the fundamental assumptions of linear regression, so further results should be treated with caution.
+
+The Predicted vs Residuals displays residuals on the vertical axis and the predicted compensation values on the horizontal axis. A horizontal line at zero represents no error between the predicted and actual values. The ideal scenario in such a plot is for the residuals to be randomly dispersed around the horizontal line, indicating that the model predicts equally well across all values of the independent variable. As can be observed the spread of residuals increases with the predicted compensation values. The heteroscedasticity observed suggests that the model's predictive accuracy varies across the scale of compensation, being less precise at higher compensation levels. This violates one of the fundamental assumptions of linear regression, so further results should be treated with caution.
+
+
 
 **Model Performance**
 
