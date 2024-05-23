@@ -54,8 +54,7 @@ This analysis provides insight into compensation dynamics among developers world
 4. **Data Description**
 5. **Survey Methodology**
     - Key Principles
-        - Evaluation of Methodologies
-        - Non-Response
+        - Scope and Scale
         - Duration and Timing
     - Survey Design
     - Evaluation of Methodologies
@@ -64,9 +63,10 @@ This analysis provides insight into compensation dynamics among developers world
         - Adaptive Questionnaire
         - Handling of Compensation Data
         - Technological Inclusion
-        - Randomization of Questions
+        - Randomisation of Questions
         - Data Analysis Adjustments
-        - Non-response
+        - Survey Language
+    - Non-Response
 6. **Data Analysis**
     - Data Description
     - Exploratory Data Analysis (EDA)
