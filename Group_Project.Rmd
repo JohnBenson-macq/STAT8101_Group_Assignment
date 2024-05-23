@@ -108,65 +108,110 @@ The rows within this data set are representative of each respondent who filled o
 
 
 ### Survey Methodology
+\newline
+\newline
 
 #### Key Principles
+\newline
+\newline
 
-**Scope and Scale**: The survey reached 89,184 qualified software developers from 185 countries, indicating a broad global representation. The qualification for analysis was based on respondents' consent to share their data and completion of all required questions. About 2,000 responses were excluded due to incomplete data.
+**Scope and Scale**: The survey reached 89,184 qualified software developers from 185 countries, indicating a broad global representation. The qualification for analysis was based on respondents' consenting to share their data and the completion of all required questions. Approximately 2,000 responses were excluded due to incomplete data.
+\newline
+\newline
 
-**Duration and Timing**: The survey was conducted from May 8, 2023, to May 19, 2023. The median response time was nearly 18 minutes, which increased from the previous year due to the inclusion of additional questions this year.
+**Duration and Timing**: The survey was conducted from May 82023, to May 19, 2023. The median response time was nearly 18 minutes, which increased from the previous year due to the inclusion of additional questions.
+\newline
+\newline
+\newline
 
 #### Survey Design
-The objective of the survey was to obtain data on a wide range of topics to help infer and provided insights into the trends and technology shaping the industry. As such, the survey contained questions relating to the objective details of the respondents e.g. the years they've spent coding, their salary and their profession etc and questions designed to elicit more subjective responses in relation to the technology landscape e.g. their thoughts on the usefulness of AI to their work and whether Stack Overflow has been helpful etc.
+The objective of this survey was to obtain data on a wide range of topics to help infer and provide insights into trends and technology that are shaping the developers industry. The survey contained questions relating to the objective details on the respondents, such as, the years they've spent coding, their salary and their profession. This was combined with questions designed to elicit more subjective responses in relation to the technology landscape, such as, their thoughts on the usefulness of AI to their work and whether Stack Overflow has been helpful. 
+\newline
 
-The questionnaire contained a mix of questions in the form of single-response multiple choice, multiple-response multiple choice and short answers that resulted in responses of a categorical or numerical nature. The multiple choice questions themselves contained response options that either related specifically to the questions asked, for example, numerical ranges for employer size, or utilised a Likert scale that ranged from "Strongly Disagree" to "Strongly Agree" to gauge the agreeableness of a respondent to a proposition e.g. that AI will be useful in assisting their work. All questions were framed in as neutral a tone as possible to assist in minimising potential social desirability bias from respondents. 
+The questionnaire contained a mix of questions in the form of single-response multiple choice, multiple-response multiple choice and short answers that resulted in responses of  categorical or numerical natures. Some multiple choice questions themselves contained response options that related specifically to the questions asked, such as the numerical ranges for employer size. Additionally multiple choice questions utilised Likert scales with the range "Strongly Disagree" to "Strongly Agree", to gauge the agreeableness of a respondent to a proposition, for example, ‘that AI will be useful in assisting their work’. All questions were framed in as neutral a tone as possible to assist in minimising potential social desirability bias from respondents. 
+\newline
 
-Survey outcomes from previous years were used as learnings to help update the survey question methodology including the re-evaluation of question wording and framing to reduce ambiguity and non-responses to individual questions
+Survey outcomes from previous years were used as learnings to help update the survey question methodology including the re-evaluation of question wording and framing to reduce ambiguity and non-responses to individual questions.
+\newline
 
-The survey mode was conducted in a two stage process with each stage pertaining to a different form of participation. The initial primary mode of engagement centered around an opt-in model where the survey was available to everyone on the Stack Overflow website with message banners and advertisements on the site encouraging users to participate in the survey. The purpose of this model was two fold: to attract as many responses as possible and that those who opted-in were less likely to provide non-response answers to any individual question.
+The survey mode was conducted in a two-stage process with each stage pertaining to a different form of participation. The initial primary mode of engagement centred around an opt-in model where the survey was available to everyone on the Stack Overflow website. With message banners and advertisements used on the site to encourage users to participate in the survey. The purpose of this model was twofold: to attract as many responses as possible and to reduce the likelihood that individuals who opted-in would provide non-response answers to any individual questions. 
+\newline
 
-Once the opt-in time period had elapsed the responses were aggregated by country and a second stage was then implemented whereby the survey was specifically emailed to a target population of users who had not already completed the survey. The design of this approach involved stratified sampling techniques whereby the target population of users/respondents was weighted according to the country they resided in such that the overall response rate (opt-in and emailed participants) by country was roughly proportional to number of programmers in that country as a proportion of the global user base. For example, high response rates for countries such as India & China were desired given the disproportionate number of programmers compared to the global mean. As such, should the number of responses be lower than expected at the opt-in stage for these countries, they were over sampled i.e. over represented, in the population of emailed surveys.
-
+Once the opt-in time period had elapsed the responses were aggregated by country and a second stage was then implemented, whereby the survey was specifically emailed to a target population of users who had not already completed the survey. The design of this approach involved stratified sampling techniques whereby the target population of users/respondents was weighted according to the country they resided in. To ensure that the overall response rate (opt-in and emailed participants) by country was roughly proportional to number of programmers in that country as a proportion of the global user base. For example, high response rates for countries such as India & China were desired given the disproportionate number of programmers compared to the global mean. As such, should the number of responses be lower than expected at the opt-in stage for these countries, they were over sampled i.e. over represented, in the population of emailed surveys.
+\newline
+\newline
+\newline
 
 #### Evaluation of Methodologies
+\newline
+\newline
 
 **Recruitment Methods**: Respondents were primarily recruited through Stack Overflow's own channels, such as onsite messaging, blog posts, emails, banner ads, and social media posts. This recruitment strategy likely led to a sample biased towards highly engaged users of Stack Overflow.
+\newline
+\newline
 
 **Geography**: Due to U.S. sanctions, the survey was not accessible in certain regions (Crimea, Cuba, Iran, North Korea, Syria), potentially skewing geographical representation. Some respondents circumvented this using VPNs, which introduces another layer of bias in data representation.
+\newline
+\newline
 
 **Adaptive Questionnaire**: The survey employed conditional questioning, where certain topics (e.g., job-related questions) were only presented based on previous responses, which helps in reducing the respondent burden but could lead to biased results if not all relevant respondents see all questions.
+\newline
+\newline
 
-**Handling of Compensation Data**: Compensation data, which was optional, was provided by 48,026 respondents. Compensation were reported in local currencies and converted to USD using the exchange rate from June 2, 2023. High outlier Compensation were trimmed (less than 1% of data), suggesting robust handling of Compensation data to prevent skewing results.
+**Handling of Compensation Data**: Compensation data, which was optional, was provided by 48,026 respondents. Compensation was reported in local currencies and converted to USD using the exchange rate from June 2, 2023. High outlier Compensations were trimmed (less than 1% of data), suggesting robust handling of Compensation data to prevent skewing results.
+\newline
+\newline
 
 **Technological Inclusion**: Technologies to be included in the survey were selected based on previous years' data and community feedback. This participative approach helped ensure that the survey content remained relevant and reflective of current trends.
+\newline
+\newline
 
-**Randomization of Questions**: The survey randomized the order of blocks of questions to minimize the order effect, which can influence how questions are answered based on their sequence in the survey.
+**Randomisation of Questions**: The survey randomised the order of blocks-of-questions to minimize the order effect. Since the order of questions can influence how they are answered based on their sequence within the survey.
+\newline
+\newline
 
-**Data Analysis Adjustments**: Post-survey, several corrections were made to the online results, such as adjusting the Compensation filter to exclude small sample sizes and correcting display issues in sections about professional coders and AI tools. This demonstrates an ongoing commitment to accuracy and transparency in reporting survey results.
+**Data Analysis Adjustments**: Post-survey, several corrections were made to the online results. This included adjusting the Compensation filter to exclude small sample sizes and correcting display issues in sections about professional coders and AI tools. This demonstrates an ongoing commitment to accuracy and transparency in reporting survey results.
+\newline
+\newline
 
-**Non-response**: 
-A variety of different forms of non-response occurs within this survey as a result of the questions composition, distribution methods and respondent locations. 
-
-- Non-repossession based on branching or skip-logic: Many questions are skipped based on the respondents answers to previous questions. This is done to streamline the survey, improve the relevance of questions and increase the specif information gathered on respondents. For example, job focused questions would only be visible to those who responded that they had a job, therefore resulting in non-response for all branching questions.
-- Non-response based on failure to respond when contacted: A number of participants that were emailed, failed to respond to the survey request despite repeated outreaches.
-- The survey was conducted entirely in English resulting in the possibility of misinterpretation/misunderstanding of the questions asked. Given that the website operates wholly in English, however, the effect of language barrier non-response can be assumed to be minimal.
-- The survey was conducted solely in English, which could lead to potential misinterpretations or misunderstandings of the questions. However, since the website operates exclusively in English, the impact of non-response due to language barriers is expected to be minimal.
+- *Survey Language:* The survey was conducted entirely in English resulting in the possibility of misinterpretation/misunderstanding of the questions asked. Given that the website operates wholly in English, however, the effect of language barrier non-response can be assumed to be minimal.
 \newline
 \newline
 \newline
+
+#### Non-Response
+\newline
+
 The survey defined a non-response if either of the following criteria were met:
+\newline
 - Respondent failed to complete an emailed survey
+\newline
 - The respondent did not agree to the terms & conditions (Q120)
 \newline
-Non-response rates for The Stack Overflow Annual Developer Survey 2023:
-40,000 surveys were emailed out to Stack Overflow uses weighted by country and targeted on the most active users that had not already answered. Of these 27,414 were completed with 12,586 non-respondents, resulting in a non-response rate of 31.47%. The unanswered surveys were reissued, using oversampling methodologies to a new sample (n=18,240) that followed the same weighted criteria. Of the 18,240 survey that were reissued there were 3,834 respondents and 14,406 non-respondents resulting in a non-response rate of 78.98%. In total, the emailed survey received 31,248 responses against an initial sample size of 40,000 constituting a non-response rate of 21.88%. Combining the total number of emailed surveys i.e. initial sample + secondary sample = $40,000 + 18,240= 58,240$, however, a total non-response rate was calculated at 46.35% 
+\newline
 
-Methods to adjust for the non-response:
-Targeted follow up strategies by way of follow-up communications were employed to encourage non-respondents to complete the survey.(Kelly et al., 2013) This included emailing and messaging the non-respondents. After a set time had elapsed, the number of non-respondents was redetermined along with aggregated statistic, specifically geographical location (country)(Corry et al., 2017). An additional round of emailed surveys targeting individuals with the same country characteristics as the non-respondents was conducted along with an oversampling strategy that had a sample size inversely proportional to the initial non-response rate. (Pickery & Carton, 2008)
+A number of different forms of non-response occurs within this survey as a result of the question composition, distribution methods and respondent locations.
+\newline
 
+- *Non-repossession based on branching or skip-logic:* Many questions may be skipped based on the respondent’s answers to previous questions. This is done to streamline the survey, improve the relevance of questions and increase the specific information gathered on respondents. For example, job focused questions would only be visible to those who responded that they had a job, therefore resulting in non-response for all branching questions.
+\newline
 
-[FIND SOME INFO ON HOW TO DEAL WITH NON-RESPOSNE, ESPECIALLY ON LIKE BRANCHING ]
-[RESEARCH ON STANDRDS FOR NON-RESPONSE]
-[TRY AND FIND OUT IF PEOPLE WERE TARGETTED BASED ON THEIR ACTIVITY LEVEL]
+- *Non-response based on failure to respond when contacted:* A number of participants that were emailed, failed to respond to the survey request despite repeated outreaches.
+\newline
+\newline
+
+**Non-response rates for The Stack Overflow Annual Developer Survey 2023:**
+\newline
+
+40,000 surveys were emailed out to Stack Overflow users, weighted by country and targeted on the most active users that had not already answered. Of these 27,414 were completed with 12,586 non-respondents, resulting in a non-response rate of 31.47%. The unanswered surveys were reissued, using oversampling methodologies to a new sample (n=18,240) that followed the same weighted criteria. Of the 18,240 surveys that were reissued, there were 3,834 respondents and 14,406 non-respondents resulting in a non-response rate of 78.98%. In total, the emailed survey received 31,248 responses against an initial sample size of 40,000 constituting a non-response rate of 21.88%. Combining the total number of emailed surveys, the initial sample + secondary sample = $40,000 + 18,240= 58,240$, therefore the total non-response rate was 46.35%.
+\newline
+\newline
+
+**Methods to adjust for the non-response:**
+\newline
+
+Targeted follow up strategies by way of follow-up communications were employed to encourage non-respondents to complete the survey (Kelly et al., 2013). This included emailing and messaging the non-respondents. After a set time had elapsed, the number of non-respondents was redetermined along with aggregated statistic, specifically geographical location (country)(Corry et al., 2017). An additional round of emailed surveys targeting individuals with the same country characteristics as the non-respondents was conducted along with an oversampling strategy that had a sample size inversely proportional to the initial non-response rate (Pickery & Carton, 2008).
+
 
 ### Data Analysis
 
