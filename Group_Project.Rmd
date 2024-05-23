@@ -217,10 +217,9 @@ Targeted follow up strategies by way of follow-up communications were employed t
 
 #### Data Description
 The initial survey data consisted of 84 fields and 89,185 observations. 
-The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI, and Stack Overflow metrics. The respondent characteristics
-outlined details of the respondents including age, employment status, residing country, years coding, and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages they know and use, any databases they use, frameworks and platforms they may use, and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents' use of AI and it's effect on their programming. Finally, data was collected about the respondents' use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore, several questions were asked using a Likert scale to gauge respondents' views on the design and usefulness of the site for their needs.
+The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI, and Stack Overflow metrics. The respondent characteristics outlined details of the respondents including age, employment status, residing country, years coding, and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages, databases, frameworks and platforms they may use, and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents' use of AI and it's effect on their programming. Finally, data was collected about the respondents' use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore, several questions were asked using a Likert scale to gauge respondents' views on the design and usefulness of the site for their needs.
 
-Given that the data set was pre-weighted along the key factor i.e. country and that given the large number of observations in our data-set (89,000+) it was deemed unnecessary for the need to use survey packages as the design effects were likely to be minimal (Heeringa et al., 2017).
+Given that the data set was pre-weighted along the key factor, i.e. country and that given the large number of observations in our data-set (89,000+) it was deemed unnecessary for the need to use survey packages as the design effects were likely to be minimal (Heeringa et al., 2017).
 
 In constructing out regression model we selected predictor variables that were likely to have a strong association with the response variable, that is yearly compensation. As such it was determined that variables including the years an individual spent coding, their highest level of education attainment, their role in their organisation, the size of the organisation, the programming languages they know, the database systems they use and other tools they used were the most appropriate. All predictor variables, except for years coding, were categorical and were handled by translating each level into individual binary 1:0 variables corresponding to TRUE/FALSE respectively.
 
@@ -258,11 +257,11 @@ UpSet plots have been used to visualise the intersections of missing data within
 
 #### Data Cleaning and Manipulation
 
-To clean our data, we first began by subsampling the dataset to include only valid responses to *ConvertedCompYearly*. This decision was made as it maintains a large dataset (48,019 responses) while ensuring data integrity. Additionally due to the highly skewed nature of the data, and *ConvertedCompYearly* being the variable of interest any self-imputation would have been unreliable.
+To clean our data, we first began by subsampling the dataset to include only valid responses to *ConvertedCompYearly*. This decision was made as it maintains a large dataset (48,019 responses) while ensuring data integrity. Additionally, due to the highly skewed nature of the data, and *ConvertedCompYearly* being the variable of interest any self-imputation would have been unreliable.
 
 In order to prepare the data for imputation and subsequent regression analyses, several variables required augmentation. The *LanguageHaveWorkedWith* and *DatabaseHaveWorkedWith* variables contained multiple responses per respondent, indicating every language or database they had worked with. These variables were separated and encoded, along with *EdLevel*, *DevType*, and *OrgSize*, to create binary columns representing each unique response.
 
-To handle missing values, we employed Multiple Imputation by Chained Equations (MICE). Five iterations were selected as it gave a balance between computational efficiency and convergence of the algorithm. For the encoded binary variables, the logistic regression method ('logreg') was utilized, for the numeric variable *YearsCode* was imputed using predictive mean matching ('pmm'), this method preserves the distributional properties of the original data (van Buuren, 2007).
+To handle missing values, we employed Multiple Imputation by Chained Equations (MICE). Five iterations were selected as it gave a balance between computational efficiency and convergence of the algorithm. For the encoded binary variables, the logistic regression method ('logreg') was utilised, for the numeric variable *YearsCode* was imputed using predictive mean matching ('pmm'), this method preserves the distributional properties of the original data (van Buuren, 2007).
 
 The MICE algorithm operates by iteratively imputing missing values in each variable based on the observed values of other variables. By generating multiple imputed datasets, MICE accounts for the uncertainty associated with missing data, providing a more robust and reliable basis for subsequent statistical analyses.
 
@@ -272,7 +271,7 @@ The plot shows the mean and standard deviation of the imputed values only. We ca
 
 #### Feature Selection and Data Curation
 
-In analyzing compensation data problems such as skewness and outliers are common. These issues can have detrimental effects on the model. To address this, we performed a log-transformation on the compensation data. The transformation helped to stabilize variance and normalize the data, making it suitable for linear modeling.
+In analysing compensation data, problems such as skewness and outliers was common and can have detrimental effects on the model. To address this, we performed a log-transformation on the compensation data. The transformation helped to stabilize variance and normalize the data, making it suitable for linear modeling.
 
 The transformation's effectiveness is evident in the boxplot comparison below, which shows a marked reduction in skewness.
 
