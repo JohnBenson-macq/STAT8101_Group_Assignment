@@ -4,27 +4,14 @@ output:
     latex_engine: xelatex
     keep_tex: true
     number_sections: true
-    toc: true
     toc_depth: 3
     fig_caption: true
     fig_crop: true
     highlight: tango
-  html_document:
-    toc: true
-    toc_depth: 3
-    toc_float: true
-    fig_caption: true
-    df_print: paged
-mainfont: "Times New Roman"
+  html_document: default
+mainfont: Times New Roman
 fontsize: 12pt
-geometry: "left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm"
-header-includes:
-  - \usepackage{hyperref}
-  - \usepackage{amsmath}
-  - \usepackage{graphicx}
-  - \usepackage{chngcntr}
-  - \counterwithout{section}{chapter}
-  - \renewcommand{\thesection}{\arabic{section}}
+geometry: "left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm"
 ---
 
 ```{r setup, include=FALSE}
@@ -160,12 +147,15 @@ The rows within this data set are representative of each respondent who filled o
 ### Survey Methodology
 
 #### Key Principles
+\
 
 **Scope and Scale**: The survey reached 89,184 qualified software developers from 185 countries, indicating a broad global representation. The qualification for analysis was based on respondents' consenting to share their data and the completion of all required questions. Approximately 2,000 responses were excluded due to incomplete data.
 
 **Duration and Timing**: The survey was conducted from May 82023, to May 19, 2023. The median response time was nearly 18 minutes, which increased from the previous year due to the inclusion of additional questions.
 
 #### Survey Design
+\
+
 The objective of this survey was to obtain data on a wide range of topics to help infer and provide insights into trends and technology that are shaping the developers industry. The survey contained questions relating to the objective details on the respondents, such as, the years they've spent coding, their salary and their profession. This was combined with questions designed to elicit more subjective responses in relation to the technology landscape, such as, their thoughts on the usefulness of AI to their work and whether Stack Overflow has been helpful. 
 
 The questionnaire contained a mix of questions in the form of single-response multiple choice, multiple-response multiple choice and short answers that resulted in responses of  categorical or numerical natures. Some multiple choice questions themselves contained response options that related specifically to the questions asked, such as the numerical ranges for employer size. Additionally multiple choice questions utilised Likert scales with the range "Strongly Disagree" to "Strongly Agree", to gauge the agreeableness of a respondent to a proposition, for example, ‘that AI will be useful in assisting their work’. All questions were framed in as neutral a tone as possible to assist in minimising potential social desirability bias from respondents. 
@@ -177,6 +167,7 @@ The survey mode was conducted in a two-stage process with each stage pertaining 
 Once the opt-in time period had elapsed the responses were aggregated by country and a second stage was then implemented, whereby the survey was specifically emailed to a target population of users who had not already completed the survey. The design of this approach involved stratified sampling techniques whereby the target population of users/respondents was weighted according to the country they resided in. To ensure that the overall response rate (opt-in and emailed participants) by country was roughly proportional to number of programmers in that country as a proportion of the global user base. For example, high response rates for countries such as India & China were desired given the disproportionate number of programmers compared to the global mean. As such, should the number of responses be lower than expected at the opt-in stage for these countries, they were over sampled i.e. over represented, in the population of emailed surveys.
 
 #### Evaluation of Methodologies
+\
 
 **Recruitment Methods**: Respondents were primarily recruited through Stack Overflow's own channels, such as onsite messaging, blog posts, emails, banner ads, and social media posts. This recruitment strategy likely led to a sample biased towards highly engaged users of Stack Overflow.
 
@@ -192,7 +183,7 @@ Once the opt-in time period had elapsed the responses were aggregated by country
 
 **Data Analysis Adjustments**: Post-survey, several corrections were made to the online results. This included adjusting the Compensation filter to exclude small sample sizes and correcting display issues in sections about professional coders and AI tools. This demonstrates an ongoing commitment to accuracy and transparency in reporting survey results.
 
-- *Survey Language:* The survey was conducted entirely in English resulting in the possibility of misinterpretation/misunderstanding of the questions asked. Given that the website operates wholly in English, however, the effect of language barrier non-response can be assumed to be minimal.
+**Survey Language**: The survey was conducted entirely in English resulting in the possibility of misinterpretation/misunderstanding of the questions asked. Given that the website operates wholly in English, however, the effect of language barrier non-response can be assumed to be minimal.
 
 #### Non-Response
 
@@ -221,6 +212,8 @@ Targeted follow up strategies by way of follow-up communications were employed t
 ### Data Analysis
 
 #### Data Description
+\
+
 The initial survey data consisted of 84 fields and 89,185 observations. 
 The data collected broadly cover four main areas of interest: respondent characteristics, technology, AI, and Stack Overflow metrics. The respondent characteristics outlined details of the respondents including age, employment status, residing country, years coding, and salary. The technology element encompassed data about the tools the respondents used as it pertains to programming including the programming languages, databases, frameworks and platforms they may use, and other tangentially related tools such as Confluence. The key topic for this year's developer survey centered around AI and, as such, several questions were asked as to the respondents' use of AI and it's effect on their programming. Finally, data was collected about the respondents' use of the Stack Overflow website including time spent on the site and what they used it for. Furthermore, several questions were asked using a Likert scale to gauge respondents' views on the design and usefulness of the site for their needs.
 
@@ -232,18 +225,28 @@ In constructing out regression model we selected predictor variables that were l
 
 
 #### Exploratory Data Analysis (EDA)
+\
 
 A summary of our data indicates that only 4 out of the 84 fields are numeric variables, while the remaining 80 variables are catorgosied as chacters as they are comprised of string responses. It is evident that a number of missing values exist within this dataset as indecates by the number of 'NA's' for the numerical observations.
-![Alt text](Missing_data.png){width=50% height=50%}
+\
+
+![Missing Data presences](Missing_data.png){width=90% height=90%}
+
+\newpage
 
 **Numeric Variables**
+
 - *CompTotal*: Extremely right-skewed given outliers with extremely high compensation values.
+
 - *ConvertedCompYearly*: Extremely right-skewed given outliers with extremely high compensation values.
+
 - *ResponseId*: This variable identifies each observation and is not a response from participants.
+
 - *WorkExp*: Right-skewed, indicating the decreasing frequency of work experience within the respondants. 
+
 - *convertedcomp_log*: Given the compensation outliers present within the dataset, a log transformation has been applied to the variable of interest *ConvertedCompYearly* resulting in an approximately normal distribution.
 
-![Alt text](Numerical_variables_hist.png){width=50% height=50%}
+![Histogram of Numerical Variables](Numerical_variables_hist.png){width=100% height=100%}
 
 Further visualisation of missing values for key variables of interest:
 - There are random missing values across *YearsCode* and *YearsCodePro*.
@@ -252,15 +255,31 @@ Further visualisation of missing values for key variables of interest:
 - It is evident that there is a high amount of non-response questions focused on compensation, with several *Employment* categories having only missing response variables. This is on account of the high number of unique *Employment* combinations given the multi-select string nature of the questions and the sensitivity of providing compensation information. 
 - No clear trends of missing variables.
 
-![Alt text](MV_YearsCode_vs_Pro.png){width=50% height=50%}
-![Alt text](MV_Employment_vs_converted_comp.png){width=50% height=50%}
+\begin{figure}[ht]
+\centering
+\begin{minipage}{0.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{MV_YearsCode_vs_Pro.png}
+  \caption{Yrs Coding vs Yrs Coding Professionally}
+  \label{fig:figure1}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{MV_Employment_vs_converted_comp.png}
+  \caption{Employment vs Compensation}
+  \label{fig:figure2}
+\end{minipage}
+\end{figure}
 
 
 UpSet plots have been used to visualise the intersections of missing data within our dataset, given several characteristics and attribute values can be encoded simultaneously (Lex et al, 2014). This plot indicates that there are higher frequencies for interceptions across a greater number of variables relating to *AI* and reduced frequencies for interceptions of various reduced combinations of *AI* attributes. Many missing values are visibly present within this dataset, therefore requiring appropriate cleaning methodologies.
-![Alt text](Missing_values_upset.png){width=50% height=50%}
 
+![UpSet Missing values](Missing_values_upset.png){width=90% height=90%}
+
+\newpage
 
 #### Data Cleaning and Manipulation
+\
 
 To clean our data, we first began by subsampling the dataset to include only valid responses to *ConvertedCompYearly*. This decision was made as it maintains a large dataset (48,019 responses) while ensuring data integrity. Additionally, due to the highly skewed nature of the data, and *ConvertedCompYearly* being the variable of interest any self-imputation would have been unreliable.
 
@@ -270,17 +289,19 @@ To handle missing values, we employed Multiple Imputation by Chained Equations (
 
 The MICE algorithm operates by iteratively imputing missing values in each variable based on the observed values of other variables. By generating multiple imputed datasets, MICE accounts for the uncertainty associated with missing data, providing a more robust and reliable basis for subsequent statistical analyses.
 
-![Alt text](wiggle_plots.png){width=50% height=50%}
+![MICE convergence](wiggle_plots.png){width=60% height=60%}
+
 The plot shows the mean and standard deviation of the imputed values only. We can see the streams intermingling indicating convergence of the imputed values. 
 
 
 #### Feature Selection and Data Curation
+\
 
 In analysing compensation data, problems such as skewness and outliers was common and can have detrimental effects on the model. To address this, we performed a log-transformation on the compensation data. The transformation helped to stabilize variance and normalize the data, making it suitable for linear modeling.
 
 The transformation's effectiveness is evident in the boxplot comparison below, which shows a marked reduction in skewness.
 
-![Alt text](comparison_of_skewness.png){width=50% height=50%}
+![Skewness of Dependent](comparison_of_skewness.png){width=50% height=50%}
 
 To identifying the key determinants of *ConvertedCompYearly*, we utilised Lasso regression, a regularisation method designed to improve the statistical model's predictive performance and clarity. Lasso performs both variable selection and regularization, which helps in handling the multicollinearity and overfitting by shrinking less important feature's coefficients to zero. Consequently, Lasso enables us to identify the most pertinent variables while maintaining a parsimonious model.
 
@@ -288,8 +309,9 @@ Our dataset included 135 features, some of which exhibited high multicollinearit
 
 The cross-validation process for Lasso regression involved tuning the lambda parameter, which controls the strength of the penalty applied to features. A plot of the cross-validation results shows how the mean squared error varies with different log(lambda) values. The optimal lambda value in this context was approximately -6.502476 in log space.
 
-![Alt text](cross_validation_results.png){width=50% height=50%}
+![Cross Validation Results](cross_validation_results.png){width=50% height=50%}
 
+\newpage
 
 ### Implementation 
 
@@ -299,12 +321,16 @@ All code and algorithms can be viewed via the GitHub repository (see appendix).
 ### Results
 
 #### Numerical Response
-- The variable chosen for this part was *YearsCode*. 
-![Alt text](yearsCode_numeric_histogram.png){width=80% height=80%}
+\
+
+The variable chosen for this analysis was *YearsCode*. 
+
+![Years Coding Histogram](yearsCode_numeric_histogram.png){width=65% height=65%}
 
 There is a noticeable peak in the distribution at 5 to 10 years of coding experience, indicating that a high percentage of persons in our sample have coding expertise in this area. This might mean that many people are in the early to mid stages of their careers. The frequency drops as the number of years increases, as is common in many job domains where fewer people achieve very high levels of expertise. The existence of numerous peaks (10, 15, 20, 30 years) may reflect varied common career duration or moments at which people change occupations, rise to new roles, or even take pauses from coding. The histogram includes a large tail to the right, indicating that there are still a considerable number of people with extensive coding expertise, but far less than those with 5-10 years.
 
 **Summary Statistics:**
+
 - Mean of Years of Coding: 15.67
 - Standard Deviation of Years of Coding: 9.87
 - Median of Years of Coding: 13
@@ -313,6 +339,7 @@ The dataset includes around 15.67 average years of coding experience. The mean i
 
 
 #### Categorical Response
+\
 
 Two categorical variable: *Education Level* and *Organisation size* has been chosen to observe if there is any association among them. For this hypothesis test, a Fisher Exact Test has been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. This simulation method is conducted due to the small expected frequencies in the contingency table, making exact calculations impractical. The alternative hypothesis of this test is two-sided, indicating that it was examining any potential correlation between the variables, without assuming that one variable is greater or lesser than the other.
 
@@ -320,7 +347,7 @@ Using Fisher's Exact Test with 10,000 simulated repetitions, we established a ve
 
 Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p = 9.99e-05 <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, providing compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. The robustness of this result is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
 
-![Alt text](mosaic-fisher-plot.png){width=100% height=100%}
+![Mosaic-Fisher Analyses](mosaic-fisher-plot.png){width=100% height=100%}
 
 The relationship between organisation sizes and education levels is comprehensively visualised using the mosaic plot. Different education levels are represented on the X-axis, and organisational sizes are represented on the Y-axis. The size of the tiles in the mosaic plot represents the frequency or proportion of combinations of education level and organisation size. Each tile represents a combination of these attributes. The standardised residuals, which show the degree of association between these categories, are indicated by the colour coding of the tiles, which ranges from blue to red. Red tiles indicate lower-than-expected frequencies, and blue tiles indicate higher-than-expected frequencies. The colour's intensity corresponds to the size of these residuals.
 
@@ -335,8 +362,9 @@ In conclusion, the mosaic plot shows that while smaller organisations have a mor
 
 
 #### Regression Analysis
+\
 
-![Alt text](predicted_vs_residuals.png){width=50% height=50%}
+![Predicted vs Residuals](predicted_vs_residuals.png){width=65% height=65%}
 
 The Predicted vs Residuals plot displays residuals on the vertical axis and the predicted compensation values on the horizontal axis. A horizontal line at zero represents no error between the predicted and actual values. The ideal scenario in such a plot is for the residuals to be randomly dispersed around the horizontal line, indicating that the model predicts equally well across all values of the independent variable. As can be observed, the spread of residuals increases with the predicted compensation values. The heteroscedasticity observed suggests that the model's predictive accuracy varies across the scale of compensation, being less precise at higher compensation levels. This violates one of the fundamental assumptions of linear regression, so further results should be treated with caution.
 
@@ -359,16 +387,21 @@ The top predictors determined by the Lasso of developer compensation include:
 
 The Lasso model has provided valuable insights into the factors affecting developer compensation, highlighting the role of job roles, technology use, and company size. However, the low R-squared value suggests that additional variables, possibly capturing more specific skills or regional economic factors, might be needed to improve the model's explanatory power. Further analysis could also explore non-linear modeling techniques or more sophisticated transformations to better capture the complex dynamics of the compensation landscape in tech.
 
+\newpage
 
 ### Discussion 
 
 
 #### Successes
+\
+
 The data for the analysis we conducted was challenging to process due to a significant amount of missing values. Our most significant success was using the Multiple Imputation with Chained Equations (MICE) algorithm to handle missing values, which we did satisfactorily. By using five iterations, we ensured that our data was balanced. Successful implementation of the MICE algorithm ensured that the imputed data sets were reliable and robust, providing a solid foundation for subsequent analysis. So, we encountered convergence issues in our data and ensured that model parameters were stable and gave accurate and reliable results.
 
 In addition, we effectively handled the data cleaning and manipulation process. Due to the highly skewed structure of the *ConvertedCompYearly* variable, which we chose as the response variable, performing an analysis in its raw form would not allow us to obtain accurate results. Maintaining a large dataset of 48,019 responses while ensuring data integrity, we began *ConvertedCompYearly* by subsampling the dataset to include only valid responses. Through this careful data preparation and the application of statistical methods detailed above, we successfully prepared the data for accurate and meaningful analysis.
 
 #### Limitations
+\
+
 Although the research is comprehensive and informative, it also comes with some limitations that should be considered when interpreting the results. Firstly, the survey is not fully randomised, as it mostly targets users who are active on Stack Overflow. This method of surveying through Stack Overflow's own channels, using onsite messaging, blog posts, and emails, can be limiting. Additionally, only two rounds of survey sending may include a limited variety of respondents.
 
 Another important consideration is that the salary question was optional, and 48,026 respondents provided salary data. This means that nearly half of the participants chose not to give this information. Different factors can lead to this, such as the sensitivity of salary data in some countries and cultures, or individuals not feeling comfortable sharing their earnings, especially if they are dissatisfied with them.
@@ -377,6 +410,7 @@ Data privacy and security are also critical concerns. Due to worries about decla
 
 To ensure data consistency, salary data provided by the participant was converted to US dollars using the exchange rate on June 2, 2023. However, this conversion may lead to biases. Economic conditions can differ between countries, so an individual earning a good salary by their country's standards might fall into a different income category after conversion to USD. This could lead to incorrect findings when making country-based inferences. 
 
+\newpage
 
 ### Conclusion 
 
