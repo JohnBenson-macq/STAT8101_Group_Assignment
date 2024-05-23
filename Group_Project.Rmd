@@ -398,6 +398,6 @@ van Buuren S. (2007). Multiple imputation of discrete and continuous data by ful
 
 ### Appendix
 
-[Insert link to repository](https://github.com/JohnBenson-macq/STAT8101_Group_Assignment)
+Link to repository: (https://github.com/JohnBenson-macq/STAT8101_Group_Assignment)
 
 
