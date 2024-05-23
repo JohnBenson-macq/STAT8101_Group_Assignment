@@ -124,3 +124,29 @@ coefficients_df_sorted <- coefficients_df[order(-coefficients_df$abs_coef), ]
 # Select top 10 predictors
 top_predictors <- head(coefficients_df_sorted, 10)
 print(top_predictors)
+
+# Bootstrapping CI's
+n_bootstraps <- 1000
+coef_samples <- matrix(NA, nrow = n_bootstraps, ncol = ncol(X))
+
+# Define the function to fit the model
+boot_fn <- function(data, indices) {
+  X_sample <- as.matrix(data[indices, -ncol(data)]) 
+  y_sample <- data[indices, ncol(data)]
+  
+  # Fit lasso model
+  lasso_mod <- glmnet(X_sample, y_sample, alpha = 1, lambda = best_lambda)
+  
+  # Return coefficients
+  as.vector(coef(lasso_mod, s = "lambda.min"))
+}
+
+data <- data.frame(X, y_log)
+
+# Run bootstrapping
+results <- boot(data, statistic = boot_fn, R = n_bootstraps)
+coef_samples <- t(sapply(results$t, function(x) x))
+
+# Calculating the confidence intervals
+ci_lower <- apply(coef_samples, 2, function(x) quantile(x, probs = 0.025))
+ci_upper <- apply(coef_samples, 2, function(x) quantile(x, probs = 0.975))
