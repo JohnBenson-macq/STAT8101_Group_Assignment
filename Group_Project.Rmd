@@ -309,9 +309,13 @@ The dataset includes around 15.67 average years of coding experience. The mean i
 
 #### Categorical Response's Results
 - Two categorical variable: "Education Level" and "Organisation size" has been chosen to observe if there is any association among them. For this hypothesis test, a Fisher Exact Test has been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. This simulation method is conducted due to the small expected frequencies in the contingency table, making exact calculations impractical. The alternative hypothesis of this test is two-sided, indicating that it was examining any potential correlation between the variables, without assuming that one variable is greater or lesser than the other.
+
 ![Alt text](fisher-test-result.png){width=100% height=100%}
 
 Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, providing compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. The robustness of this result is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
+
+
+Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p = 9.99e-05 <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, providing compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. The robustness of this result is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
 
 ![Alt text](mosaic-fisher-plot.png){width=100% height=100%}
 
@@ -341,7 +345,7 @@ The Mean Squared Error of the model was found to be approximately 464,518,156,48
 
 The top predictors determined by the Lasso of developer compensation include:
 
-<<<<<<< HEAD
+
 - Student: Coefficient: -1.15, 95% CI: [-1.30, -1.00]. Suggests that attaining education can have a negative impact on compensation.
 - APL: Coefficient: -0.53, 95% CI: [-0.65, -0.41]. Suggests that less mainstream technologies may correlate with lower pay.
 - Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicates lower compensation in academic roles.
@@ -353,7 +357,7 @@ The top predictors determined by the Lasso of developer compensation include:
 - Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicating lower compensation in academic roles. 
 - Primary/Elementary School: Coefficient: -0.17, 95% CI: [-0.336, 0.0]. Suggests lower compensation for lower educational attainment.
 - Senior Executive (C-Suite, VP, etc.): Coefficient 0.28, 95% CI: [0.194, 0.368]. Senior positions result in higher compensation.
->>>>>>> 719f21b1e349363028cf2c8cfac4788ad2405343
+
 - Raku: Coefficient: -0.37, 95% CI: [-0.49, -0.25]. Similar to APL, using less common technologies correlates with lower compensation.
 - Company size showed that large companies compensate better than small companies, with large companies having a positive coefficient (Coefficient: 0.34, 95% CI: [0.294, 0.381]) and small companies a negative coefficient (Coefficient: -0.32, 95% CI: [-0.367, -0.263]).
 - Blockchain (Coefficient: 0.05, 95% CI: [0.0, 0.1]) and Snowflake (Coefficient: 0.31, 95% CI: [0.263, 0.357]): These technologies are associated with higher compensation, likely reflecting their current demand and the specialization required.
