@@ -38,7 +38,7 @@ We declare that the following project is evidence of our own work that has not b
 
 ### Abstract 
 
-This project conducts a comprehensive exploratory data analysis (EDA) of the "Stack Overflow Annual Developer Survey 2023," collecting responses from more than 90,000 developers worldwide. The main aim is to investigate the factors affecting the compensation of developers using various selected determinants.
+This project conducts a comprehensive exploratory data analysis (EDA) of the 'Stack Overflow Annual Developer Survey 2023', collecting responses from more than 90,000 developers worldwide. The main aim is to investigate the factors affecting the compensation of developers using various selected determinants.
 
 Our analysis demonstrates important information about developer compensation by exploring the impact of experience, education level, and technological expertise. In conducting our analysis, we used regression models, leveraging the survey's detailed classification and clustering information to calculate the standard errors of the survey estimates accurately. We used graphs to evaluate the relationships between various categorical variables. We detailed our findings and conducted hypothesis testing to evaluate the relationships. Additionally, we addressed nonresponse issues by using multiple imputation techniques to address missing data and ensure robustness in our findings.
 
@@ -186,26 +186,26 @@ A summary of our data indicates that only 4 out of the 84 fields are numeric var
 ![Alt text](Missing_data.png){width=50% height=50%}
 
 **Numeric Variables**
-- CompTotal: Extremely right-skewed given outliers with extremely high compensation values.
-- ConvertedCompYearly: Extremely right-skewed given outliers with extremely high compensation values.
-- ResponseId: This variable identifies each observation and is not a response from participants.
-- WorkExp: Right-skewed, indicating the decreasing frequency of work experience within the respondants. 
-- convertedcomp_log: Given the compensation outliers present within the dataset, a log transformation has been applied to the variable of interest 'ConvertedCompYearly' resulting in an approximately normal distribution.
+- *CompTotal*: Extremely right-skewed given outliers with extremely high compensation values.
+- *ConvertedCompYearly*: Extremely right-skewed given outliers with extremely high compensation values.
+- *ResponseId*: This variable identifies each observation and is not a response from participants.
+- *WorkExp*: Right-skewed, indicating the decreasing frequency of work experience within the respondants. 
+- *convertedcomp_log*: Given the compensation outliers present within the dataset, a log transformation has been applied to the variable of interest *ConvertedCompYearly* resulting in an approximately normal distribution.
 
 ![Alt text](Numerical_variables_hist.png){width=50% height=50%}
 
 Further visualisation of missing values for key variables of interest:
-- There are random missing values across 'YearsCode' and 'YearsCodePro'.
-- Missing values are present across all combinations of 'Employment' types.
-- A singular 'Employment' category has a large number of missing values, this is the Non-employed category as those without employment have no compensation. 
-- It is evident that there is a high amount of non-response questions focused on compensation, with several 'Employment' categories having only missing response variables. This is on account of the high number of unique 'Employment' combinations given the multi-select string nature of the questions and the sensitivity of providing compensation information. 
+- There are random missing values across *YearsCode* and *YearsCodePro*.
+- Missing values are present across all combinations of *Employment* types.
+- A singular *Employment* category has a large number of missing values, this is the Non-employed category as those without employment have no compensation. 
+- It is evident that there is a high amount of non-response questions focused on compensation, with several *Employment* categories having only missing response variables. This is on account of the high number of unique *Employment* combinations given the multi-select string nature of the questions and the sensitivity of providing compensation information. 
 - No clear trends of missing variables.
 
 ![Alt text](MV_YearsCode_vs_Pro.png){width=50% height=50%}
 ![Alt text](MV_Employment_vs_converted_comp.png){width=50% height=50%}
 
 
-UpSet plots have been used to visualise the intersections of missing data within our dataset, given several characteristics and attribute values can be encoded simultaneously (Lex et al, 2014). This plot indicates that there are higher frequencies for interceptions across a greater number of variables relating to 'AI' and reduced frequencies for interceptions of various reduced combinations of 'AI' attributes. Many missing values are visibly present within this dataset, therefore requiring appropriate cleaning methodologies.
+UpSet plots have been used to visualise the intersections of missing data within our dataset, given several characteristics and attribute values can be encoded simultaneously (Lex et al, 2014). This plot indicates that there are higher frequencies for interceptions across a greater number of variables relating to *AI* and reduced frequencies for interceptions of various reduced combinations of *AI* attributes. Many missing values are visibly present within this dataset, therefore requiring appropriate cleaning methodologies.
 ![Alt text](Missing_values_upset.png){width=50% height=50%}
 
 
@@ -248,7 +248,7 @@ All code and algorithms can be viewed via the GitHub repository (see appendix).
 ### Results
 
 #### Numerical Response's Results
-- The variable chosen for this part was 'YearsCode'. 
+- The variable chosen for this part was *YearsCode*. 
 ![Alt text](yearsCode_numeric_histogram.png){width=80% height=80%}
 
 There is a noticeable peak in the distribution at 5 to 10 years of coding experience, indicating that a high percentage of persons in our sample have coding expertise in this area. This might mean that many people are in the early to mid stages of their careers. The frequency drops as the number of years increases, as is common in many job domains where fewer people achieve very high levels of expertise. The existence of numerous peaks (10, 15, 20, 30 years) may reflect varied common career duration or moments at which people change occupations, rise to new roles, or even take pauses from coding. The histogram includes a large tail to the right, indicating that there are still a considerable number of people with extensive coding expertise, but far less than those with 5-10 years.
@@ -262,7 +262,7 @@ The dataset includes around 15.67 average years of coding experience. The mean i
 
 
 #### Categorical Response's Results
-- Two categorical variable: "Education Level" and "Organisation size" has been chosen to observe if there is any association among them. For this hypothesis test, a Fisher Exact Test has been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. This simulation method is conducted due to the small expected frequencies in the contingency table, making exact calculations impractical. The alternative hypothesis of this test is two-sided, indicating that it was examining any potential correlation between the variables, without assuming that one variable is greater or lesser than the other.
+- Two categorical variable: *Education Level* and *Organisation size* has been chosen to observe if there is any association among them. For this hypothesis test, a Fisher Exact Test has been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. This simulation method is conducted due to the small expected frequencies in the contingency table, making exact calculations impractical. The alternative hypothesis of this test is two-sided, indicating that it was examining any potential correlation between the variables, without assuming that one variable is greater or lesser than the other.
 
 ![Alt text](fisher-test-result.png){width=100% height=100%}
 
