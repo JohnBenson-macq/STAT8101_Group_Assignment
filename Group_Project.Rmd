@@ -92,7 +92,7 @@ The Stack Overflow Annual Developer Survey 2023 is a comprehensive survey that g
 
 #### Project Rationale
 
-The tech industry is characterized by rapid advancements and constant change, making it imperative to understand the determinants of developer compensation. The factors that influence compensation have far-reaching implications, not only for individual developers' career trajectories but also for the overall productivity and innovation within organizations. It is therefore vital to study the interplay between the aforementioned factors in determining compensation.
+The tech industry is characterised by rapid advancements and constant change, making it imperative to understand the determinants of developer compensation. The factors that influence compensation have far-reaching implications, not only for individual developers' career trajectories but also for the overall productivity and innovation within organizations. It is therefore vital to study the interplay between the aforementioned factors in determining compensation.
 
 #### Aim
 
