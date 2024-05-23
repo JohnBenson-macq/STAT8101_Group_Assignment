@@ -277,7 +277,7 @@ The transformation's effectiveness is evident in the boxplot comparison below, w
 
 ![Alt text](comparison_of_skewness.png){width=50% height=50%}
 
-To identifying the key determinants of *ConvertedCompYearly*, we utilized Lasso regression, a regularization method designed to improve the statistical model's predictive performance and clarity.  Lasso performs both variable selection and regularization, which helps in handling the multicollinearity and overfitting by shrinking less important feature's coefficients to zero. Consequently, Lasso enables us to identify the most pertinent variables while maintaining a parsimonious model.
+To identifying the key determinants of *ConvertedCompYearly*, we utilised Lasso regression, a regularisation method designed to improve the statistical model's predictive performance and clarity. Lasso performs both variable selection and regularization, which helps in handling the multicollinearity and overfitting by shrinking less important feature's coefficients to zero. Consequently, Lasso enables us to identify the most pertinent variables while maintaining a parsimonious model.
 
 Our dataset included 135 features, some of which exhibited high multicollinearity. Using Lasso regression, we aimed to mitigate these issues by selecting a subset of features that provides the best predictive performance.
 
@@ -294,18 +294,26 @@ All code and algorithms can be viewed via the GitHub repository (see appendix).
 ### Results
 
 #### Numerical Response's Results
-- The variable chosen for this part was 'YearsCode'. Here is the histograms:
+- The variable chosen for this part was 'YearsCode'. 
 ![Alt text](yearsCode_numeric_histogram.png){width=80% height=80%}
-There is a noticeable peak in the distribution at 5 to 10 years of coding experience, indicating that a high percentage of persons in our sample have coding expertise in this area. This might mean that many people are in the early to mid stages of their careers. The frequency drops as the number of years increases, as is common in many job domains where fewer people achieve very high levels of expertise. The existence of numerous peaks (10, 15, 20, 30 years) may reflect varied common career duration or moments at which people change occupations, rise to new roles, or even take pauses from coding. The histogram includes a big tail to the right, indicating that there are still a considerable number of people with extensive coding expertise, but far less than those with 5-10 years.
+
+There is a noticeable peak in the distribution at 5 to 10 years of coding experience, indicating that a high percentage of persons in our sample have coding expertise in this area. This might mean that many people are in the early to mid stages of their careers. The frequency drops as the number of years increases, as is common in many job domains where fewer people achieve very high levels of expertise. The existence of numerous peaks (10, 15, 20, 30 years) may reflect varied common career duration or moments at which people change occupations, rise to new roles, or even take pauses from coding. The histogram includes a large tail to the right, indicating that there are still a considerable number of people with extensive coding expertise, but far less than those with 5-10 years.
+
 **Summary Statistics:**
-**Mean of Years of Coding: 15.67**
-**Standard Deviation of Years of Coding: 9.87**
-**Median of Years of Coding: 13**
+- Mean of Years of Coding: 15.67
+- Standard Deviation of Years of Coding: 9.87
+- Median of Years of Coding: 13
+
 The dataset includes around 15.67 average years of coding experience. The mean is sensitive to outliers and skewed distributions, which means that a few extremely high or low numbers can have a large impact on the mean. A standard deviation of around 9.87 years implies that individual coding experience varies greatly from the average (mean), with many developers having years of expertise that are significantly lower or higher than the norm. The median is a reliable measure of central tendency that is less impacted by outliers and skewed data than the mean. This number is less than the mean, indicating that the distribution of years of coding is somewhat skewed to the right (positively skewed), with a tail extending towards greater years of coding.
 
 
 #### Categorical Response's Results
 - Two categorical variable: "Education Level" and "Organisation size" has been chosen to observe if there is any association among them. For this hypothesis test, a Fisher Exact Test has been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. This simulation method is conducted due to the small expected frequencies in the contingency table, making exact calculations impractical. The alternative hypothesis of this test is two-sided, indicating that it was examining any potential correlation between the variables, without assuming that one variable is greater or lesser than the other.
+
+![Alt text](fisher-test-result.png){width=100% height=100%}
+
+Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, providing compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. The robustness of this result is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
+
 
 Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p = 9.99e-05 <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, providing compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. The robustness of this result is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
 
@@ -315,11 +323,11 @@ The relationship between organisation sizes and education levels is comprehensiv
 
 Several important insights are revealed by a thorough plot analysis. For developers who possess a bachelor's degree (as shown by the larger blue tiles), there is a noticeably higher proportion in smaller organisations. On the other hand, as indicated by the red tiles, employees with bachelor's degrees tend to be less common than anticipated in larger organisations. Workers who hold master's degrees are more common in medium-sized to large-sized businesses; these positive residuals are highlighted by blue tiles. The red tiles indicate that employees with master's degrees are less common in smaller organisations.
 
-In a similar vein, employees with professional degrees are more common in larger organisations, although the frequency of such employees is lower in smaller organisations. The trend for developers holding associate's degrees is less obvious; medium-sized organisations nevertheless exhibit a somewhat higher frequency than anticipated.
+Similarily, employees with professional degrees are more common in larger organisations, although the frequency of such employees is lower in smaller organisations. The trend for developers holding associate's degrees is less obvious and medium-sized organisations exhibit a somewhat higher frequency than anticipated.
 
 With only slight differences, the proportion of employees who have only completed their primary or elementary and secondary schooling is generally low across all organisation sizes. The blue tiles indicate the higher frequency of employees in smaller organisations who have some college education but have not earned a degree, while the red tiles indicate the lower frequency of such employees in larger organisations.
 
-In conclusion, the mosaic plot shows that while smaller organisations have a more diverse range of education levels, including bachelor's degrees and some college education without degrees, larger organisations prefer employees with higher education levels, such as master's and professional degrees. The standardised residuals provide important information about the hiring practices of various organisation sizes by highlighting the significant relationships between education levels and organisation sizes
+In conclusion, the mosaic plot shows that while smaller organisations have a more diverse range of education levels, including bachelor's degrees and some college education without degrees, larger organisations prefer employees with higher education levels, such as master's and professional degrees. The standardised residuals provide important information about the hiring practices of various organisation sizes by highlighting the significant relationships between education levels and organisation sizes.
 
 
 
@@ -337,7 +345,7 @@ The Mean Squared Error of the model was found to be approximately 464,518,156,48
 
 The top predictors determined by the Lasso of developer compensation include:
 
-<<<<<<< HEAD
+
 - Student: Coefficient: -1.15, 95% CI: [-1.30, -1.00]. Suggests that attaining education can have a negative impact on compensation.
 - APL: Coefficient: -0.53, 95% CI: [-0.65, -0.41]. Suggests that less mainstream technologies may correlate with lower pay.
 - Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicates lower compensation in academic roles.
