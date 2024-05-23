@@ -4,14 +4,27 @@ output:
     latex_engine: xelatex
     keep_tex: true
     number_sections: true
+    toc: true
     toc_depth: 3
     fig_caption: true
     fig_crop: true
     highlight: tango
-  html_document: default
-mainfont: Times New Roman
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    fig_caption: true
+    df_print: paged
+mainfont: "Times New Roman"
 fontsize: 12pt
-geometry: "left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm"
+geometry: "left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm"
+header-includes:
+  - \usepackage{hyperref}
+  - \usepackage{amsmath}
+  - \usepackage{graphicx}
+  - \usepackage{chngcntr}
+  - \counterwithout{section}{chapter}
+  - \renewcommand{\thesection}{\arabic{section}}
 ---
 
 ```{r setup, include=FALSE}
@@ -61,19 +74,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 We declare that the following project is evidence of our own work that has not been submitted previously for academic credit. All group members, who have all actively contributed, submit this assignment as an original piece of work. 
 
-- Conceptualisation, X.X. and Y.Y.; 
-- Methodology, X.X.; 
-- Software, X.X.; 
-- Validation, X.X., Y.Y. and Z.Z.; 
-- Formal Analysis, X.X.; 
-- Investigation, X.X.; 
-- Resources, X.X.; 
-- Data Curation, X.X.; 
-- Writing – Original Draft Preparation, X.X.; 
-- Writing – Review & Editing, X.X.; 
-- Visualisation, X.X.
-
-
+- Conceptualisation: Benson, John; Ilhan, Nergis; Kong, David; Koslow, Katherine; and Paul, Ayan Krishna;
+- Methodology: Kong, David.;
+- Software: Benson, John.;
+- Validation: Benson, John; Ilhan, Nergis; Khan, Rohan Junaid; Kong, David; Koslow, Katherine; and Paul, Ayan Krishna.;
+- Formal Analysis: Benson, John; Khan, Rohan Junaid; and Paul, Ayan Krishna.;
+- Investigation: Benson, John; Koslow, Katherine; and Khan, Rohan Junaid.;
+- Resources: Kong, David; and Koslow, Katherine.;
+- Data Curation: Benson, John.;
+- Writing – Original Draft Preparation: Benson, John; Ilhan, Nergis; Kong, David; and Koslow, Katherine.;
+- Writing – Review & Editing: Benson, John; Ilhan, Nergis; Kong, David; Koslow, Katherine; Khan, Rohan Junaid; and Paul, Ayan Krishna.;
+- Visualisation: Benson, John; Khan, Rohan Junaid; Koslow, Katherine; and Paul, Ayan Krishna.
 
 ### Abstract 
 
@@ -83,45 +94,45 @@ Our analysis demonstrates important information about developer compensation by 
 
 This analysis provides insight into compensation dynamics among developers worldwide by addressing critical factors affecting yearly compensation.
 
+\newpage
+
 ### Contents
 
-1. **Declaration**
-2. **Abstract**
-3. **Introduction**
-    - Project Rationale
-    - Aim
-4. **Data Description**
-5. **Survey Methodology**
-    - Key Principles
-        - Scope and Scale
-        - Duration and Timing
-    - Survey Design
-    - Evaluation of Methodologies
-        - Recruitment Methods
-        - Geography
-        - Adaptive Questionnaire
-        - Handling of Compensation Data
-        - Technological Inclusion
-        - Randomisation of Questions
-        - Data Analysis Adjustments
-        - Survey Language
-    - Non-Response
-6. **Data Analysis**
-    - Data Description
-    - Exploratory Data Analysis (EDA)
-    - Data Cleaning and Manipulation
-    - Feature Selection and Data Curation
-7. **Implementation**
-8. **Results**
-    - Numerical Response
-    - Categorical Response
-    - Regression Analysis
-9.  **Discussion**
-    - Successes
-    - Limitations
-10. **Conclusion**
-11. **References**
-12. **Appendix**
+1. **[Declaration](#declaration)**
+2. **[Abstract](#abstract)**
+3. **[Introduction](#introduction)**
+    - [Project Rationale](#project-rationale)
+    - [Aim](#aim)
+4. **[Data Description](#data-description)**
+5. **[Survey Methodology](#survey-methodology)**
+    - [Key Principles](#key-principles)
+    - [Survey Design](#survey-design)
+    - [Evaluation of Methodologies](#evaluation-of-methodologies)
+        - [Recruitment Methods](#recruitment-methods)
+        - [Geography](#geography)
+        - [Adaptive Questionnaire](#adaptive-questionnaire)
+        - [Handling of Compensation Data](#handling-of-compensation-data)
+        - [Technological Inclusion](#technological-inclusion)
+        - [Randomisation of Questions](#randomisation-of-questions)
+        - [Data Analysis Adjustments](#data-analysis-adjustments)
+        - [Survey Language](#survey-language)
+    - [Non-Response](#non-response)
+6. **[Data Analysis](#data-analysis)**
+    - [Data Description](#data-description)
+    - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-(eda))
+    - [Data Cleaning and Manipulation](#data-cleaning-and-manipulation)
+    - [Feature Selection and Data Curation](#feature-selection-and-data-curation)
+7. **[Implementation](#implementation)**
+8. **[Results](#results)**
+    - [Numerical Response](#numerical-response)
+    - [Categorical Response](#categorical-response)
+    - [Regression Analysis](#regression-analysis)
+9. **[Discussion](#discussion)**
+    - [Successes](#successes)
+    - [Limitations](#limitations)
+10. **[Conclusion](#conclusion)**
+11. **[References](#references)**
+12. **[Appendix](#appendix)**
 
 
 ### Introduction 
@@ -166,6 +177,7 @@ The survey mode was conducted in a two-stage process with each stage pertaining 
 Once the opt-in time period had elapsed the responses were aggregated by country and a second stage was then implemented, whereby the survey was specifically emailed to a target population of users who had not already completed the survey. The design of this approach involved stratified sampling techniques whereby the target population of users/respondents was weighted according to the country they resided in. To ensure that the overall response rate (opt-in and emailed participants) by country was roughly proportional to number of programmers in that country as a proportion of the global user base. For example, high response rates for countries such as India & China were desired given the disproportionate number of programmers compared to the global mean. As such, should the number of responses be lower than expected at the opt-in stage for these countries, they were over sampled i.e. over represented, in the population of emailed surveys.
 
 #### Evaluation of Methodologies
+
 **Recruitment Methods**: Respondents were primarily recruited through Stack Overflow's own channels, such as onsite messaging, blog posts, emails, banner ads, and social media posts. This recruitment strategy likely led to a sample biased towards highly engaged users of Stack Overflow.
 
 **Geography**: Due to U.S. sanctions, the survey was not accessible in certain regions (Crimea, Cuba, Iran, North Korea, Syria), potentially skewing geographical representation. Some respondents circumvented this using VPNs, which introduces another layer of bias in data representation.
@@ -279,14 +291,14 @@ The cross-validation process for Lasso regression involved tuning the lambda par
 ![Alt text](cross_validation_results.png){width=50% height=50%}
 
 
-### Implimentation 
+### Implementation 
 
 All code and algorithms can be viewed via the GitHub repository (see appendix). 
 
 
 ### Results
 
-#### Numerical Response's Results
+#### Numerical Response
 - The variable chosen for this part was *YearsCode*. 
 ![Alt text](yearsCode_numeric_histogram.png){width=80% height=80%}
 
@@ -300,13 +312,11 @@ There is a noticeable peak in the distribution at 5 to 10 years of coding experi
 The dataset includes around 15.67 average years of coding experience. The mean is sensitive to outliers and skewed distributions, which means that a few extremely high or low numbers can have a large impact on the mean. A standard deviation of around 9.87 years implies that individual coding experience varies greatly from the average (mean), with many developers having years of expertise that are significantly lower or higher than the norm. The median is a reliable measure of central tendency that is less impacted by outliers and skewed data than the mean. This number is less than the mean, indicating that the distribution of years of coding is somewhat skewed to the right (positively skewed), with a tail extending towards greater years of coding.
 
 
-#### Categorical Response's Results
-- Two categorical variable: *Education Level* and *Organisation size* has been chosen to observe if there is any association among them. For this hypothesis test, a Fisher Exact Test has been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. This simulation method is conducted due to the small expected frequencies in the contingency table, making exact calculations impractical. The alternative hypothesis of this test is two-sided, indicating that it was examining any potential correlation between the variables, without assuming that one variable is greater or lesser than the other.
+#### Categorical Response
 
-![Alt text](fisher-test-result.png){width=100% height=100%}
+Two categorical variable: *Education Level* and *Organisation size* has been chosen to observe if there is any association among them. For this hypothesis test, a Fisher Exact Test has been deployed. The p-value is derived from a simulation method rather than an exact calculation based on 10,000 replicates. This simulation method is conducted due to the small expected frequencies in the contingency table, making exact calculations impractical. The alternative hypothesis of this test is two-sided, indicating that it was examining any potential correlation between the variables, without assuming that one variable is greater or lesser than the other.
 
 Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, providing compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. The robustness of this result is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
-
 
 Using Fisher's Exact Test with 10,000 simulated repetitions, we established a very significant connection between the two categorical variables under study (p = 9.99e-05 <0.0001). This implies that the observed link is highly unlikely to have occurred by coincidence, providing compelling evidence against the null hypothesis of no association. This conclusion might have significant consequences for our understanding of education level and organisation size. The robustness of this result is reinforced by the use of a simulation technique to account for the contingency table's particular conditions.
 
@@ -324,7 +334,7 @@ In conclusion, the mosaic plot shows that while smaller organisations have a mor
 
 
 
-#### Regression Results
+#### Regression Analysis
 
 ![Alt text](predicted_vs_residuals.png){width=50% height=50%}
 
@@ -376,6 +386,7 @@ Our results indicate that not only does education and company size impact compen
 
 The Stack Overflow Developer Survey for 2023 has provided valuable insights into understanding compensation of developers across the world. This report has addressed a number of data challenges such as, non-response, to identify the relationships of key variables that impact developer compensation. Further research may deepen our understanding of factors that may influence the future of developers as they grow, learn and adjust to new trends and technologies in the rapidly evolving industry. This analysis does not only benefit developers but may be used by employers and policymakers to improve their understanding of the compensation landscape for developers and address disparities across the industry. 
 
+\newpage
 
 ### References 
 
@@ -391,7 +402,7 @@ Pickery, J., & Carton, A. (2008). Oversampling in Relation to Differential Regio
 
 van Buuren S. (2007). Multiple imputation of discrete and continuous data by fully conditional specification. *Statistical methods in medical research*, 16(3), 219–242. https://doi.org/10.1177/0962280206074463
 
-
+\newpage
 
 ### Appendix
 
