@@ -305,7 +305,7 @@ The top predictors determined by the Lasso of developer compensation include:
 - Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicates lower compensation in academic roles.
 - Primary/Elementary School: Coefficient: -0.17, 95% CI: [-0.336, 0.0]. Suggests lower compensation for lower educational attainment.
 - Senior Executive (C-Suite, VP, etc.): Coefficient: 0.28, 95% CI: [0.194, 0.368]. Senior positions result in higher compensation.
-=======
+
 - Student: Coefficient: -1.15, 95% CI: [-1.30, -1.00]. This indicates that being a student is associated with lower compensation, possibly due to part-time or intern-level employment.
 - APL: Coefficient: -0.53, 95% CI: [-0.65, -0.41]. Suggests less mainstream technologies may correlate with lower pay. 
 - Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicating lower compensation in academic roles. 
@@ -318,6 +318,7 @@ The top predictors determined by the Lasso of developer compensation include:
 
 The Lasso model has provided valuable insights into the factors affecting developer compensation, highlighting the role of job roles, technology use, and company size. However, the low R-squared value suggests that additional variables, possibly capturing more specific skills or regional economic factors, might be needed to improve the model's explanatory power. Further analysis could also explore non-linear modeling techniques or more sophisticated transformations to better capture the complex dynamics of the compensation landscape in tech.
 
+
 ### Discussion 
 
 
@@ -327,7 +328,7 @@ The data for the analysis we conducted was challenging to process due to a signi
 In addition, we effectively handled the data cleaning and manipulation process. Due to the highly skewed structure of the *ConvertedCompYearly* variable, which we chose as the response variable, performing an analysis in its raw form would not allow us to obtain accurate results. Maintaining a large dataset of 48,019 responses while ensuring data integrity, we began *ConvertedCompYearly* by subsampling the dataset to include only valid responses. Through this careful data preparation and the application of statistical methods detailed above, we successfully prepared the data for accurate and meaningful analysis.
 
 #### Limitations
-Although the research is comprehensive and informative, it also comes with some limitations that should be considered when interpreting the results. Firstly, the survey is not fully randomized; it mostly targets users who are active on Stack Overflow. This method of surveying through Stack Overflow's own channels, such as onsite messaging, blog posts, and emails, can be limiting. Additionally, only two rounds of survey sending may include a limited variety of respondents.
+Although the research is comprehensive and informative, it also comes with some limitations that should be considered when interpreting the results. Firstly, the survey is not fully randomised, as it mostly targets users who are active on Stack Overflow. This method of surveying through Stack Overflow's own channels, using onsite messaging, blog posts, and emails, can be limiting. Additionally, only two rounds of survey sending may include a limited variety of respondents.
 
 Another important consideration is that the salary question was optional, and 48,026 respondents provided salary data. This means that nearly half of the participants chose not to give this information. Different factors can lead to this, such as the sensitivity of salary data in some countries and cultures, or individuals not feeling comfortable sharing their earnings, especially if they are dissatisfied with them.
 
@@ -342,7 +343,7 @@ The Stack Overflow Annual Developer Survey 2023 is a noteworthy dataset that off
 
 Our results indicate that not only does education and company size impact compensation but specific technologies that are both widely used, and in-demand drive increased compensation values. This is in alignment with the economic theory of supply and demand, in which compensation increases when there is a greater amount of demand to supply. To obtain more accurate results, further analysis is required with a higher degree of granularity for elements related to compensation and the possible application of non-linear models. Considering that many survey items were optional, this will lead to a deeper comprehension of the effects on compensation. 
 
-The Stack Overflow Developer Survey for 2023 has provided valuable insights into understanding compensation of developers across the world. This report has addressed a number of data challenges including the non-response to identify the relationships of key variables that impact developer compensation. Further research may deepen our understanding of factors that may influence the future of developers as they grow, learn and adjust to new trends and technologies in the rapidly evolving industry. This analysis does not only benefit developers but may be used by employers and policymakers to improve their understanding of the compensation landscape for developers and address disparities across the industry. 
+The Stack Overflow Developer Survey for 2023 has provided valuable insights into understanding compensation of developers across the world. This report has addressed a number of data challenges such as, non-response, to identify the relationships of key variables that impact developer compensation. Further research may deepen our understanding of factors that may influence the future of developers as they grow, learn and adjust to new trends and technologies in the rapidly evolving industry. This analysis does not only benefit developers but may be used by employers and policymakers to improve their understanding of the compensation landscape for developers and address disparities across the industry. 
 
 
 ### References 
