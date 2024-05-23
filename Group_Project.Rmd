@@ -290,11 +290,19 @@ The Mean Squared Error of the model was found to be approximately 464,518,156,48
 
 The top predictors determined by the Lasso of developer compensation include:
 
+<<<<<<< HEAD
 - Student: Coefficient: -1.15, 95% CI: [-1.30, -1.00]. Suggests that attaining education can have a negative impact on compensation.
 - APL: Coefficient: -0.53, 95% CI: [-0.65, -0.41]. Suggests that less mainstream technologies may correlate with lower pay.
 - Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicates lower compensation in academic roles.
 - Primary/Elementary School: Coefficient: -0.17, 95% CI: [-0.336, 0.0]. Suggests lower compensation for lower educational attainment.
 - Senior Executive (C-Suite, VP, etc.): Coefficient: 0.28, 95% CI: [0.194, 0.368]. Senior positions result in higher compensation.
+=======
+- Student: Coefficient: -1.15, 95% CI: [-1.30, -1.00]. This indicates that being a student is associated with lower compensation, possibly due to part-time or intern-level employment.
+- APL: Coefficient: -0.53, 95% CI: [-0.65, -0.41]. Suggests less mainstream technologies may correlate with lower pay. 
+- Academic Researcher: Coefficient: -0.31, 95% CI: [-0.42, -0.196]. Indicating lower compensation in academic roles. 
+- Primary/Elementary School: Coefficient: -0.17, 95% CI: [-0.336, 0.0]. Suggests lower compensation for lower educational attainment.
+- Senior Executive (C-Suite, VP, etc.): Coefficient 0.28, 95% CI: [0.194, 0.368]. Senior positions result in higher compensation.
+>>>>>>> 719f21b1e349363028cf2c8cfac4788ad2405343
 - Raku: Coefficient: -0.37, 95% CI: [-0.49, -0.25]. Similar to APL, using less common technologies correlates with lower compensation.
 - Company size showed that large companies compensate better than small companies, with large companies having a positive coefficient (Coefficient: 0.34, 95% CI: [0.294, 0.381]) and small companies a negative coefficient (Coefficient: -0.32, 95% CI: [-0.367, -0.263]).
 - Blockchain (Coefficient: 0.05, 95% CI: [0.0, 0.1]) and Snowflake (Coefficient: 0.31, 95% CI: [0.263, 0.357]): These technologies are associated with higher compensation, likely reflecting their current demand and the specialization required.
